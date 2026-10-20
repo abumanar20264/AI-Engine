@@ -1,4 +1,4 @@
-> **Project status notice — 2026-10-20:** This file contains a research response and creative/technical hypotheses, not a completed, source-verified competitor study. The response does not include a sufficiently traceable video-by-video evidence ledger. Treat claims about audience comprehension percentages, sound impact multipliers, algorithmic distribution, and market superiority as unverified unless independently sourced and measured. The operational production procedure is maintained separately in [PRODUCTION_OPERATIONS_SPECIFICATION.md](./PRODUCTION_OPERATIONS_SPECIFICATION.md), the approved product strategy is in [REVIEW_AND_UPDATED_PROJECT_FOUNDATION.md](./REVIEW_AND_UPDATED_PROJECT_FOUNDATION.md), and the section-by-section review is in [DOCUMENT_AUDIT_AND_GAP_REGISTER.md](./DOCUMENT_AUDIT_AND_GAP_REGISTER.md).
+> **Project status notice — 2026-10-20:** This file contains a research response and creative/technical hypotheses, not a completed, source-verified competitor study. The response does not include a sufficiently traceable video-by-video evidence ledger. Treat claims about audience comprehension percentages, sound impact multipliers, algorithmic distribution, and market superiority as unverified unless independently sourced and measured. The operational procedure is maintained in [PRODUCTION_OPERATIONS_SPECIFICATION.md](./PRODUCTION_OPERATIONS_SPECIFICATION.md); the approved product strategy is in [REVIEW_AND_UPDATED_PROJECT_FOUNDATION.md](./REVIEW_AND_UPDATED_PROJECT_FOUNDATION.md); and the section-by-section audit is in [DOCUMENT_AUDIT_AND_GAP_REGISTER.md](./DOCUMENT_AUDIT_AND_GAP_REGISTER.md).
 
 ---
 
@@ -566,23 +566,12 @@
 
 
 
-### ثامناً: التوصيات النهائية لاستكمال وثيقة المشروع
+### ثامناً: حالة الإغلاق بعد المراجعة
 
+هذا القسم يحل محل التوصيات السابقة التي كانت تطلب إضافات أصبحت الآن موثقة في مستودع المشروع.
 
-
-1. **قائمة النواقص الحقيقية في الوثيقة:** افتقار الوثيقة الحالية لمعايير تفصيلية تميز بين أساليب جذب المشاهد لكل منتج من المنتجات الثلاثة، وضرورة وجود بروتوكول لفحص استقرار المحاكاة لتجنب الأخطاء البصرية الشائعة.
-
-2. **ما هو مكتمل ولا يحتاج تعديل:** الهيكل العام للمشروع، حصر المنتجات في 3 مسارات متكاملة، استراتيجية البدء بمنصة الشورتس (Shorts)، وقاعدة مراجعة المحتوى بشرياً قبل النشر.
-
-3. **القرارات التصميمية المقترحة للمشروع:** الاحتفاظ بمعيار الأصالة الجوهرية ووضوح النتيجة كقواعد داخلية للجودة؛ لا يُعرض ذلك بوصفه استنتاجًا مثبتًا من أبحاث السوق في هذا الملف.
-
-4. **الفرضيات الواجب إبقاؤها مفتوحة:** الأداة البرمجية أو محرك المحاكاة النهائي (إلى حين إجراء اختبارات الأداء الميدانية)، والمدة الزمنية المثلى لكل منتج على حدة (بين 20 إلى 45 ثانية).
-
-5. **الاختبارات الضرورية لاحقاً:** بناء نموذج أولي مصغر (Spike) لكل منتج من المنتجات الثلاثة لقياس زمن الرندر، استقرار الفيزياء، وتفاعل المشاهدين الأولي عند النشر التجريبي.
-
-6. **هيكل مقترح للإضافة للنسخة القادمة من الوثيقة:**
-
-* إضافة ملحق خاص بـ **"مواصفات البدء (Hook Protocols)"** لكل منتج.
-
-* إضافة جدول **"فحص الأخطاء الفيزيائية البصرية"** قبل مرحلة الرندر النهائي.
-
+1. **مواصفات الإنتاج:** أضيفت إلى [PRODUCTION_OPERATIONS_SPECIFICATION.md](./PRODUCTION_OPERATIONS_SPECIFICATION.md)، وتشمل مراحل الإنتاج ومخرجاتها وشروط اجتيازها، مواصفات المشهد، فحوصات المحاكاة، درجات العيوب، الرندر، الصوت، ضمان الجودة، الحقوق، الأرشفة، الاختبارات، والقوالب.
+2. **المراجعة بندًا بندًا:** موثقة في [DOCUMENT_AUDIT_AND_GAP_REGISTER.md](./DOCUMENT_AUDIT_AND_GAP_REGISTER.md)، بما في ذلك حالة كل قسم من وثيقة التأسيس وما بقي مفتوحًا.
+3. **ما لم يكتمل:** لم تُستكمل بعد دراسة المنافسين ذات المصادر القابلة للتحقق، ولم تُختبر المحاكاة على العتاد الفعلي، ولم يُختر المحرك أو تُقَس تكلفة الإنتاج أو تُنشر فيديوهات تجريبية.
+4. **الخطوة التقنية التالية:** بعد التحقق من البيئة والعتاد المتاحين، نفّذ اختبار المقارنة المحدد في القسم 15 من وثيقة الإنتاج. لا تختر المحرك بناءً على التخمين أو قوائم الميزات فقط.
+5. **الحد الفاصل:** اكتمال الوثائق لا يعني إثبات الجدوى التقنية أو التجارية. لا يمكن حسم زمن الرندر أو تكلفة الفيديو أو استجابة الجمهور أو الدخل من الكتابة وحدها؛ يجب تسجيلها من اختبارات وبيانات فعلية.
