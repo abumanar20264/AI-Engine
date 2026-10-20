@@ -1,0 +1,67 @@
+[{"stream_name":"stderr","time":9.628695684,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.628868749,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.628878757,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.6288832,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.48262443,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.482665802,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.482671851,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.482676324,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":12.179548002,"data":"AI-Engine Kaggle Blender runtime preflight\n"}
+,{"stream_name":"stdout","time":12.179592063,"data":"Timestamp UTC: 2026-10-20T15:20:27.947778+00:00\n"}
+,{"stream_name":"stdout","time":12.179598501,"data":"Python: 3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]\n"}
+,{"stream_name":"stdout","time":12.179603796,"data":"OS: Linux-6.18.48+-x86_64-with-glibc2.39\n"}
+,{"stream_name":"stdout","time":12.179608767,"data":"Architecture: x86_64\n"}
+,{"stream_name":"stdout","time":12.179612921,"data":"Working directory: /kaggle/working\n"}
+,{"stream_name":"stdout","time":12.179616855,"data":"Selected Kaggle environment: {'KAGGLE_KERNEL_RUN_TYPE': 'Batch'}\n"}
+,{"stream_name":"stdout","time":12.179621828,"data":"CPU logical count: 4\n"}
+,{"stream_name":"stdout","time":12.179626361,"data":"CPU model: ['Intel(R) Xeon(R) CPU @ 2.20GHz']\n"}
+,{"stream_name":"stdout","time":12.179631408,"data":"Memory: {'MemTotal': '32869452 kB', 'MemAvailable': '31763364 kB', 'SwapTotal': '0 kB', 'SwapFree': '0 kB'}\n"}
+,{"stream_name":"stdout","time":12.179636437,"data":"Working disk: {'total_bytes': 20957446144, 'used_bytes': 163840, 'free_bytes': 20940505088}\n"}
+,{"stream_name":"stdout","time":12.179641497,"data":"GPU query: {'status': 'nvidia-smi not available'}\n"}
+,{"stream_name":"stdout","time":12.179646148,"data":"TPU device paths: []\n"}
+,{"stream_name":"stdout","time":12.179650078,"data":"apt_blender_policy_initial: COMPLETED (exit_code=0)\n"}
+,{"stream_name":"stdout","time":17.901806362,"data":"apt_update: COMPLETED (exit_code=0)\n"}
+,{"stream_name":"stdout","time":19.047654175,"data":"apt_blender_policy_after_update: COMPLETED (exit_code=0)\n"}
+,{"stream_name":"stdout","time":46.627559871,"data":"blender_install_command: COMPLETED (exit_code=0)\n"}
+,{"stream_name":"stdout","time":47.392101411,"data":"blender_background_version: COMPLETED (exit_code=0)\n"}
+,{"stream_name":"stdout","time":49.445460723,"data":"blender_background_startup: COMPLETED (exit_code=0)\n"}
+,{"stream_name":"stdout","time":58.820697873,"data":"blender_scene_render_and_simulation: COMPLETED (exit_code=0)\n"}
+,{"stream_name":"stdout","time":58.820765258,"data":"Overall status: COMPLETED\n"}
+,{"stream_name":"stdout","time":58.820772543,"data":"EEVEE render: COMPLETED\n"}
+,{"stream_name":"stdout","time":58.820777754,"data":"Rigid-body simulation: COMPLETED\n"}
+,{"stream_name":"stdout","time":58.820782843,"data":"Report: /kaggle/working/ai-engine-blender-runtime-preflight/preflight_report.json 27224 bytes\n"}
+,{"stream_name":"stdout","time":58.820788617,"data":"Artifact inventory:\n"}
+,{"stream_name":"stdout","time":58.820822655,"data":"{\"name\": \"apt-state/lists/archive.ubuntu.com_ubuntu_dists_noble-updates_InRelease\", \"sha256\": \"4fd8f772d483cb011bf899a9e1a20c38c7dec90fbc21bf5083d4ada6b7d9120b\", \"size_bytes\": 126125}\n"}
+,{"stream_name":"stdout","time":58.820831523,"data":"{\"name\": \"apt-state/lists/archive.ubuntu.com_ubuntu_dists_noble-updates_main_binary-amd64_Packages.lz4\", \"sha256\": \"0860e2081a15a0c1583796bbf607b423d7b3666936940b44e5060f4160dee93a\", \"size_bytes\": 2897437}\n"}
+,{"stream_name":"stdout","time":58.820837721,"data":"{\"name\": \"apt-state/lists/archive.ubuntu.com_ubuntu_dists_noble-updates_universe_binary-amd64_Packages.lz4\", \"sha256\": \"36b2e1f2b1219332371c19c9614e84922988bc225b17f1377a9b1a80987a4399\", \"size_bytes\": 3621458}\n"}
+,{"stream_name":"stdout","time":58.820842872,"data":"{\"name\": \"apt-state/lists/archive.ubuntu.com_ubuntu_dists_noble_InRelease\", \"sha256\": \"cdb2f31d809f589719a53c6ad15f255b27569c4059542ada282aaa21b8e164b0\", \"size_bytes\": 255850}\n"}
+,{"stream_name":"stdout","time":58.820849713,"data":"{\"name\": \"apt-state/lists/archive.ubuntu.com_ubuntu_dists_noble_main_binary-amd64_Packages.lz4\", \"sha256\": \"5440959b1be383eee0871228f9a97a15f50e5ecf8ac726f3aa53b2c6903bcdf2\", \"size_bytes\": 2950155}\n"}
+,{"stream_name":"stdout","time":58.82085468,"data":"{\"name\": \"apt-state/lists/archive.ubuntu.com_ubuntu_dists_noble_universe_binary-amd64_Packages.lz4\", \"sha256\": \"0aa71c66135f20a4aa760fa788a42846a41c8628b6720d82f768b51b5c2d3895\", \"size_bytes\": 31234980}\n"}
+,{"stream_name":"stdout","time":58.820859823,"data":"{\"name\": \"apt-state/lists/lock\", \"sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"size_bytes\": 0}\n"}
+,{"stream_name":"stdout","time":58.820864506,"data":"{\"name\": \"apt-state/lists/security.ubuntu.com_ubuntu_dists_noble-security_InRelease\", \"sha256\": \"3e807a1db9531e3815e6fa04e16b98e3d0499d925766c8fe398e9101b8bd4c3f\", \"size_bytes\": 126127}\n"}
+,{"stream_name":"stdout","time":58.820869228,"data":"{\"name\": \"apt-state/lists/security.ubuntu.com_ubuntu_dists_noble-security_main_binary-amd64_Packages.lz4\", \"sha256\": \"e62ab6fdd5bc6f16bd4a6ecabc6d87dd5e62d572c9e0f7ae061f8e8429431a9a\", \"size_bytes\": 2364118}\n"}
+,{"stream_name":"stdout","time":58.820875735,"data":"{\"name\": \"apt-state/lists/security.ubuntu.com_ubuntu_dists_noble-security_universe_binary-amd64_Packages.lz4\", \"sha256\": \"b86e3f9ca4c91a7ac768702fcc7c3761018dd05a09badbcd251888fd7518355e\", \"size_bytes\": 2584865}\n"}
+,{"stream_name":"stdout","time":58.820880578,"data":"{\"name\": \"apt_blender_policy_after_update.log\", \"sha256\": \"d267741ba56d04c65506909f8e5d19849348720a02a8795c4d68497c33557d1c\", \"size_bytes\": 518}\n"}
+,{"stream_name":"stdout","time":58.820885284,"data":"{\"name\": \"apt_blender_policy_initial.log\", \"sha256\": \"75c547f10ccb531647feeeefe3da1bf7d94073570a44f6648d3521f7864af5e2\", \"size_bytes\": 334}\n"}
+,{"stream_name":"stdout","time":58.820889978,"data":"{\"name\": \"apt_update.log\", \"sha256\": \"38c9172ea34f1f9af224a0315e7c938f93a7119848b89941c48ddf4f1d95d4a8\", \"size_bytes\": 1103}\n"}
+,{"stream_name":"stdout","time":58.820894618,"data":"{\"name\": \"blender_background_startup.log\", \"sha256\": \"259c9e1a09483337bc8f0865d54015db9e08a19647710fbb6fca150b0e61580a\", \"size_bytes\": 267}\n"}
+,{"stream_name":"stdout","time":58.820899435,"data":"{\"name\": \"blender_background_version.log\", \"sha256\": \"629bd426cf6eda11b5b9b6823486cf1cac4e4b6f7b1d0635c8e1dd38ffeacb7c\", \"size_bytes\": 100}\n"}
+,{"stream_name":"stdout","time":58.820903969,"data":"{\"name\": \"blender_install_command.log\", \"sha256\": \"e166f403751950c7f88030b7d98caeadfcf829084bd83cbb9a262d219f95e345\", \"size_bytes\": 18261}\n"}
+,{"stream_name":"stdout","time":58.820910484,"data":"{\"name\": \"blender_scene_render_and_simulation.log\", \"sha256\": \"ff3583a5f423a3270675e3511b420a783ce0a2834e2c88ebcd112d7db521fa50\", \"size_bytes\": 1459}\n"}
+,{"stream_name":"stdout","time":58.820947155,"data":"{\"name\": \"eevee_preflight.png\", \"sha256\": \"58117193457999b90ef588ad0adf6d6ae9462c8e7884fceeefeb94357f874d74\", \"size_bytes\": 10651}\n"}
+,{"stream_name":"stdout","time":58.820953655,"data":"{\"name\": \"environment.json\", \"sha256\": \"70f2579bba093d22569d2ba9fbd95e60d28d5665ab962de90f2b082b30c3ac6a\", \"size_bytes\": 901}\n"}
+,{"stream_name":"stdout","time":58.820958995,"data":"{\"name\": \"probe_eevee.py\", \"sha256\": \"dcdcfab7ba9b3e2c68675cbf43e3f88a7676e577b920d69ddfe0286f2bd0ecd9\", \"size_bytes\": 427}\n"}
+,{"stream_name":"stdout","time":58.820963641,"data":"{\"name\": \"scene_test.json\", \"sha256\": \"1f86c97f137047ce74a21b2d2e4738b0e4fee5b13eb89b66e4c0823aeb61c8f6\", \"size_bytes\": 989}\n"}
+,{"stream_name":"stdout","time":58.820968046,"data":"{\"name\": \"scene_test.py\", \"sha256\": \"833527e2e40aeae92aeacad45752d0bb1c2b149a692a2c4c2db864602f1370e4\", \"size_bytes\": 4792}\n"}
+,{"stream_name":"stdout","time":58.820972621,"data":"{\"name\": \"temporary-write-read.txt\", \"sha256\": \"850fa61abd0b44e6f33ea54cfa9cb0b5872e38a2abac5bb3f5b49b6773b65b7d\", \"size_bytes\": 51}\n"}
+,{"stream_name":"stdout","time":58.820977145,"data":"{\"name\": \"ubuntu-official.sources\", \"sha256\": \"a109f34b0a3ec4aaef05bfe03b0b48bbfef0f0823f167d5a79659d41009135be\", \"size_bytes\": 323}\n"}
+,{"stream_name":"stdout","time":58.820982135,"data":"Report SHA256: d6c8f14a71eb4c4430d445198fb640b4bd4d570e0909cc3beaca8ad4ae6d4264\n"}
+,{"stream_name":"stderr","time":62.229635118,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":62.229700192,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":62.450890114,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":62.450930343,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":63.38244445,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":63.473299242,"data":"[NbConvertApp] Writing 37333 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":66.680558812,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":67.396602787,"data":"[NbConvertApp] Writing 373252 bytes to __results__.html\n"}
+]

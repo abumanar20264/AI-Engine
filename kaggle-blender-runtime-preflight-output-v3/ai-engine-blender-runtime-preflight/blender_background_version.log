@@ -1,0 +1,4 @@
+COMMAND: ["/usr/bin/blender", "--background", "--version"]
+EXIT_CODE: 0
+Blender 4.0.2
+Blender 4.0.2

@@ -1,0 +1,6 @@
+COMMAND: ["/usr/bin/blender", "--background", "--python", "/kaggle/working/ai-engine-blender-runtime-preflight/probe_eevee.py"]
+EXIT_CODE: 0
+EEVEE_ENGINE_PROBE={"available": true, "selected": "BLENDER_EEVEE", "engines": ["BLENDER_EEVEE"]}
+Blender 4.0.2
+
+Blender quit

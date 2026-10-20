@@ -1,0 +1,72 @@
+{
+  "audio_streams": [],
+  "checks": {
+    "duration_about_5_seconds": true,
+    "first_middle_last_frames_extracted": true,
+    "frame_count_120": true,
+    "frame_rate_24": true,
+    "full_video_decode": true,
+    "h264_video": true,
+    "mp4_container": true,
+    "resolution_720x1280": true,
+    "visible_motion_detected": true
+  },
+  "completed_utc": "2026-10-20T16:44:45.969760+00:00",
+  "contact_sheet": {
+    "path": "C:\\AI-Engine\\kaggle-blender-short-test-output-v6\\ai-engine-satisfying-physics-short\\mp4_verified_contact_sheet.png",
+    "sha256": "59c54830d2f74a8fa405a1b79e689a33650575e0a9dfbcc7a3daba170bfac243",
+    "size_bytes": 173024
+  },
+  "container": {
+    "bit_rate": 415316,
+    "duration_seconds": 5.0,
+    "format_name": "mov,mp4,m4a,3gp,3g2,mj2"
+  },
+  "decoded_frame_count": 120,
+  "errors": [],
+  "extracted_frames": [
+    {
+      "frame_index_zero_based": 0,
+      "path": "C:\\AI-Engine\\kaggle-blender-short-test-output-v6\\ai-engine-satisfying-physics-short\\mp4_verified_frame_0001.png",
+      "sha256": "83938b36d99b93b682746bcf2a8246e25175336bb9b8b9167d406d0c9e8f36a7",
+      "size_bytes": 117856
+    },
+    {
+      "frame_index_zero_based": 59,
+      "path": "C:\\AI-Engine\\kaggle-blender-short-test-output-v6\\ai-engine-satisfying-physics-short\\mp4_verified_frame_0060.png",
+      "sha256": "abbc3b34c1679298ec6464429e74cdbbaf992e183954738dfcba7cd6a432dea8",
+      "size_bytes": 143060
+    },
+    {
+      "frame_index_zero_based": 119,
+      "path": "C:\\AI-Engine\\kaggle-blender-short-test-output-v6\\ai-engine-satisfying-physics-short\\mp4_verified_frame_0120.png",
+      "sha256": "b30a1c0fb224ac487c7c2f0acd2c1b0836a8ff57291977a4918d29d4c858ee4a",
+      "size_bytes": 123974
+    }
+  ],
+  "report_path": "C:\\AI-Engine\\kaggle-blender-short-test-output-v6\\ai-engine-satisfying-physics-short\\mp4_verification_report.json",
+  "sampled_frame_mean_absolute_differences": {
+    "0-119": 4.4226,
+    "0-59": 4.3172,
+    "59-119": 1.161
+  },
+  "started_utc": "2026-10-20T16:44:45.237974+00:00",
+  "status": "VERIFIED",
+  "video": {
+    "path": "C:\\AI-Engine\\kaggle-blender-short-test-output-v6\\ai-engine-satisfying-physics-short\\satisfying_physics_test0001-0120.mp4",
+    "sha256": "2a641e5272521186ee16d19574f1a6a0e97a115143c14077ff11356e29b4177a",
+    "size_bytes": 259573
+  },
+  "video_stream": {
+    "average_rate": "24/1",
+    "codec": "h264",
+    "declared_frame_count": 120,
+    "duration_seconds": 5.0,
+    "frame_rate": "24/1",
+    "frame_rate_float": 24.0,
+    "height": 1280,
+    "time_base": "1/12288",
+    "width": 720
+  },
+  "visible_motion_detected": true
+}

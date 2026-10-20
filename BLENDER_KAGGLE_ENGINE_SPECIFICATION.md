@@ -1,7 +1,8 @@
 # AI-Engine — Blender Production Engine & Kaggle Operations Specification
 
 **Document ID:** AI-ENGINE-BLENDER-KAGGLE-SPEC  
-**Version:** 1.0.0  
+**Version:** 1.0.1
+
 **Decision status:** **BLENDER APPROVED AS THE SOLE PRIMARY PRODUCTION ENGINE**  
 **Operational status:** **NOT YET VALIDATED ON THE PROJECT'S KAGGLE RUNTIME**  
 **Decision date:** 2026-10-20  
@@ -9,7 +10,7 @@
 **Parent product specification:** [REVIEW_AND_UPDATED_PROJECT_FOUNDATION.md](./REVIEW_AND_UPDATED_PROJECT_FOUNDATION.md)  
 **Production procedure:** [PRODUCTION_OPERATIONS_SPECIFICATION.md](./PRODUCTION_OPERATIONS_SPECIFICATION.md)
 
-> **Decision boundary:** Blender is the selected production engine for this project. This is an architecture decision, not a claim that Kaggle compatibility, render speed, output quality, or production economics have already been measured. A small compatibility gate remains mandatory before bulk production. Do not benchmark several alternative engines unless Blender fails a documented mandatory requirement.
+> **Decision boundary:** Blender is the approved primary production engine for this project. This is an architecture decision, not a claim that Kaggle compatibility, render speed, output quality, or production economics have already been measured. A small compatibility gate remains mandatory before bulk production. Do not investigate or benchmark alternative engines unless Blender fails a documented mandatory requirement and separate approval is obtained.
 
 ## 1. Purpose and scope
 
@@ -163,7 +164,7 @@ Capture stdout/stderr and the process exit code. Do not treat the presence of a 
 - Do not assume that Cycles GPU rendering is configured simply because a GPU is visible.
 - First prove that the chosen renderer completes a minimal scene in the allocated runtime.
 - Prefer the simplest renderer/settings that meet the project's visual requirements and pass repeatability checks.
-- If the initial EEVEE path fails, diagnose the environment and compare a documented CPU or alternate supported configuration within Blender. Do not begin testing other engines as the first response.
+- If the initial EEVEE path fails, diagnose the environment and compare a documented CPU or alternate supported configuration within Blender. Do not investigate other engines unless Blender fails a documented mandatory requirement and separate approval is obtained.
 
 ## 5. Local-computer control and file transfer
 
@@ -324,3 +325,8 @@ Official Blender references:
 Kaggle runtime capabilities and limits are service policies and can change. Verify current documentation and the actual notebook runtime before relying on specific accelerator types, quotas, persistence, or session duration. Record the verification date and observed facts in the environment manifest.
 
 **Evidence labels:** APPROVED = project decision; PROVISIONAL = initial choice requiring validation; MEASURED = supported by a recorded test; UNKNOWN = not established. Do not relabel a capability-based expectation as a measured result.
+
+## 11. Change log
+
+### 1.0.1 — 2026-10-20
+- Clarified that alternative-engine investigation requires a documented Blender mandatory-requirement failure and separate approval.

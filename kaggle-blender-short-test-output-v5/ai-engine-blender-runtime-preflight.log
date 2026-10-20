@@ -1,0 +1,79 @@
+[{"stream_name":"stderr","time":10.96240965,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.962493692,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.96250206,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.962506652,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":11.929243189,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":11.929295251,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":11.929302301,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":11.929307318,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":13.758552352,"data":"AI-Engine first vertical Short export\n"}
+,{"stream_name":"stdout","time":13.758639078,"data":"Timestamp UTC: 2026-10-20T15:34:37.128132+00:00\n"}
+,{"stream_name":"stdout","time":13.758645568,"data":"Python: 3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]\n"}
+,{"stream_name":"stdout","time":13.758648959,"data":"Runtime: Linux-6.18.48+-x86_64-with-glibc2.39 x86_64\n"}
+,{"stream_name":"stdout","time":13.758652215,"data":"Kaggle run type: Batch\n"}
+,{"stream_name":"stdout","time":13.758655368,"data":"Accelerator inventory: GPU query no nvidia-smi\n"}
+,{"stream_name":"stdout","time":13.758658719,"data":"TPU devices: []\n"}
+,{"stream_name":"stdout","time":13.758661696,"data":"apt_policy_initial: COMPLETED (exit_code=0)\n"}
+,{"stream_name":"stdout","time":19.718247584,"data":"apt_update: COMPLETED (exit_code=0)\n"}
+,{"stream_name":"stdout","time":20.890557938,"data":"apt_policy_after_update: COMPLETED (exit_code=0)\n"}
+,{"stream_name":"stdout","time":50.112847495,"data":"runtime_tool_install: COMPLETED (exit_code=0)\n"}
+,{"stream_name":"stdout","time":50.96994597,"data":"blender_version: COMPLETED (exit_code=0)\n"}
+,{"stream_name":"stdout","time":53.502413797,"data":"blender_short_render: COMPLETED (exit_code=0)\n"}
+,{"stream_name":"stdout","time":53.540586095,"data":"Overall status: FAILED\n"}
+,{"stream_name":"stdout","time":53.54064929,"data":"Video: /kaggle/working/ai-engine-satisfying-physics-short/satisfying_physics_test.mp4 0 bytes None\n"}
+,{"stream_name":"stdout","time":53.540656561,"data":"Metadata: null\n"}
+,{"stream_name":"stdout","time":53.540662495,"data":"Physics: {\"ball_end_x\": -1.029, \"ball_start_x\": -2.8, \"domino_count\": 10, \"fixed_ground\": \"Fixed stage\", \"maximum_domino_rotation_radians\": 0.0, \"status\": \"FAILED\"}\n"}
+,{"stream_name":"stdout","time":53.540669945,"data":"Visible motion: null\n"}
+,{"stream_name":"stdout","time":53.540676423,"data":"Elapsed seconds: 39.986\n"}
+,{"stream_name":"stdout","time":53.540681371,"data":"Report: /kaggle/working/ai-engine-satisfying-physics-short/short_test_report.json 24044 bytes\n"}
+,{"stream_name":"stdout","time":53.540686639,"data":"Artifact inventory:\n"}
+,{"stream_name":"stdout","time":53.540691937,"data":"{\"name\": \"apt-state/lists/archive.ubuntu.com_ubuntu_dists_noble-updates_InRelease\", \"sha256\": \"4fd8f772d483cb011bf899a9e1a20c38c7dec90fbc21bf5083d4ada6b7d9120b\", \"size_bytes\": 126125}\n"}
+,{"stream_name":"stdout","time":53.540700527,"data":"{\"name\": \"apt-state/lists/archive.ubuntu.com_ubuntu_dists_noble-updates_main_binary-amd64_Packages.lz4\", \"sha256\": \"0860e2081a15a0c1583796bbf607b423d7b3666936940b44e5060f4160dee93a\", \"size_bytes\": 2897437}\n"}
+,{"stream_name":"stdout","time":53.540731566,"data":"{\"name\": \"apt-state/lists/archive.ubuntu.com_ubuntu_dists_noble-updates_universe_binary-amd64_Packages.lz4\", \"sha256\": \"36b2e1f2b1219332371c19c9614e84922988bc225b17f1377a9b1a80987a4399\", \"size_bytes\": 3621458}\n"}
+,{"stream_name":"stdout","time":53.540737715,"data":"{\"name\": \"apt-state/lists/archive.ubuntu.com_ubuntu_dists_noble_InRelease\", \"sha256\": \"cdb2f31d809f589719a53c6ad15f255b27569c4059542ada282aaa21b8e164b0\", \"size_bytes\": 255850}\n"}
+,{"stream_name":"stdout","time":53.540743779,"data":"{\"name\": \"apt-state/lists/archive.ubuntu.com_ubuntu_dists_noble_main_binary-amd64_Packages.lz4\", \"sha256\": \"5440959b1be383eee0871228f9a97a15f50e5ecf8ac726f3aa53b2c6903bcdf2\", \"size_bytes\": 2950155}\n"}
+,{"stream_name":"stdout","time":53.540748452,"data":"{\"name\": \"apt-state/lists/archive.ubuntu.com_ubuntu_dists_noble_universe_binary-amd64_Packages.lz4\", \"sha256\": \"0aa71c66135f20a4aa760fa788a42846a41c8628b6720d82f768b51b5c2d3895\", \"size_bytes\": 31234980}\n"}
+,{"stream_name":"stdout","time":53.540752327,"data":"{\"name\": \"apt-state/lists/lock\", \"sha256\": \"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\", \"size_bytes\": 0}\n"}
+,{"stream_name":"stdout","time":53.540756151,"data":"{\"name\": \"apt-state/lists/security.ubuntu.com_ubuntu_dists_noble-security_InRelease\", \"sha256\": \"e00f2d7bfccf4a8b3696a59ea67dfb5cfbfdb7a982a9739422d46c73a2c1ab28\", \"size_bytes\": 126127}\n"}
+,{"stream_name":"stdout","time":53.540769454,"data":"{\"name\": \"apt-state/lists/security.ubuntu.com_ubuntu_dists_noble-security_main_binary-amd64_Packages.lz4\", \"sha256\": \"d07e608d7634650a005f32488d66a5920eb9dd0a274af0fada063540c77872f5\", \"size_bytes\": 2364031}\n"}
+,{"stream_name":"stdout","time":53.540775395,"data":"{\"name\": \"apt-state/lists/security.ubuntu.com_ubuntu_dists_noble-security_universe_binary-amd64_Packages.lz4\", \"sha256\": \"917bf4ddf8840e92990fa54cea30460e6953e1342b53c9eac97b1902198da098\", \"size_bytes\": 2584839}\n"}
+,{"stream_name":"stdout","time":53.540781225,"data":"{\"name\": \"apt_policy_after_update.log\", \"sha256\": \"19963db4d52ab57b07b794085e1ca945412269822bd3b217fb049a1b84d4ac70\", \"size_bytes\": 746}\n"}
+,{"stream_name":"stdout","time":53.540794997,"data":"{\"name\": \"apt_policy_initial.log\", \"sha256\": \"bc312d056a25d211d752c352a60787daafe2965f25ccb6adcd5776f4ecccb1be\", \"size_bytes\": 486}\n"}
+,{"stream_name":"stdout","time":53.540799812,"data":"{\"name\": \"apt_update.log\", \"sha256\": \"fe37f7937ff703b9e5f981725e96b59bfb3b5598a33b88db949a2da3c8e27e5f\", \"size_bytes\": 1101}\n"}
+,{"stream_name":"stdout","time":53.540829927,"data":"{\"name\": \"blender_short_render.log\", \"sha256\": \"9de4c8e2c5d63f9d4fdc94f7e143916b466364d385f21eed941ea156d1d5e671\", \"size_bytes\": 4564}\n"}
+,{"stream_name":"stdout","time":53.540836262,"data":"{\"name\": \"blender_version.log\", \"sha256\": \"629bd426cf6eda11b5b9b6823486cf1cac4e4b6f7b1d0635c8e1dd38ffeacb7c\", \"size_bytes\": 100}\n"}
+,{"stream_name":"stdout","time":53.540841747,"data":"{\"name\": \"runtime_tool_install.log\", \"sha256\": \"f4ac7fb69a5627a3f0825f95fde9be074cdfd4b36257ebc21769eb82595e8692\", \"size_bytes\": 18326}\n"}
+,{"stream_name":"stdout","time":53.540847255,"data":"{\"name\": \"scene_report.json\", \"sha256\": \"bc160bdc13745fab60d72224f4b4c345e4b764a853e194d824aa6a0d4c364cd2\", \"size_bytes\": 2965}\n"}
+,{"stream_name":"stdout","time":53.540852743,"data":"{\"name\": \"short_scene.py\", \"sha256\": \"c0e095576a22dbc3a9973dcf6216aac5116592cd2fbe896dea2beaf447ccdc04\", \"size_bytes\": 9459}\n"}
+,{"stream_name":"stdout","time":53.540858199,"data":"{\"name\": \"ubuntu-official.sources\", \"sha256\": \"a109f34b0a3ec4aaef05bfe03b0b48bbfef0f0823f167d5a79659d41009135be\", \"size_bytes\": 323}\n"}
+,{"stream_name":"stderr","time":53.550269041,"data":"/usr/local/lib/python3.13/dist-packages/IPython/core/interactiveshell.py:3561: UserWarning: To exit: use 'exit', 'quit', or Ctrl-D.\n"}
+,{"stream_name":"stderr","time":53.550308783,"data":"  warn(\"To exit: use 'exit', 'quit', or Ctrl-D.\", stacklevel=1)\n"}
+,{"stream_name":"stderr","time":53.550315116,"data":"\n"}
+,{"stream_name":"stderr","time":53.550319498,"data":"/usr/local/lib/python3.13/dist-packages/IPython/core/interactiveshell.py:3561: UserWarning: To exit: use 'exit', 'quit', or Ctrl-D.\n"}
+,{"stream_name":"stderr","time":53.550324069,"data":"  warn(\"To exit: use 'exit', 'quit', or Ctrl-D.\", stacklevel=1)\n"}
+,{"stream_name":"stderr","time":54.080699991,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":54.081507722,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":54.081535949,"data":"    import sys;import papermill as pm;pm.execute_notebook(\"__notebook__.ipynb\",\"__notebook__.ipynb\",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=1800)\n"}
+,{"stream_name":"stderr","time":54.081543916,"data":"                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":54.081549826,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":54.081555096,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":54.081559668,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":54.081564771,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":54.081569918,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":54.081574472,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":54.081579211,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":54.081584216,"data":"Exception encountered at \"In [1]\":\n"}
+,{"stream_name":"stderr","time":54.081588859,"data":"An exception has occurred, use %tb to see the full traceback.\n"}
+,{"stream_name":"stderr","time":54.081593684,"data":"\n"}
+,{"stream_name":"stderr","time":54.081608926,"data":"SystemExit: 1\n"}
+,{"stream_name":"stderr","time":54.081613998,"data":"\n"}
+,{"stream_name":"stderr","time":54.081618321,"data":"\n"}
+,{"stream_name":"stderr","time":57.318398134,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":57.318468062,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":57.572933768,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":57.572981409,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":58.582941497,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":58.68859306,"data":"[NbConvertApp] Writing 45308 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":62.394340723,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":63.245787475,"data":"[NbConvertApp] Writing 392340 bytes to __results__.html\n"}
+]

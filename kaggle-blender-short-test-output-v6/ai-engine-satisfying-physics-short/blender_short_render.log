@@ -1,0 +1,2655 @@
+COMMAND: ["/usr/bin/blender", "--background", "--python", "/kaggle/working/ai-engine-satisfying-physics-short/short_scene.py", "--", "/kaggle/working/ai-engine-satisfying-physics-short"]
+EXIT_CODE: 0
+Blender 4.0.2
+Fra:1 Mem:33.91M (Peak 34.99M) | Time:00:03.28 | Syncing Fixed stage
+Fra:1 Mem:33.94M (Peak 34.99M) | Time:00:04.44 | Syncing Backdrop
+Fra:1 Mem:33.95M (Peak 34.99M) | Time:00:04.44 | Syncing Orange launch sphere
+Fra:1 Mem:34.04M (Peak 34.99M) | Time:00:04.44 | Syncing Domino 01
+Fra:1 Mem:34.06M (Peak 34.99M) | Time:00:04.45 | Syncing Domino 02
+Fra:1 Mem:34.08M (Peak 34.99M) | Time:00:04.45 | Syncing Domino 03
+Fra:1 Mem:34.10M (Peak 34.99M) | Time:00:04.45 | Syncing Domino 04
+Fra:1 Mem:34.13M (Peak 34.99M) | Time:00:04.45 | Syncing Domino 05
+Fra:1 Mem:34.15M (Peak 34.99M) | Time:00:04.45 | Syncing Domino 06
+Fra:1 Mem:34.17M (Peak 34.99M) | Time:00:04.45 | Syncing Domino 07
+Fra:1 Mem:34.19M (Peak 34.99M) | Time:00:04.45 | Syncing Domino 08
+Fra:1 Mem:34.21M (Peak 34.99M) | Time:00:04.45 | Syncing Domino 09
+Fra:1 Mem:34.23M (Peak 34.99M) | Time:00:04.45 | Syncing Domino 10
+Fra:1 Mem:34.24M (Peak 34.99M) | Time:00:04.45 | Syncing Short title
+Fra:1 Mem:34.25M (Peak 34.99M) | Time:00:04.45 | Syncing Vertical Short camera
+Fra:1 Mem:34.25M (Peak 34.99M) | Time:00:04.45 | Syncing Large soft key
+Fra:1 Mem:34.25M (Peak 34.99M) | Time:00:04.45 | Syncing Color rim
+Fra:1 Mem:34.44M (Peak 34.99M) | Time:00:04.47 | Rendering 1 / 8 samples
+Fra:1 Mem:34.13M (Peak 34.99M) | Time:00:11.69 | Rendering 8 / 8 samples
+Append frame 1
+Time: 00:12.38 (Saving: 00:00.20)
+
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:2 Mem:34.13M (Peak 50.92M) | Time:00:03.20 | Rendering 8 / 8 samples
+Append frame 2
+Time: 00:03.82 (Saving: 00:00.13)
+
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:3 Mem:34.13M (Peak 50.92M) | Time:00:03.16 | Rendering 8 / 8 samples
+Append frame 3
+Time: 00:03.77 (Saving: 00:00.13)
+
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:4 Mem:34.13M (Peak 50.92M) | Time:00:03.16 | Rendering 8 / 8 samples
+Append frame 4
+Time: 00:03.79 (Saving: 00:00.13)
+
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:5 Mem:34.13M (Peak 50.92M) | Time:00:03.29 | Rendering 8 / 8 samples
+Append frame 5
+Time: 00:03.92 (Saving: 00:00.14)
+
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:6 Mem:34.13M (Peak 50.92M) | Time:00:03.16 | Rendering 8 / 8 samples
+Append frame 6
+Time: 00:03.79 (Saving: 00:00.13)
+
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:7 Mem:34.13M (Peak 50.92M) | Time:00:03.19 | Rendering 8 / 8 samples
+Append frame 7
+Time: 00:03.85 (Saving: 00:00.13)
+
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:8 Mem:34.13M (Peak 50.92M) | Time:00:03.13 | Rendering 8 / 8 samples
+Append frame 8
+Time: 00:03.76 (Saving: 00:00.13)
+
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:9 Mem:34.13M (Peak 50.92M) | Time:00:03.17 | Rendering 8 / 8 samples
+Append frame 9
+Time: 00:03.79 (Saving: 00:00.13)
+
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:10 Mem:34.13M (Peak 50.92M) | Time:00:03.23 | Rendering 8 / 8 samples
+Append frame 10
+Time: 00:03.85 (Saving: 00:00.13)
+
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:11 Mem:34.13M (Peak 50.92M) | Time:00:03.16 | Rendering 8 / 8 samples
+Append frame 11
+Time: 00:03.79 (Saving: 00:00.13)
+
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:12 Mem:34.13M (Peak 50.92M) | Time:00:03.19 | Rendering 8 / 8 samples
+Append frame 12
+Time: 00:03.81 (Saving: 00:00.13)
+
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:13 Mem:34.13M (Peak 50.92M) | Time:00:03.20 | Rendering 8 / 8 samples
+Append frame 13
+Time: 00:03.82 (Saving: 00:00.12)
+
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:14 Mem:34.13M (Peak 50.92M) | Time:00:03.15 | Rendering 8 / 8 samples
+Append frame 14
+Time: 00:03.77 (Saving: 00:00.13)
+
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:15 Mem:34.13M (Peak 50.92M) | Time:00:03.22 | Rendering 8 / 8 samples
+Append frame 15
+Time: 00:03.83 (Saving: 00:00.13)
+
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:16 Mem:34.13M (Peak 50.92M) | Time:00:03.14 | Rendering 8 / 8 samples
+Append frame 16
+Time: 00:03.76 (Saving: 00:00.13)
+
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:17 Mem:34.13M (Peak 50.92M) | Time:00:03.17 | Rendering 8 / 8 samples
+Append frame 17
+Time: 00:03.79 (Saving: 00:00.13)
+
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:18 Mem:34.13M (Peak 50.92M) | Time:00:03.19 | Rendering 8 / 8 samples
+Append frame 18
+Time: 00:03.83 (Saving: 00:00.14)
+
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:19 Mem:34.13M (Peak 50.92M) | Time:00:03.16 | Rendering 8 / 8 samples
+Append frame 19
+Time: 00:03.79 (Saving: 00:00.13)
+
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:20 Mem:34.13M (Peak 50.92M) | Time:00:03.16 | Rendering 8 / 8 samples
+Append frame 20
+Time: 00:03.79 (Saving: 00:00.13)
+
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:21 Mem:34.13M (Peak 50.92M) | Time:00:03.21 | Rendering 8 / 8 samples
+Append frame 21
+Time: 00:03.83 (Saving: 00:00.13)
+
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:22 Mem:34.13M (Peak 50.92M) | Time:00:03.17 | Rendering 8 / 8 samples
+Append frame 22
+Time: 00:03.79 (Saving: 00:00.13)
+
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:23 Mem:34.13M (Peak 50.92M) | Time:00:03.25 | Rendering 8 / 8 samples
+Append frame 23
+Time: 00:03.88 (Saving: 00:00.13)
+
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:24 Mem:34.13M (Peak 50.92M) | Time:00:03.19 | Rendering 8 / 8 samples
+Append frame 24
+Time: 00:03.82 (Saving: 00:00.13)
+
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:25 Mem:34.13M (Peak 50.92M) | Time:00:03.23 | Rendering 8 / 8 samples
+Append frame 25
+Time: 00:03.86 (Saving: 00:00.13)
+
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:26 Mem:34.13M (Peak 50.92M) | Time:00:03.23 | Rendering 8 / 8 samples
+Append frame 26
+Time: 00:03.87 (Saving: 00:00.14)
+
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:27 Mem:34.13M (Peak 50.92M) | Time:00:03.18 | Rendering 8 / 8 samples
+Append frame 27
+Time: 00:03.81 (Saving: 00:00.13)
+
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:28 Mem:34.13M (Peak 50.92M) | Time:00:03.16 | Rendering 8 / 8 samples
+Append frame 28
+Time: 00:03.83 (Saving: 00:00.13)
+
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:29 Mem:34.13M (Peak 50.92M) | Time:00:03.17 | Rendering 8 / 8 samples
+Append frame 29
+Time: 00:03.79 (Saving: 00:00.13)
+
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:30 Mem:34.13M (Peak 50.92M) | Time:00:03.17 | Rendering 8 / 8 samples
+Append frame 30
+Time: 00:03.80 (Saving: 00:00.13)
+
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:31 Mem:34.13M (Peak 50.92M) | Time:00:03.21 | Rendering 8 / 8 samples
+Append frame 31
+Time: 00:03.85 (Saving: 00:00.13)
+
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:32 Mem:34.13M (Peak 50.92M) | Time:00:03.18 | Rendering 8 / 8 samples
+Append frame 32
+Time: 00:03.81 (Saving: 00:00.13)
+
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:33 Mem:34.13M (Peak 50.92M) | Time:00:03.17 | Rendering 8 / 8 samples
+Append frame 33
+Time: 00:03.79 (Saving: 00:00.13)
+
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:34 Mem:34.13M (Peak 50.92M) | Time:00:03.18 | Rendering 8 / 8 samples
+Append frame 34
+Time: 00:03.79 (Saving: 00:00.13)
+
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:35 Mem:34.13M (Peak 50.92M) | Time:00:03.16 | Rendering 8 / 8 samples
+Append frame 35
+Time: 00:03.78 (Saving: 00:00.13)
+
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:36 Mem:34.13M (Peak 50.92M) | Time:00:03.26 | Rendering 8 / 8 samples
+Append frame 36
+Time: 00:03.88 (Saving: 00:00.13)
+
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:37 Mem:34.13M (Peak 50.92M) | Time:00:03.16 | Rendering 8 / 8 samples
+Append frame 37
+Time: 00:03.80 (Saving: 00:00.14)
+
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:38 Mem:34.13M (Peak 50.92M) | Time:00:03.15 | Rendering 8 / 8 samples
+Append frame 38
+Time: 00:03.76 (Saving: 00:00.13)
+
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:39 Mem:34.13M (Peak 50.92M) | Time:00:03.21 | Rendering 8 / 8 samples
+Append frame 39
+Time: 00:03.83 (Saving: 00:00.13)
+
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:40 Mem:34.13M (Peak 50.92M) | Time:00:03.14 | Rendering 8 / 8 samples
+Append frame 40
+Time: 00:03.76 (Saving: 00:00.13)
+
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:41 Mem:34.13M (Peak 50.92M) | Time:00:03.18 | Rendering 8 / 8 samples
+Append frame 41
+Time: 00:03.85 (Saving: 00:00.16)
+
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:42 Mem:34.13M (Peak 50.92M) | Time:00:03.17 | Rendering 8 / 8 samples
+Append frame 42
+Time: 00:03.80 (Saving: 00:00.14)
+
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:43 Mem:34.13M (Peak 50.92M) | Time:00:03.15 | Rendering 8 / 8 samples
+Append frame 43
+Time: 00:03.77 (Saving: 00:00.13)
+
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:44 Mem:34.13M (Peak 50.92M) | Time:00:03.19 | Rendering 8 / 8 samples
+Append frame 44
+Time: 00:03.80 (Saving: 00:00.13)
+
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:45 Mem:34.13M (Peak 50.92M) | Time:00:03.19 | Rendering 8 / 8 samples
+Append frame 45
+Time: 00:03.82 (Saving: 00:00.13)
+
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:46 Mem:34.13M (Peak 50.92M) | Time:00:03.15 | Rendering 8 / 8 samples
+Append frame 46
+Time: 00:03.78 (Saving: 00:00.13)
+
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:47 Mem:34.13M (Peak 50.92M) | Time:00:03.21 | Rendering 8 / 8 samples
+Append frame 47
+Time: 00:03.82 (Saving: 00:00.13)
+
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:48 Mem:34.13M (Peak 50.92M) | Time:00:03.14 | Rendering 8 / 8 samples
+Append frame 48
+Time: 00:03.77 (Saving: 00:00.14)
+
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:49 Mem:34.13M (Peak 50.92M) | Time:00:03.19 | Rendering 8 / 8 samples
+Append frame 49
+Time: 00:03.87 (Saving: 00:00.14)
+
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:50 Mem:34.13M (Peak 50.92M) | Time:00:03.20 | Rendering 8 / 8 samples
+Append frame 50
+Time: 00:03.82 (Saving: 00:00.13)
+
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:51 Mem:34.13M (Peak 50.92M) | Time:00:03.17 | Rendering 8 / 8 samples
+Append frame 51
+Time: 00:03.80 (Saving: 00:00.13)
+
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:52 Mem:34.13M (Peak 50.92M) | Time:00:03.22 | Rendering 8 / 8 samples
+Append frame 52
+Time: 00:03.84 (Saving: 00:00.13)
+
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:53 Mem:34.13M (Peak 50.92M) | Time:00:03.14 | Rendering 8 / 8 samples
+Append frame 53
+Time: 00:03.77 (Saving: 00:00.13)
+
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:54 Mem:34.13M (Peak 50.92M) | Time:00:03.21 | Rendering 8 / 8 samples
+Append frame 54
+Time: 00:03.84 (Saving: 00:00.14)
+
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:55 Mem:34.13M (Peak 50.92M) | Time:00:03.20 | Rendering 8 / 8 samples
+Append frame 55
+Time: 00:03.82 (Saving: 00:00.13)
+
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:56 Mem:34.13M (Peak 50.92M) | Time:00:03.14 | Rendering 8 / 8 samples
+Append frame 56
+Time: 00:03.75 (Saving: 00:00.13)
+
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:57 Mem:34.13M (Peak 50.92M) | Time:00:03.21 | Rendering 8 / 8 samples
+Append frame 57
+Time: 00:03.83 (Saving: 00:00.13)
+
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:58 Mem:34.13M (Peak 50.92M) | Time:00:03.19 | Rendering 8 / 8 samples
+Append frame 58
+Time: 00:03.81 (Saving: 00:00.13)
+
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:59 Mem:34.13M (Peak 50.92M) | Time:00:03.19 | Rendering 8 / 8 samples
+Append frame 59
+Time: 00:03.80 (Saving: 00:00.13)
+
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:60 Mem:34.13M (Peak 50.92M) | Time:00:03.23 | Rendering 8 / 8 samples
+Append frame 60
+Time: 00:03.85 (Saving: 00:00.13)
+
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:61 Mem:34.13M (Peak 50.92M) | Time:00:03.15 | Rendering 8 / 8 samples
+Append frame 61
+Time: 00:03.78 (Saving: 00:00.14)
+
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:62 Mem:34.13M (Peak 50.92M) | Time:00:03.17 | Rendering 8 / 8 samples
+Append frame 62
+Time: 00:03.86 (Saving: 00:00.14)
+
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:63 Mem:34.13M (Peak 50.92M) | Time:00:03.15 | Rendering 8 / 8 samples
+Append frame 63
+Time: 00:03.77 (Saving: 00:00.14)
+
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:64 Mem:34.13M (Peak 50.92M) | Time:00:03.17 | Rendering 8 / 8 samples
+Append frame 64
+Time: 00:03.79 (Saving: 00:00.13)
+
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:65 Mem:34.13M (Peak 50.92M) | Time:00:03.21 | Rendering 8 / 8 samples
+Append frame 65
+Time: 00:03.83 (Saving: 00:00.13)
+
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:66 Mem:34.13M (Peak 50.92M) | Time:00:03.15 | Rendering 8 / 8 samples
+Append frame 66
+Time: 00:03.77 (Saving: 00:00.13)
+
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:67 Mem:34.13M (Peak 50.92M) | Time:00:03.18 | Rendering 8 / 8 samples
+Append frame 67
+Time: 00:03.81 (Saving: 00:00.13)
+
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:68 Mem:34.13M (Peak 50.92M) | Time:00:03.20 | Rendering 8 / 8 samples
+Append frame 68
+Time: 00:03.81 (Saving: 00:00.13)
+
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:69 Mem:34.13M (Peak 50.92M) | Time:00:03.13 | Rendering 8 / 8 samples
+Append frame 69
+Time: 00:03.75 (Saving: 00:00.13)
+
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:70 Mem:34.13M (Peak 50.92M) | Time:00:03.26 | Rendering 8 / 8 samples
+Append frame 70
+Time: 00:03.89 (Saving: 00:00.13)
+
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:71 Mem:34.13M (Peak 50.92M) | Time:00:03.17 | Rendering 8 / 8 samples
+Append frame 71
+Time: 00:03.79 (Saving: 00:00.13)
+
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:72 Mem:34.13M (Peak 50.92M) | Time:00:03.15 | Rendering 8 / 8 samples
+Append frame 72
+Time: 00:03.77 (Saving: 00:00.13)
+
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:73 Mem:34.13M (Peak 50.92M) | Time:00:03.20 | Rendering 8 / 8 samples
+Append frame 73
+Time: 00:03.82 (Saving: 00:00.13)
+
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:74 Mem:34.13M (Peak 50.92M) | Time:00:03.16 | Rendering 8 / 8 samples
+Append frame 74
+Time: 00:03.78 (Saving: 00:00.13)
+
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:75 Mem:34.13M (Peak 50.92M) | Time:00:03.14 | Rendering 8 / 8 samples
+Append frame 75
+Time: 00:03.76 (Saving: 00:00.13)
+
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:76 Mem:34.13M (Peak 50.92M) | Time:00:03.18 | Rendering 8 / 8 samples
+Append frame 76
+Time: 00:03.80 (Saving: 00:00.13)
+
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Fixed stage
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Backdrop
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Orange launch sphere
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 01
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 02
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 03
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 04
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 05
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 06
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 07
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 08
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 09
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Domino 10
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Short title
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Vertical Short camera
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Large soft key
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Syncing Color rim
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:77 Mem:34.13M (Peak 50.92M) | Time:00:03.15 | Rendering 8 / 8 samples
+Append frame 77
+Time: 00:03.78 (Saving: 00:00.13)
+
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:78 Mem:34.13M (Peak 50.92M) | Time:00:03.20 | Rendering 8 / 8 samples
+Append frame 78
+Time: 00:03.82 (Saving: 00:00.13)
+
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:79 Mem:34.13M (Peak 50.92M) | Time:00:03.12 | Rendering 8 / 8 samples
+Append frame 79
+Time: 00:03.75 (Saving: 00:00.14)
+
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Fixed stage
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Backdrop
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Orange launch sphere
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 01
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 02
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 03
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 04
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 05
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 06
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 07
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 08
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 09
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 10
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Short title
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Vertical Short camera
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Large soft key
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Color rim
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Rendering 1 / 8 samples
+Fra:80 Mem:34.13M (Peak 50.92M) | Time:00:03.15 | Rendering 8 / 8 samples
+Append frame 80
+Time: 00:03.77 (Saving: 00:00.13)
+
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:81 Mem:34.13M (Peak 50.92M) | Time:00:03.19 | Rendering 8 / 8 samples
+Append frame 81
+Time: 00:03.82 (Saving: 00:00.13)
+
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:82 Mem:34.13M (Peak 50.92M) | Time:00:03.19 | Rendering 8 / 8 samples
+Append frame 82
+Time: 00:03.82 (Saving: 00:00.13)
+
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:83 Mem:34.13M (Peak 50.92M) | Time:00:03.23 | Rendering 8 / 8 samples
+Append frame 83
+Time: 00:03.90 (Saving: 00:00.16)
+
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:84 Mem:34.13M (Peak 50.92M) | Time:00:03.15 | Rendering 8 / 8 samples
+Append frame 84
+Time: 00:03.78 (Saving: 00:00.13)
+
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Fixed stage
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Backdrop
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Orange launch sphere
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 01
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 02
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 03
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 04
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 05
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 06
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 07
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 08
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 09
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 10
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Short title
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Vertical Short camera
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Large soft key
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Color rim
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:85 Mem:34.13M (Peak 50.92M) | Time:00:03.16 | Rendering 8 / 8 samples
+Append frame 85
+Time: 00:03.80 (Saving: 00:00.14)
+
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:86 Mem:34.13M (Peak 50.92M) | Time:00:03.26 | Rendering 8 / 8 samples
+Append frame 86
+Time: 00:03.87 (Saving: 00:00.13)
+
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:87 Mem:34.13M (Peak 50.92M) | Time:00:03.13 | Rendering 8 / 8 samples
+Append frame 87
+Time: 00:03.75 (Saving: 00:00.13)
+
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:88 Mem:34.13M (Peak 50.92M) | Time:00:03.14 | Rendering 8 / 8 samples
+Append frame 88
+Time: 00:03.77 (Saving: 00:00.13)
+
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:89 Mem:34.13M (Peak 50.92M) | Time:00:03.29 | Rendering 8 / 8 samples
+Append frame 89
+Time: 00:03.92 (Saving: 00:00.13)
+
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:90 Mem:34.13M (Peak 50.92M) | Time:00:03.20 | Rendering 8 / 8 samples
+Append frame 90
+Time: 00:03.83 (Saving: 00:00.14)
+
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:91 Mem:34.13M (Peak 50.92M) | Time:00:03.21 | Rendering 8 / 8 samples
+Append frame 91
+Time: 00:03.83 (Saving: 00:00.13)
+
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Fixed stage
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Backdrop
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Orange launch sphere
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 01
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 02
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 03
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 04
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 05
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 06
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 07
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 08
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 09
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 10
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Short title
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Vertical Short camera
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Large soft key
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:92 Mem:34.13M (Peak 50.92M) | Time:00:03.13 | Rendering 8 / 8 samples
+Append frame 92
+Time: 00:03.75 (Saving: 00:00.13)
+
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:93 Mem:34.13M (Peak 50.92M) | Time:00:03.15 | Rendering 8 / 8 samples
+Append frame 93
+Time: 00:03.78 (Saving: 00:00.14)
+
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:94 Mem:34.13M (Peak 50.92M) | Time:00:03.18 | Rendering 8 / 8 samples
+Append frame 94
+Time: 00:03.80 (Saving: 00:00.13)
+
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:95 Mem:34.13M (Peak 50.92M) | Time:00:03.10 | Rendering 8 / 8 samples
+Append frame 95
+Time: 00:03.72 (Saving: 00:00.13)
+
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:96 Mem:34.13M (Peak 50.92M) | Time:00:03.11 | Rendering 8 / 8 samples
+Append frame 96
+Time: 00:03.72 (Saving: 00:00.13)
+
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:97 Mem:34.13M (Peak 50.92M) | Time:00:03.15 | Rendering 8 / 8 samples
+Append frame 97
+Time: 00:03.76 (Saving: 00:00.13)
+
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Fixed stage
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Backdrop
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Orange launch sphere
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 01
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 02
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 03
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 04
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 05
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 06
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 07
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 08
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 09
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 10
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Short title
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Vertical Short camera
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Large soft key
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Color rim
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:98 Mem:34.13M (Peak 50.92M) | Time:00:03.11 | Rendering 8 / 8 samples
+Append frame 98
+Time: 00:03.74 (Saving: 00:00.13)
+
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:99 Mem:34.13M (Peak 50.92M) | Time:00:03.19 | Rendering 8 / 8 samples
+Append frame 99
+Time: 00:03.81 (Saving: 00:00.13)
+
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:100 Mem:34.13M (Peak 50.92M) | Time:00:03.13 | Rendering 8 / 8 samples
+Append frame 100
+Time: 00:03.76 (Saving: 00:00.13)
+
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Fixed stage
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Backdrop
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Orange launch sphere
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 01
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 02
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 03
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 04
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 05
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 06
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 07
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 08
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 09
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 10
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Short title
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Vertical Short camera
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Large soft key
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Color rim
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Rendering 1 / 8 samples
+Fra:101 Mem:34.13M (Peak 50.92M) | Time:00:03.12 | Rendering 8 / 8 samples
+Append frame 101
+Time: 00:03.74 (Saving: 00:00.13)
+
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:102 Mem:34.13M (Peak 50.92M) | Time:00:03.19 | Rendering 8 / 8 samples
+Append frame 102
+Time: 00:03.81 (Saving: 00:00.13)
+
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Fixed stage
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Backdrop
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Orange launch sphere
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 01
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 02
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 03
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 04
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 05
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 06
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 07
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 08
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 09
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 10
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Short title
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Vertical Short camera
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Large soft key
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Color rim
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:00.05 | Rendering 1 / 8 samples
+Fra:103 Mem:34.13M (Peak 50.92M) | Time:00:03.11 | Rendering 8 / 8 samples
+Append frame 103
+Time: 00:03.74 (Saving: 00:00.13)
+
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:104 Mem:34.13M (Peak 50.92M) | Time:00:03.12 | Rendering 8 / 8 samples
+Append frame 104
+Time: 00:03.76 (Saving: 00:00.14)
+
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:105 Mem:34.13M (Peak 50.92M) | Time:00:03.18 | Rendering 8 / 8 samples
+Append frame 105
+Time: 00:03.80 (Saving: 00:00.14)
+
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:106 Mem:34.13M (Peak 50.92M) | Time:00:03.11 | Rendering 8 / 8 samples
+Append frame 106
+Time: 00:03.73 (Saving: 00:00.13)
+
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:107 Mem:34.13M (Peak 50.92M) | Time:00:03.15 | Rendering 8 / 8 samples
+Append frame 107
+Time: 00:03.77 (Saving: 00:00.13)
+
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:108 Mem:34.13M (Peak 50.92M) | Time:00:03.12 | Rendering 8 / 8 samples
+Append frame 108
+Time: 00:03.74 (Saving: 00:00.13)
+
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:109 Mem:34.13M (Peak 50.92M) | Time:00:03.14 | Rendering 8 / 8 samples
+Append frame 109
+Time: 00:03.76 (Saving: 00:00.13)
+
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:110 Mem:34.13M (Peak 50.92M) | Time:00:03.16 | Rendering 8 / 8 samples
+Append frame 110
+Time: 00:03.79 (Saving: 00:00.13)
+
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:111 Mem:34.13M (Peak 50.92M) | Time:00:03.10 | Rendering 8 / 8 samples
+Append frame 111
+Time: 00:03.71 (Saving: 00:00.13)
+
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Fixed stage
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Backdrop
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Orange launch sphere
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 01
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 02
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 03
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 04
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 05
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 06
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 07
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 08
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 09
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Domino 10
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Short title
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Vertical Short camera
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Large soft key
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:00.03 | Syncing Color rim
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:112 Mem:34.13M (Peak 50.92M) | Time:00:03.10 | Rendering 8 / 8 samples
+Append frame 112
+Time: 00:03.73 (Saving: 00:00.14)
+
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:113 Mem:34.13M (Peak 50.92M) | Time:00:03.16 | Rendering 8 / 8 samples
+Append frame 113
+Time: 00:03.78 (Saving: 00:00.13)
+
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:114 Mem:34.13M (Peak 50.92M) | Time:00:03.12 | Rendering 8 / 8 samples
+Append frame 114
+Time: 00:03.74 (Saving: 00:00.14)
+
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:115 Mem:34.13M (Peak 50.92M) | Time:00:03.17 | Rendering 8 / 8 samples
+Append frame 115
+Time: 00:03.78 (Saving: 00:00.13)
+
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:116 Mem:34.13M (Peak 50.92M) | Time:00:03.13 | Rendering 8 / 8 samples
+Append frame 116
+Time: 00:03.75 (Saving: 00:00.14)
+
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:117 Mem:34.13M (Peak 50.92M) | Time:00:03.13 | Rendering 8 / 8 samples
+Append frame 117
+Time: 00:03.75 (Saving: 00:00.13)
+
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:118 Mem:34.13M (Peak 50.92M) | Time:00:03.19 | Rendering 8 / 8 samples
+Append frame 118
+Time: 00:03.82 (Saving: 00:00.13)
+
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:00.07 | Rendering 1 / 8 samples
+Fra:119 Mem:34.13M (Peak 50.92M) | Time:00:03.15 | Rendering 8 / 8 samples
+Append frame 119
+Time: 00:03.77 (Saving: 00:00.13)
+
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Fixed stage
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Backdrop
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Orange launch sphere
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 01
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 02
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 03
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 04
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 05
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 06
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 07
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 08
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 09
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Domino 10
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Short title
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Vertical Short camera
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Large soft key
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:00.04 | Syncing Color rim
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:00.06 | Rendering 1 / 8 samples
+Fra:120 Mem:34.13M (Peak 50.92M) | Time:00:03.13 | Rendering 8 / 8 samples
+Append frame 120
+Time: 00:03.76 (Saving: 00:00.14)
+
+
+Blender quit
+
+EGL Error (0x3001): EGL_NOT_INITIALIZED: EGL is not initialized, or could not be initialized, for the specified EGL display connection.
+
+Managed to successfully fallback to surfaceless EGL rendering!
+
+EGL Error (0x3009): EGL_BAD_MATCH: Arguments are inconsistent (for example, a valid context requires buffers not supplied by a valid surface).
+EGL Error (0x3001): EGL_NOT_INITIALIZED: EGL is not initialized, or could not be initialized, for the specified EGL display connection.
+
+Managed to successfully fallback to surfaceless EGL rendering!
+

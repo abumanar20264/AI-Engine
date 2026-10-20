@@ -1,0 +1,38 @@
+[{"stream_name":"stderr","time":11.154421729,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":11.154496049,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":11.154501619,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":11.154505409,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":11.902989606,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":11.903052536,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":11.903056336,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":11.903059507,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":13.396510523,"data":"AI-Engine Kaggle Blender runtime preflight\n"}
+,{"stream_name":"stdout","time":13.396551303,"data":"Timestamp UTC: 2026-10-20T15:14:18.509922+00:00\n"}
+,{"stream_name":"stdout","time":13.396555613,"data":"Python: 3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]\n"}
+,{"stream_name":"stdout","time":13.396559043,"data":"OS: Linux-6.18.48+-x86_64-with-glibc2.39\n"}
+,{"stream_name":"stdout","time":13.396562263,"data":"Architecture: x86_64\n"}
+,{"stream_name":"stdout","time":13.396565373,"data":"Working directory: /kaggle/working\n"}
+,{"stream_name":"stdout","time":13.396568563,"data":"Selected Kaggle environment: {'KAGGLE_KERNEL_RUN_TYPE': 'Batch'}\n"}
+,{"stream_name":"stdout","time":13.396571793,"data":"CPU logical count: 4\n"}
+,{"stream_name":"stdout","time":13.396574603,"data":"CPU model: ['AMD EPYC 7B12']\n"}
+,{"stream_name":"stdout","time":13.396577693,"data":"Memory: {'MemTotal': '32869448 kB', 'MemAvailable': '31715672 kB', 'SwapTotal': '0 kB', 'SwapFree': '0 kB'}\n"}
+,{"stream_name":"stdout","time":13.396581263,"data":"Working disk: {'total_bytes': 20957446144, 'used_bytes': 155648, 'free_bytes': 20940513280}\n"}
+,{"stream_name":"stdout","time":13.396584333,"data":"GPU query: {'status': 'nvidia-smi not available'}\n"}
+,{"stream_name":"stdout","time":13.396587363,"data":"TPU device paths: []\n"}
+,{"stream_name":"stdout","time":13.396593733,"data":"Overall status: BLOCKED\n"}
+,{"stream_name":"stdout","time":13.396596753,"data":"EEVEE render: None\n"}
+,{"stream_name":"stdout","time":13.396599263,"data":"Rigid-body simulation: None\n"}
+,{"stream_name":"stdout","time":13.396602223,"data":"Report: /kaggle/working/ai-engine-blender-runtime-preflight/preflight_report.json 3441 bytes\n"}
+,{"stream_name":"stdout","time":13.396605513,"data":"Artifact inventory:\n"}
+,{"stream_name":"stdout","time":13.396608743,"data":"{\"name\": \"environment.json\", \"sha256\": \"41b2d75b434e00fd2233bdb0f8e517b85c5bba3b06d70eb8e57b879cfe6684c6\", \"size_bytes\": 884}\n"}
+,{"stream_name":"stdout","time":13.396612653,"data":"{\"name\": \"temporary-write-read.txt\", \"sha256\": \"850fa61abd0b44e6f33ea54cfa9cb0b5872e38a2abac5bb3f5b49b6773b65b7d\", \"size_bytes\": 51}\n"}
+,{"stream_name":"stdout","time":13.396617463,"data":"Report SHA256: a670a24bac560a9a0b6746fe9a186d43bec6a631800cb016f004d3fcac003d78\n"}
+,{"stream_name":"stderr","time":16.562914359,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":16.562987418,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":16.793041759,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":16.793102109,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":17.642715443,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":17.706532836,"data":"[NbConvertApp] Writing 29569 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":20.509300739,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":21.127820662,"data":"[NbConvertApp] Writing 357786 bytes to __results__.html\n"}
+]

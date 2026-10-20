@@ -1,0 +1,174 @@
+{
+  "fps": 24,
+  "frame_count": 120,
+  "frame_end": 120,
+  "frame_start": 1,
+  "motion_samples": [
+    {
+      "ball_x": -2.8,
+      "domino_y_rotations": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frame": 1
+    },
+    {
+      "ball_x": -1.12,
+      "domino_y_rotations": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frame": 20
+    },
+    {
+      "ball_x": -0.88,
+      "domino_y_rotations": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frame": 24
+    },
+    {
+      "ball_x": -0.7957,
+      "domino_y_rotations": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frame": 30
+    },
+    {
+      "ball_x": -0.7098,
+      "domino_y_rotations": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frame": 42
+    },
+    {
+      "ball_x": -0.6441,
+      "domino_y_rotations": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frame": 60
+    },
+    {
+      "ball_x": -0.7657,
+      "domino_y_rotations": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frame": 84
+    },
+    {
+      "ball_x": -0.9438,
+      "domino_y_rotations": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frame": 108
+    },
+    {
+      "ball_x": -1.029,
+      "domino_y_rotations": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frame": 120
+    }
+  ],
+  "physics": {
+    "ball_end_x": -1.029,
+    "ball_start_x": -2.8,
+    "domino_count": 10,
+    "fixed_ground": "Fixed stage",
+    "maximum_domino_rotation_radians": 0.0,
+    "status": "FAILED"
+  },
+  "render": {
+    "status": "NOT_STARTED"
+  },
+  "render_engine": "BLENDER_EEVEE",
+  "resolution": [
+    720,
+    1280
+  ],
+  "scene_setup": {
+    "error": "RuntimeError: Rigid-body scene did not produce both ball travel and domino rotation.",
+    "status": "FAILED",
+    "traceback": "Traceback (most recent call last):\n  File \"/kaggle/working/ai-engine-satisfying-physics-short/short_scene.py\", line 213, in <module>\n    raise RuntimeError(\"Rigid-body scene did not produce both ball travel and domino rotation.\")\nRuntimeError: Rigid-body scene did not produce both ball travel and domino rotation.\n"
+  },
+  "title": "Satisfying Physics Test"
+}

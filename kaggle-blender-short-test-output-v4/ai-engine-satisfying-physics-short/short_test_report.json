@@ -1,0 +1,47 @@
+{
+  "artifacts": [],
+  "blender_executable": null,
+  "completed_utc": "2026-10-20T15:32:53.959564+00:00",
+  "elapsed_seconds": 0.115,
+  "ffmpeg_executable": null,
+  "ffprobe_executable": null,
+  "overall_status": "BLOCKED",
+  "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "stages": {
+    "apt_policy_initial": {
+      "command": [
+        "/usr/bin/apt-cache",
+        "-o",
+        "Dir::Etc::sourcelist=/kaggle/working/ai-engine-satisfying-physics-short/ubuntu-official.sources",
+        "-o",
+        "Dir::Etc::sourceparts=-",
+        "-o",
+        "Dir::State::lists=/kaggle/working/ai-engine-satisfying-physics-short/apt-state/lists",
+        "-o",
+        "APT::Get::List-Cleanup=0",
+        "policy",
+        "blender ffmpeg"
+      ],
+      "duration_seconds": 0.103,
+      "exit_code": 0,
+      "log": "apt_policy_initial.log",
+      "output_tail": "COMMAND: [\"/usr/bin/apt-cache\", \"-o\", \"Dir::Etc::sourcelist=/kaggle/working/ai-engine-satisfying-physics-short/ubuntu-official.sources\", \"-o\", \"Dir::Etc::sourceparts=-\", \"-o\", \"Dir::State::lists=/kaggle/working/ai-engine-satisfying-physics-short/apt-state/lists\", \"-o\", \"APT::Get::List-Cleanup=0\", \"policy\", \"blender ffmpeg\"]\nEXIT_CODE: 0\n",
+      "status": "COMPLETED"
+    },
+    "initial_tool_detection": {
+      "blender": null,
+      "ffmpeg": "/usr/bin/ffmpeg",
+      "ffprobe": "/usr/bin/ffprobe",
+      "status": "COMPLETED"
+    },
+    "runtime_tool_installation": {
+      "policy_hosts": [],
+      "reason": "No Blender/ffmpeg candidates verified from official Ubuntu package hosts.",
+      "source_list": "/kaggle/working/ai-engine-satisfying-physics-short/ubuntu-official.sources",
+      "status": "BLOCKED"
+    }
+  },
+  "started_utc": "2026-10-20T15:32:53.844534+00:00",
+  "title": "Satisfying Physics Test"
+}

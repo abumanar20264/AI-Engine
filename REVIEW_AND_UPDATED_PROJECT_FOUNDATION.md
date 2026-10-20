@@ -1,7 +1,8 @@
 # AI-Engine — Visual Physics Experiments Channel Product Specification
 
 **Document ID:** AI-ENGINE-PRODUCT-VISUAL-PHYSICS  
-**Version:** 1.3.0-audit-register-linked  
+**Version:** 1.3.1-engine-status-aligned
+
 **Status:** EDITORIAL DIRECTION APPROVED — PRODUCTION SYSTEM NOT IMPLEMENTED  
 **Decision date:** 2026-10-20  
 **Repository:** https://github.com/abumanar20264/AI-Engine  
@@ -446,7 +447,7 @@ Blender is approved as the sole primary 3D production engine by the decision rec
 
 ### 8.2 Approved engine and validation criteria
 
-Blender is the approved primary engine. Do not restart broad engine comparisons unless Blender fails a documented mandatory requirement after reasonable remediation. Validate the chosen Blender version and initial EEVEE renderer using a minimal scene in the actual Kaggle runtime. Record:
+Blender is the approved primary engine. EEVEE remains provisional until it passes a minimal compatibility test in the actual Kaggle runtime. Do not investigate or compare alternative engines unless Blender fails a documented mandatory requirement after reasonable remediation and separate approval is obtained. Record:
 - Physical behavior and stability for the intended rigid-body scene.
 - Scripted scene creation and background execution.
 - Ability to render vertical output.
@@ -767,7 +768,7 @@ Reject or revise if:
 
 ## 16. Open questions that must remain open until tested
 
-- Which visual simulation engine best balances fidelity, stability, scripting, and render time?
+- Can the pinned Blender version and provisional EEVEE satisfy the required workflow in the actual Kaggle runtime?
 - Can the intended visual identity be created reliably on the available local hardware?
 - Does a small amount of text improve comprehension or interrupt the visual experience?
 - Which pillar produces repeatable audience interest rather than isolated spikes?
@@ -785,12 +786,12 @@ Do not answer these questions by assumption. Use recorded tests and current sour
 1. Keep the three-pillar channel direction as the sole approved editorial product.
 2. Do not resume the earlier unrelated niche shortlist in this foundation document.
 3. Choose three candidate concepts—one from each pillar—and score them before creating any production code.
-4. Benchmark one minimal simulation scene on the actual available hardware.
+4. Run the minimal Blender/EEVEE compatibility test in the actual Kaggle runtime before production benchmarking.
 5. Record production time, failures, and visual defects.
 6. Create three distinct prototype Shorts with a comparable quality standard.
 7. Review the prototypes against Section 15 before publishing.
 8. If publishing is approved, define the measurement window and collect comparable YouTube Studio data.
-9. Do not build a generalized or fully automated engine until the prototype and repeatability gates pass.
+9. Do not build a generalized or fully automated production pipeline until the prototype and repeatability gates pass.
 10. Revisit long-form only after evidence indicates which premise patterns merit expansion.
 
 ---
@@ -962,7 +963,7 @@ Do not label competitive research complete until the evidence ledger includes ex
 
 The production workflow is now specified in [PRODUCTION_OPERATIONS_SPECIFICATION.md](./PRODUCTION_OPERATIONS_SPECIFICATION.md). That SOP defines the required production records, stages, exit criteria, simulation tests, render/audio baselines, release QA, and benchmark gate. It does not imply the production system has been implemented or validated on hardware.
 
-Before choosing a production engine or building automation:
+Before building production automation:
 
 1. Prepare one concept card per pillar using the same required fields.
 2. Select the intended visual fidelity mode for each concept.
@@ -973,7 +974,7 @@ Before choosing a production engine or building automation:
 7. Revise the visual specification based on observed failures and reviewer feedback.
 8. Keep market-performance claims open until a traceable competitor study and, later, a controlled publishing test provide evidence.
 
-These actions refine the existing pilot gates; they do not authorize bulk production, purchases, engine selection, or automated publishing.
+These actions refine the existing pilot gates; they do not authorize bulk production, purchases, alternative-engine investigation or changes, or automated publishing. Any alternative-engine investigation requires a documented Blender mandatory-requirement failure and separate approval.
 
 
 ## Appendix A — Primary policy and technical references
@@ -996,6 +997,10 @@ These sources document policies or tools. They do not validate this channel’s 
 ### 1.3.0 — 2026-10-20
 - Linked the section-by-section audit register and its empirical test/decision list.
 
+### 1.3.1 — 2026-10-20
+- Aligned the open questions and next steps with Blender's approved status and EEVEE's pending Kaggle compatibility test.
+- Clarified that investigating or changing to another engine requires a documented Blender mandatory-requirement failure and separate approval.
+
 ### 1.2.0 — 2026-10-20
 - Linked the dedicated production operations SOP as the authoritative execution procedure.
 - Clarified that detailed production documentation does not establish technical feasibility or measured production capacity.
@@ -1004,7 +1009,7 @@ These sources document policies or tools. They do not validate this channel’s 
 - Added operational visual-quality specifications for the three pillars, with clear distinctions between stylized procedural scenes, plausible simulations, and evidence-oriented experiments.
 - Added testable hook/payoff hypotheses, simulation QA gates, an operational originality standard, and an evidence/claim-control framework.
 - Explicitly downgraded unsupported numerical and algorithmic claims from the research response to unverified hypotheses.
-- Kept market demand, performance, monetization, rendering targets, and engine choice unvalidated pending evidence and prototype tests.
+- At version 1.1.0, kept market demand, performance, monetization, rendering targets, and engine choice unvalidated pending evidence and prototype tests.
 
 ### 1.0.0 — 2026-10-20
 - Replaced the previous multi-niche candidate list with one approved editorial product: Visual Physics Experiments.

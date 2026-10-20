@@ -1,5 +1,6 @@
 # AI-Engine — Document Audit and Gap Register
-**Version:** 1.0.0  
+**Version:** 1.0.1
+
 **Audit date:** 2026-10-20  
 **Scope:** Current repository documentation; editorial product, production workflow, technical feasibility controls, evidence quality, and release process.  
 **Audited files:** `README.md`, `REVIEW_AND_UPDATED_PROJECT_FOUNDATION.md`, `PRODUCTION_OPERATIONS_SPECIFICATION.md`.
@@ -31,7 +32,7 @@ Statuses:
 | 5. Shorts specification | Vertical format, flexible structure, sound-off intent, and quality checks are documented. The 20–45 second duration remains a hypothesis, not a platform rule. | DOCUMENTED / TEST REQUIRED |
 | 6. Long-form expansion | Entry conditions and formats require a coherent question, progression, and additional value. | DOCUMENTED; expansion remains blocked pending Shorts evidence |
 | 7. Production workflow | Original workflow described the major stages but lacked detailed exit criteria, defect severity, repeatability tests, and templates. | Supplemented by the Production Operations Specification |
-| 8. Technical architecture | Logical module boundaries and engine-selection criteria are present; no engine is preselected. | DOCUMENTED; benchmark required |
+| 8. Technical architecture | Blender is the approved primary engine; EEVEE remains provisional pending a compatibility test in the actual Kaggle runtime. | DOCUMENTED / TEST REQUIRED; alternative-engine investigation requires a documented Blender mandatory-requirement failure and separate approval |
 | 9. Rights and monetization risk | Originality, licenses, audience designation, and policy risks are identified. Eligibility cannot be guaranteed in advance. | DOCUMENTED; verify current policy before release |
 | 10. Competitive research | The required evidence ledger and limits on inference are defined. README examples were not sufficiently traceable. | Evidence standard documented; actual competitor study remains INCOMPLETE |
 | 11. Pilot and decision gates | Concept, technical, three-format pilot, publishing, repeatability, and long-form gates are defined. | DOCUMENTED / TEST REQUIRED |
@@ -39,7 +40,7 @@ Statuses:
 | 13. Risks | Main editorial, technical, rights, and operational risks have mitigations. | DOCUMENTED; update from real failures |
 | 14. Example concepts | Examples clarify intended product shape but are not production-approved scripts. | DOCUMENTED; concept cards still require approval |
 | 15. Acceptance criteria | Mandatory release checks and rejection conditions are listed. | DOCUMENTED; implemented through SOP release checklist |
-| 16. Open questions | Engine, hardware, visual identity, audience response, production time, and monetization remain open. | OPEN BY DESIGN; each has a benchmark, test, or decision path |
+| 16. Open questions | Blender/EEVEE Kaggle compatibility, hardware, visual identity, audience response, production time, and monetization remain open. Engine selection is decided. | OPEN BY DESIGN for unvalidated items; Blender compatibility test required |
 | 17. Immediate next actions | Calls for concepts and a minimal prototype before automation. | Linked to the detailed SOP; production is still not authorized by documentation alone |
 | 18. Visual quality | Shared visual rules, pillar differences, fidelity modes, and camera/rendering rules are defined. | DOCUMENTED / TEST REQUIRED |
 | 19. Hook/payoff patterns | Patterns are labeled as hypotheses, not algorithmic facts. | DOCUMENTED / TEST REQUIRED |
@@ -69,7 +70,7 @@ Statuses:
 | 12. Assets and licenses | Asset/source/license register and blocked status for unclear rights | DOCUMENTED |
 | 13. File organization | Proposed layout and stable naming/version rules | DOCUMENTED; adapt only with equivalent traceability |
 | 14. Production metrics | Active labor separated from compute/render time; output measurements | DOCUMENTED / TEST REQUIRED |
-| 15. Engine selection | Common benchmark and evidence-backed scorecard | DOCUMENTED; engine selection remains OPEN BY DESIGN |
+| 15. Approved engine and compatibility gate | Blender is approved; EEVEE/runtime compatibility must be tested in Kaggle. | DOCUMENTED / TEST REQUIRED; do not investigate alternatives without a documented Blender mandatory-requirement failure and separate approval |
 | 16. Recovery | Checkpoints, logs, durable storage, reproducibility, secure handling | DOCUMENTED / TEST REQUIRED |
 | 17. Pilot/scale-up | First proof and explicit conditions before scaling | DOCUMENTED; production capacity not yet measured |
 | 18. Long-form | Entry gate and planning package | DOCUMENTED; remains blocked pending evidence |
@@ -94,7 +95,7 @@ These items are not documentation defects; they cannot be settled accurately wit
 
 | ID | Unknown | Required test/evidence | Blocks |
 |---|---|---|---|
-| T-01 | Best simulation/renderer stack | Run the same benchmark scene across feasible candidates and record quality, time, memory, failures, licensing, and maintenance burden | Engine selection |
+| T-01 | Blender/EEVEE Kaggle compatibility | Run the minimal compatibility test with the pinned Blender version in the actual Kaggle runtime; record renderer initialization, output integrity, logs, resources, and failures | Kaggle compatibility and renderer feasibility |
 | T-02 | Actual hardware capacity | Record machine/GPU, driver/runtime, memory, software versions, and successful preview/final output | Final quality and cadence |
 | T-03 | Per-video effort/cost | Time concepting, scene work, debugging, simulation, rendering, audio, edit, and QA separately | Publishing cadence and scale-up |
 | T-04 | Simulation repeatability | Repeat the benchmark and inspect critical collisions, resting states, constraints, and output integrity | Technical pilot acceptance |
@@ -120,13 +121,17 @@ The following remain release blockers:
 
 **Documentation:** Production workflow is specified in a dedicated SOP and linked from the foundation. The README has been corrected to avoid presenting unverified market assertions as established findings.
 
-**Implementation:** Not started by this documentation pass. No engine was selected, no production code was written, no model was downloaded, no simulation was run, and no video was rendered.
+**Implementation:** Not started by this documentation pass. Blender is approved, but no Kaggle compatibility test was run, no production code was written, no model was downloaded, no simulation was run, and no video was rendered.
 
-**Next allowed technical step:** Run the minimal benchmark specified in Section 15 of the Production Operations Specification, after confirming the actual available hardware and environment. Do not scale beyond the prototype until the gates pass.
+**Next allowed technical step:** Run the minimal Blender compatibility test specified in Section 15 of the Production Operations Specification in the actual Kaggle runtime. Do not investigate alternatives unless Blender fails a documented mandatory requirement and separate approval is obtained; do not scale beyond the prototype until the gates pass.
 
 **Research limitation:** This audit did not create the missing competitor evidence ledger. That requires a separate source-based research pass; it must not be implied by the production SOP.
 
 ## Change log
+
+### 1.0.1 — 2026-10-20
+- Reconciled engine status with the approved Blender decision and the pending EEVEE/Kaggle compatibility test.
+- Replaced stale engine-selection comparisons with a scoped Blender compatibility test and an approval gate for any alternative-engine investigation.
 
 ### 1.0.0 — 2026-10-20
 - Audited each section of the product foundation and production SOP.

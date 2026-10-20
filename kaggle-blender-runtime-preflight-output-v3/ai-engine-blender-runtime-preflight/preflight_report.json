@@ -1,0 +1,432 @@
+{
+  "artifacts": [
+    {
+      "name": "apt-state/lists/archive.ubuntu.com_ubuntu_dists_noble-updates_InRelease",
+      "sha256": "4fd8f772d483cb011bf899a9e1a20c38c7dec90fbc21bf5083d4ada6b7d9120b",
+      "size_bytes": 126125
+    },
+    {
+      "name": "apt-state/lists/archive.ubuntu.com_ubuntu_dists_noble-updates_main_binary-amd64_Packages.lz4",
+      "sha256": "0860e2081a15a0c1583796bbf607b423d7b3666936940b44e5060f4160dee93a",
+      "size_bytes": 2897437
+    },
+    {
+      "name": "apt-state/lists/archive.ubuntu.com_ubuntu_dists_noble-updates_universe_binary-amd64_Packages.lz4",
+      "sha256": "36b2e1f2b1219332371c19c9614e84922988bc225b17f1377a9b1a80987a4399",
+      "size_bytes": 3621458
+    },
+    {
+      "name": "apt-state/lists/archive.ubuntu.com_ubuntu_dists_noble_InRelease",
+      "sha256": "cdb2f31d809f589719a53c6ad15f255b27569c4059542ada282aaa21b8e164b0",
+      "size_bytes": 255850
+    },
+    {
+      "name": "apt-state/lists/archive.ubuntu.com_ubuntu_dists_noble_main_binary-amd64_Packages.lz4",
+      "sha256": "5440959b1be383eee0871228f9a97a15f50e5ecf8ac726f3aa53b2c6903bcdf2",
+      "size_bytes": 2950155
+    },
+    {
+      "name": "apt-state/lists/archive.ubuntu.com_ubuntu_dists_noble_universe_binary-amd64_Packages.lz4",
+      "sha256": "0aa71c66135f20a4aa760fa788a42846a41c8628b6720d82f768b51b5c2d3895",
+      "size_bytes": 31234980
+    },
+    {
+      "name": "apt-state/lists/lock",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0
+    },
+    {
+      "name": "apt-state/lists/security.ubuntu.com_ubuntu_dists_noble-security_InRelease",
+      "sha256": "3e807a1db9531e3815e6fa04e16b98e3d0499d925766c8fe398e9101b8bd4c3f",
+      "size_bytes": 126127
+    },
+    {
+      "name": "apt-state/lists/security.ubuntu.com_ubuntu_dists_noble-security_main_binary-amd64_Packages.lz4",
+      "sha256": "e62ab6fdd5bc6f16bd4a6ecabc6d87dd5e62d572c9e0f7ae061f8e8429431a9a",
+      "size_bytes": 2364118
+    },
+    {
+      "name": "apt-state/lists/security.ubuntu.com_ubuntu_dists_noble-security_universe_binary-amd64_Packages.lz4",
+      "sha256": "b86e3f9ca4c91a7ac768702fcc7c3761018dd05a09badbcd251888fd7518355e",
+      "size_bytes": 2584865
+    },
+    {
+      "name": "apt_blender_policy_after_update.log",
+      "sha256": "d267741ba56d04c65506909f8e5d19849348720a02a8795c4d68497c33557d1c",
+      "size_bytes": 518
+    },
+    {
+      "name": "apt_blender_policy_initial.log",
+      "sha256": "75c547f10ccb531647feeeefe3da1bf7d94073570a44f6648d3521f7864af5e2",
+      "size_bytes": 334
+    },
+    {
+      "name": "apt_update.log",
+      "sha256": "38c9172ea34f1f9af224a0315e7c938f93a7119848b89941c48ddf4f1d95d4a8",
+      "size_bytes": 1103
+    },
+    {
+      "name": "blender_background_startup.log",
+      "sha256": "259c9e1a09483337bc8f0865d54015db9e08a19647710fbb6fca150b0e61580a",
+      "size_bytes": 267
+    },
+    {
+      "name": "blender_background_version.log",
+      "sha256": "629bd426cf6eda11b5b9b6823486cf1cac4e4b6f7b1d0635c8e1dd38ffeacb7c",
+      "size_bytes": 100
+    },
+    {
+      "name": "blender_install_command.log",
+      "sha256": "e166f403751950c7f88030b7d98caeadfcf829084bd83cbb9a262d219f95e345",
+      "size_bytes": 18261
+    },
+    {
+      "name": "blender_scene_render_and_simulation.log",
+      "sha256": "ff3583a5f423a3270675e3511b420a783ce0a2834e2c88ebcd112d7db521fa50",
+      "size_bytes": 1459
+    },
+    {
+      "name": "eevee_preflight.png",
+      "sha256": "58117193457999b90ef588ad0adf6d6ae9462c8e7884fceeefeb94357f874d74",
+      "size_bytes": 10651
+    },
+    {
+      "name": "environment.json",
+      "sha256": "70f2579bba093d22569d2ba9fbd95e60d28d5665ab962de90f2b082b30c3ac6a",
+      "size_bytes": 901
+    },
+    {
+      "name": "probe_eevee.py",
+      "sha256": "dcdcfab7ba9b3e2c68675cbf43e3f88a7676e577b920d69ddfe0286f2bd0ecd9",
+      "size_bytes": 427
+    },
+    {
+      "name": "scene_test.json",
+      "sha256": "1f86c97f137047ce74a21b2d2e4738b0e4fee5b13eb89b66e4c0823aeb61c8f6",
+      "size_bytes": 989
+    },
+    {
+      "name": "scene_test.py",
+      "sha256": "833527e2e40aeae92aeacad45752d0bb1c2b149a692a2c4c2db864602f1370e4",
+      "size_bytes": 4792
+    },
+    {
+      "name": "temporary-write-read.txt",
+      "sha256": "850fa61abd0b44e6f33ea54cfa9cb0b5872e38a2abac5bb3f5b49b6773b65b7d",
+      "size_bytes": 51
+    },
+    {
+      "name": "ubuntu-official.sources",
+      "sha256": "a109f34b0a3ec4aaef05bfe03b0b48bbfef0f0823f167d5a79659d41009135be",
+      "size_bytes": 323
+    }
+  ],
+  "blender_executable": "/usr/bin/blender",
+  "completed_utc": "2026-10-20T15:21:14.789425+00:00",
+  "overall_status": "COMPLETED",
+  "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "scene_test": {
+    "render": {
+      "engine": "BLENDER_EEVEE",
+      "path": "/kaggle/working/ai-engine-blender-runtime-preflight/eevee_preflight.png",
+      "size_bytes": 10651,
+      "status": "COMPLETED"
+    },
+    "simulation": {
+      "frames_simulated": 48,
+      "ground": "Ground",
+      "objects": [
+        "DropCube1",
+        "DropCube2",
+        "DropCube3"
+      ],
+      "samples": [
+        {
+          "cube_z": [
+            1.1,
+            2.25,
+            3.4
+          ],
+          "frame": 1
+        },
+        {
+          "cube_z": [
+            0.39909,
+            1.20258,
+            2.35258
+          ],
+          "frame": 12
+        },
+        {
+          "cube_z": [
+            0.4,
+            1.19996,
+            1.99991
+          ],
+          "frame": 24
+        },
+        {
+          "cube_z": [
+            0.4,
+            1.19995,
+            1.9999
+          ],
+          "frame": 36
+        },
+        {
+          "cube_z": [
+            0.4,
+            1.19995,
+            1.9999
+          ],
+          "frame": 48
+        }
+      ],
+      "status": "COMPLETED"
+    }
+  },
+  "stages": {
+    "apt_blender_policy_after_update": {
+      "command": [
+        "/usr/bin/apt-cache",
+        "-o",
+        "Dir::Etc::sourcelist=/kaggle/working/ai-engine-blender-runtime-preflight/ubuntu-official.sources",
+        "-o",
+        "Dir::Etc::sourceparts=-",
+        "-o",
+        "Dir::State::lists=/kaggle/working/ai-engine-blender-runtime-preflight/apt-state/lists",
+        "-o",
+        "APT::Get::List-Cleanup=0",
+        "policy",
+        "blender"
+      ],
+      "duration_seconds": 1.146,
+      "exit_code": 0,
+      "log": "apt_blender_policy_after_update.log",
+      "output_tail": "COMMAND: [\"/usr/bin/apt-cache\", \"-o\", \"Dir::Etc::sourcelist=/kaggle/working/ai-engine-blender-runtime-preflight/ubuntu-official.sources\", \"-o\", \"Dir::Etc::sourceparts=-\", \"-o\", \"Dir::State::lists=/kaggle/working/ai-engine-blender-runtime-preflight/apt-state/lists\", \"-o\", \"APT::Get::List-Cleanup=0\", \"policy\", \"blender\"]\nEXIT_CODE: 0\nblender:\n  Installed: (none)\n  Candidate: 4.0.2+dfsg-1ubuntu8\n  Version table:\n     4.0.2+dfsg-1ubuntu8 500\n        500 https://archive.ubuntu.com/ubuntu noble/universe amd64 Packages\n",
+      "status": "COMPLETED"
+    },
+    "apt_blender_policy_initial": {
+      "command": [
+        "/usr/bin/apt-cache",
+        "-o",
+        "Dir::Etc::sourcelist=/kaggle/working/ai-engine-blender-runtime-preflight/ubuntu-official.sources",
+        "-o",
+        "Dir::Etc::sourceparts=-",
+        "-o",
+        "Dir::State::lists=/kaggle/working/ai-engine-blender-runtime-preflight/apt-state/lists",
+        "-o",
+        "APT::Get::List-Cleanup=0",
+        "policy",
+        "blender"
+      ],
+      "duration_seconds": 0.143,
+      "exit_code": 0,
+      "log": "apt_blender_policy_initial.log",
+      "output_tail": "COMMAND: [\"/usr/bin/apt-cache\", \"-o\", \"Dir::Etc::sourcelist=/kaggle/working/ai-engine-blender-runtime-preflight/ubuntu-official.sources\", \"-o\", \"Dir::Etc::sourceparts=-\", \"-o\", \"Dir::State::lists=/kaggle/working/ai-engine-blender-runtime-preflight/apt-state/lists\", \"-o\", \"APT::Get::List-Cleanup=0\", \"policy\", \"blender\"]\nEXIT_CODE: 0\n",
+      "status": "COMPLETED"
+    },
+    "apt_update": {
+      "command": [
+        "/usr/bin/apt-get",
+        "-o",
+        "Dir::Etc::sourcelist=/kaggle/working/ai-engine-blender-runtime-preflight/ubuntu-official.sources",
+        "-o",
+        "Dir::Etc::sourceparts=-",
+        "-o",
+        "Dir::State::lists=/kaggle/working/ai-engine-blender-runtime-preflight/apt-state/lists",
+        "-o",
+        "APT::Get::List-Cleanup=0",
+        "update"
+      ],
+      "duration_seconds": 5.556,
+      "exit_code": 0,
+      "log": "apt_update.log",
+      "output_tail": "COMMAND: [\"/usr/bin/apt-get\", \"-o\", \"Dir::Etc::sourcelist=/kaggle/working/ai-engine-blender-runtime-preflight/ubuntu-official.sources\", \"-o\", \"Dir::Etc::sourceparts=-\", \"-o\", \"Dir::State::lists=/kaggle/working/ai-engine-blender-runtime-preflight/apt-state/lists\", \"-o\", \"APT::Get::List-Cleanup=0\", \"update\"]\nEXIT_CODE: 0\nGet:1 https://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]\nGet:2 https://archive.ubuntu.com/ubuntu noble InRelease [256 kB]\nGet:3 https://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1,549 kB]\nGet:4 https://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1,410 kB]\nGet:5 https://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]\nGet:6 https://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]\nGet:7 https://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1,808 kB]\nGet:8 https://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2,168 kB]\nGet:9 https://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1,729 kB]\nFetched 28.5 MB in 4s (6,728 kB/s)\nReading package lists...\n",
+      "status": "COMPLETED"
+    },
+    "blender_background_startup": {
+      "command": [
+        "/usr/bin/blender",
+        "--background",
+        "--python",
+        "/kaggle/working/ai-engine-blender-runtime-preflight/probe_eevee.py"
+      ],
+      "duration_seconds": 2.053,
+      "exit_code": 0,
+      "log": "blender_background_startup.log",
+      "output_tail": "COMMAND: [\"/usr/bin/blender\", \"--background\", \"--python\", \"/kaggle/working/ai-engine-blender-runtime-preflight/probe_eevee.py\"]\nEXIT_CODE: 0\nEEVEE_ENGINE_PROBE={\"available\": true, \"selected\": \"BLENDER_EEVEE\", \"engines\": [\"BLENDER_EEVEE\"]}\nBlender 4.0.2\n\nBlender quit\n",
+      "status": "COMPLETED"
+    },
+    "blender_background_version": {
+      "command": [
+        "/usr/bin/blender",
+        "--background",
+        "--version"
+      ],
+      "duration_seconds": 0.765,
+      "exit_code": 0,
+      "log": "blender_background_version.log",
+      "output_tail": "COMMAND: [\"/usr/bin/blender\", \"--background\", \"--version\"]\nEXIT_CODE: 0\nBlender 4.0.2\nBlender 4.0.2\n",
+      "status": "COMPLETED"
+    },
+    "blender_detection": {
+      "apt_sources": {
+        "codename": "noble",
+        "configured_hosts_not_used": [
+          "archive.ubuntu.com",
+          "cli.github.com",
+          "cloud.r-project.org",
+          "ppa.launchpadcontent.net",
+          "r2u.stat.illinois.edu",
+          "security.ubuntu.com"
+        ],
+        "distribution": "ubuntu",
+        "distribution_and_keyring_verified": true,
+        "isolated_sources": [
+          "archive.ubuntu.com",
+          "security.ubuntu.com"
+        ],
+        "signing_keyring": "/usr/share/keyrings/ubuntu-archive-keyring.gpg"
+      },
+      "path": null,
+      "path_after_install_attempt": "/usr/bin/blender",
+      "status": "COMPLETED"
+    },
+    "blender_install": {
+      "candidate_available": true,
+      "command": [
+        "/usr/bin/apt-get",
+        "-o",
+        "Dir::Etc::sourcelist=/kaggle/working/ai-engine-blender-runtime-preflight/ubuntu-official.sources",
+        "-o",
+        "Dir::Etc::sourceparts=-",
+        "-o",
+        "Dir::State::lists=/kaggle/working/ai-engine-blender-runtime-preflight/apt-state/lists",
+        "-o",
+        "APT::Get::List-Cleanup=0",
+        "install",
+        "-y",
+        "--no-install-recommends",
+        "blender"
+      ],
+      "configured_third_party_sources_were_not_used": true,
+      "duration_seconds": 27.578,
+      "exit_code": 0,
+      "log": "blender_install_command.log",
+      "official_distribution_source_verified": true,
+      "output_tail": "_amd64.deb ...\nUnpacking libspnav0 (1.1-2) ...\nSelecting previously unselected package blender.\nPreparing to unpack .../37-blender_4.0.2+dfsg-1ubuntu8_amd64.deb ...\nUnpacking blender (4.0.2+dfsg-1ubuntu8) ...\nSetting up libtbbmalloc2:amd64 (2021.11.0-2ubuntu2) ...\nSetting up liblog4cplus-2.0.5t64:amd64 (2.0.8-1.1ubuntu3) ...\nSetting up libfftw3-single3:amd64 (3.3.10-1ubuntu3) ...\nSetting up libcharls2:amd64 (2.4.2-2build2) ...\nSetting up libdcmtk17t64:amd64 (3.6.7-9.1build4) ...\nSetting up libyaml-cpp0.8:amd64 (0.8.0+dfsg-6build1) ...\nSetting up libboost-thread1.83.0:amd64 (1.83.0-2.1ubuntu3.2) ...\nSetting up libjemalloc2:amd64 (5.3.0-2build1) ...\nSetting up libpugixml1v5:amd64 (1.14-0.1build1) ...\nSetting up liborc-0.4-0t64:amd64 (1:0.4.38-1ubuntu0.1) ...\nSetting up libtbbbind-2-5:amd64 (2021.11.0-2ubuntu2) ...\nSetting up libboost-iostreams1.83.0:amd64 (1.83.0-2.1ubuntu3.2) ...\nSetting up fonts-dejavu-mono (2.37-8) ...\nSetting up fonts-dejavu-core (2.37-8) ...\nSetting up libsocket++1:amd64 (1.12.13+git20131030.5d039ba-1build1) ...\nSetting up libosdcpu3.5.0t64:amd64 (3.5.0-2.1build1) ...\nSetting up fonts-dejavu-extra (2.37-8) ...\nSetting up blender-data (4.0.2+dfsg-1ubuntu8) ...\nSetting up libpystring0:amd64 (1.1.4-1build1) ...\nSetting up libgphoto2-port12t64:amd64 (2.5.31-2.1ubuntu1.1) ...\nSetting up libspnav0 (1.1-2) ...\nSetting up libpotrace0:amd64 (1.16-2build1) ...\nSetting up libgdcm3.0t64:amd64 (3.0.22-2.1ubuntu1) ...\nSetting up libosdgpu3.5.0t64:amd64 (3.5.0-2.1build1) ...\nSetting up fonts-dejavu (2.37-8) ...\nSetting up libboost-locale1.83.0:amd64 (1.83.0-2.1ubuntu3.2) ...\nSetting up libgstreamer-plugins-base1.0-0:amd64 (1.24.2-1ubuntu0.5) ...\nSetting up libtbb12:amd64 (2021.11.0-2ubuntu2) ...\nSetting up libgphoto2-6t64:amd64 (2.5.31-2.1ubuntu1.1) ...\nNo diversion 'diversion of /lib/udev/hwdb.d/20-libgphoto2-6.hwdb to /lib/udev/hwdb.d/20-libgphoto2-6.hwdb.usr-is-merged by usr-is-merged', none removed.\nNo diversion 'diversion of /lib/udev/rules.d/60-libgphoto2-6.rules to /lib/udev/rules.d/60-libgphoto2-6.rules.usr-is-merged by usr-is-merged', none removed.\nSetting up libopencolorio2.1t64:amd64 (2.1.3+dfsg-1.1build3) ...\nSetting up libembree4-4:amd64 (4.3.0+dfsg-2) ...\nSetting up libopencv-core406t64:amd64 (4.6.0+dfsg-13.1ubuntu1) ...\nSetting up libopenvdb10.0t64:amd64 (10.0.1-2.1build5) ...\nSetting up libopencv-imgproc406t64:amd64 (4.6.0+dfsg-13.1ubuntu1) ...\nSetting up libopencv-imgcodecs406t64:amd64 (4.6.0+dfsg-13.1ubuntu1) ...\nSetting up libopencv-videoio406t64:amd64 (4.6.0+dfsg-13.1ubuntu1) ...\nSetting up libopenimageio2.4t64:amd64 (2.4.17.0+dfsg-1.1build4) ...\nSetting up blender (4.0.2+dfsg-1ubuntu8) ...\nProcessing triggers for hicolor-icon-theme (0.17-2) ...\nProcessing triggers for libc-bin (2.39-0ubuntu8.9) ...\n/sbin/ldconfig.real: /usr/local/lib/libtbbbind_2_5.so.3 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libur_adapter_level_zero.so.0 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtcm.so.1 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtbbbind.so.3 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libur_adapter_level_zero_v2.so.0 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtbbbind_2_0.so.3 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libur_loader.so.0 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtbb.so.12 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libumf.so.1 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtcm_debug.so.1 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libur_adapter_opencl.so.0 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtbbmalloc_proxy.so.2 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtbbmalloc.so.2 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libhwloc.so.15 is not a symbolic link\n\nProcessing triggers for man-db (2.12.0-4build2) ...\nProcessing triggers for fontconfig (2.15.0-1.1ubuntu2) ...\n",
+      "package_policy_hosts": [
+        "archive.ubuntu.com"
+      ],
+      "source_list": "/kaggle/working/ai-engine-blender-runtime-preflight/ubuntu-official.sources",
+      "status": "COMPLETED"
+    },
+    "blender_install_command": {
+      "command": [
+        "/usr/bin/apt-get",
+        "-o",
+        "Dir::Etc::sourcelist=/kaggle/working/ai-engine-blender-runtime-preflight/ubuntu-official.sources",
+        "-o",
+        "Dir::Etc::sourceparts=-",
+        "-o",
+        "Dir::State::lists=/kaggle/working/ai-engine-blender-runtime-preflight/apt-state/lists",
+        "-o",
+        "APT::Get::List-Cleanup=0",
+        "install",
+        "-y",
+        "--no-install-recommends",
+        "blender"
+      ],
+      "duration_seconds": 27.578,
+      "exit_code": 0,
+      "log": "blender_install_command.log",
+      "output_tail": "_amd64.deb ...\nUnpacking libspnav0 (1.1-2) ...\nSelecting previously unselected package blender.\nPreparing to unpack .../37-blender_4.0.2+dfsg-1ubuntu8_amd64.deb ...\nUnpacking blender (4.0.2+dfsg-1ubuntu8) ...\nSetting up libtbbmalloc2:amd64 (2021.11.0-2ubuntu2) ...\nSetting up liblog4cplus-2.0.5t64:amd64 (2.0.8-1.1ubuntu3) ...\nSetting up libfftw3-single3:amd64 (3.3.10-1ubuntu3) ...\nSetting up libcharls2:amd64 (2.4.2-2build2) ...\nSetting up libdcmtk17t64:amd64 (3.6.7-9.1build4) ...\nSetting up libyaml-cpp0.8:amd64 (0.8.0+dfsg-6build1) ...\nSetting up libboost-thread1.83.0:amd64 (1.83.0-2.1ubuntu3.2) ...\nSetting up libjemalloc2:amd64 (5.3.0-2build1) ...\nSetting up libpugixml1v5:amd64 (1.14-0.1build1) ...\nSetting up liborc-0.4-0t64:amd64 (1:0.4.38-1ubuntu0.1) ...\nSetting up libtbbbind-2-5:amd64 (2021.11.0-2ubuntu2) ...\nSetting up libboost-iostreams1.83.0:amd64 (1.83.0-2.1ubuntu3.2) ...\nSetting up fonts-dejavu-mono (2.37-8) ...\nSetting up fonts-dejavu-core (2.37-8) ...\nSetting up libsocket++1:amd64 (1.12.13+git20131030.5d039ba-1build1) ...\nSetting up libosdcpu3.5.0t64:amd64 (3.5.0-2.1build1) ...\nSetting up fonts-dejavu-extra (2.37-8) ...\nSetting up blender-data (4.0.2+dfsg-1ubuntu8) ...\nSetting up libpystring0:amd64 (1.1.4-1build1) ...\nSetting up libgphoto2-port12t64:amd64 (2.5.31-2.1ubuntu1.1) ...\nSetting up libspnav0 (1.1-2) ...\nSetting up libpotrace0:amd64 (1.16-2build1) ...\nSetting up libgdcm3.0t64:amd64 (3.0.22-2.1ubuntu1) ...\nSetting up libosdgpu3.5.0t64:amd64 (3.5.0-2.1build1) ...\nSetting up fonts-dejavu (2.37-8) ...\nSetting up libboost-locale1.83.0:amd64 (1.83.0-2.1ubuntu3.2) ...\nSetting up libgstreamer-plugins-base1.0-0:amd64 (1.24.2-1ubuntu0.5) ...\nSetting up libtbb12:amd64 (2021.11.0-2ubuntu2) ...\nSetting up libgphoto2-6t64:amd64 (2.5.31-2.1ubuntu1.1) ...\nNo diversion 'diversion of /lib/udev/hwdb.d/20-libgphoto2-6.hwdb to /lib/udev/hwdb.d/20-libgphoto2-6.hwdb.usr-is-merged by usr-is-merged', none removed.\nNo diversion 'diversion of /lib/udev/rules.d/60-libgphoto2-6.rules to /lib/udev/rules.d/60-libgphoto2-6.rules.usr-is-merged by usr-is-merged', none removed.\nSetting up libopencolorio2.1t64:amd64 (2.1.3+dfsg-1.1build3) ...\nSetting up libembree4-4:amd64 (4.3.0+dfsg-2) ...\nSetting up libopencv-core406t64:amd64 (4.6.0+dfsg-13.1ubuntu1) ...\nSetting up libopenvdb10.0t64:amd64 (10.0.1-2.1build5) ...\nSetting up libopencv-imgproc406t64:amd64 (4.6.0+dfsg-13.1ubuntu1) ...\nSetting up libopencv-imgcodecs406t64:amd64 (4.6.0+dfsg-13.1ubuntu1) ...\nSetting up libopencv-videoio406t64:amd64 (4.6.0+dfsg-13.1ubuntu1) ...\nSetting up libopenimageio2.4t64:amd64 (2.4.17.0+dfsg-1.1build4) ...\nSetting up blender (4.0.2+dfsg-1ubuntu8) ...\nProcessing triggers for hicolor-icon-theme (0.17-2) ...\nProcessing triggers for libc-bin (2.39-0ubuntu8.9) ...\n/sbin/ldconfig.real: /usr/local/lib/libtbbbind_2_5.so.3 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libur_adapter_level_zero.so.0 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtcm.so.1 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtbbbind.so.3 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libur_adapter_level_zero_v2.so.0 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtbbbind_2_0.so.3 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libur_loader.so.0 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtbb.so.12 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libumf.so.1 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtcm_debug.so.1 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libur_adapter_opencl.so.0 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtbbmalloc_proxy.so.2 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libtbbmalloc.so.2 is not a symbolic link\n\n/sbin/ldconfig.real: /usr/local/lib/libhwloc.so.15 is not a symbolic link\n\nProcessing triggers for man-db (2.12.0-4build2) ...\nProcessing triggers for fontconfig (2.15.0-1.1ubuntu2) ...\n",
+      "status": "COMPLETED"
+    },
+    "blender_scene_render_and_simulation": {
+      "command": [
+        "/usr/bin/blender",
+        "--background",
+        "--python",
+        "/kaggle/working/ai-engine-blender-runtime-preflight/scene_test.py",
+        "--",
+        "/kaggle/working/ai-engine-blender-runtime-preflight"
+      ],
+      "duration_seconds": 9.4,
+      "exit_code": 0,
+      "log": "blender_scene_render_and_simulation.log",
+      "output_tail": "COMMAND: [\"/usr/bin/blender\", \"--background\", \"--python\", \"/kaggle/working/ai-engine-blender-runtime-preflight/scene_test.py\", \"--\", \"/kaggle/working/ai-engine-blender-runtime-preflight\"]\nEXIT_CODE: 0\nBlender 4.0.2\nFra:24 Mem:12.02M (Peak 13.10M) | Time:00:03.13 | Syncing Ground\nFra:24 Mem:12.05M (Peak 13.10M) | Time:00:04.32 | Syncing DropCube1\nFra:24 Mem:12.06M (Peak 13.10M) | Time:00:04.32 | Syncing DropCube2\nFra:24 Mem:12.07M (Peak 13.10M) | Time:00:04.32 | Syncing DropCube3\nFra:24 Mem:12.07M (Peak 13.10M) | Time:00:04.32 | Syncing PreflightCamera\nFra:24 Mem:12.07M (Peak 13.10M) | Time:00:04.32 | Syncing PreflightAreaLight\nFra:24 Mem:12.07M (Peak 13.10M) | Time:00:04.32 | Rendering 1 / 8 samples\nFra:24 Mem:12.07M (Peak 13.10M) | Time:00:08.17 | Rendering 8 / 8 samples\nSaved: '/kaggle/working/ai-engine-blender-runtime-preflight/eevee_preflight.png'\nTime: 00:08.44 (Saving: 00:00.25)\n\n\nBlender quit\n\nEGL Error (0x3001): EGL_NOT_INITIALIZED: EGL is not initialized, or could not be initialized, for the specified EGL display connection.\n\nManaged to successfully fallback to surfaceless EGL rendering!\n\nEGL Error (0x3009): EGL_BAD_MATCH: Arguments are inconsistent (for example, a valid context requires buffers not supplied by a valid surface).\nEGL Error (0x3001): EGL_NOT_INITIALIZED: EGL is not initialized, or could not be initialized, for the specified EGL display connection.\n\nManaged to successfully fallback to surfaceless EGL rendering!\n\n",
+      "status": "COMPLETED"
+    },
+    "blender_version": {
+      "command": [
+        "/usr/bin/blender",
+        "--background",
+        "--version"
+      ],
+      "duration_seconds": 0.765,
+      "exit_code": 0,
+      "log": "blender_background_version.log",
+      "output_tail": "COMMAND: [\"/usr/bin/blender\", \"--background\", \"--version\"]\nEXIT_CODE: 0\nBlender 4.0.2\nBlender 4.0.2\n",
+      "status": "COMPLETED"
+    },
+    "eevee_availability": {
+      "available": true,
+      "engines": [
+        "BLENDER_EEVEE"
+      ],
+      "selected": "BLENDER_EEVEE",
+      "status": "COMPLETED"
+    },
+    "environment": {
+      "details": {
+        "architecture": "x86_64",
+        "cpu_logical_count": 4,
+        "cpu_models": [
+          "Intel(R) Xeon(R) CPU @ 2.20GHz"
+        ],
+        "disk_working": {
+          "free_bytes": 20940505088,
+          "total_bytes": 20957446144,
+          "used_bytes": 163840
+        },
+        "gpu_query": {
+          "status": "nvidia-smi not available"
+        },
+        "memory": {
+          "MemAvailable": "31763364 kB",
+          "MemTotal": "32869452 kB",
+          "SwapFree": "0 kB",
+          "SwapTotal": "0 kB"
+        },
+        "os_release": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.5 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+        "tpu_device_paths": []
+      },
+      "status": "COMPLETED"
+    },
+    "scene_render_and_simulation": {
+      "command": [
+        "/usr/bin/blender",
+        "--background",
+        "--python",
+        "/kaggle/working/ai-engine-blender-runtime-preflight/scene_test.py",
+        "--",
+        "/kaggle/working/ai-engine-blender-runtime-preflight"
+      ],
+      "duration_seconds": 9.4,
+      "exit_code": 0,
+      "log": "blender_scene_render_and_simulation.log",
+      "output_tail": "COMMAND: [\"/usr/bin/blender\", \"--background\", \"--python\", \"/kaggle/working/ai-engine-blender-runtime-preflight/scene_test.py\", \"--\", \"/kaggle/working/ai-engine-blender-runtime-preflight\"]\nEXIT_CODE: 0\nBlender 4.0.2\nFra:24 Mem:12.02M (Peak 13.10M) | Time:00:03.13 | Syncing Ground\nFra:24 Mem:12.05M (Peak 13.10M) | Time:00:04.32 | Syncing DropCube1\nFra:24 Mem:12.06M (Peak 13.10M) | Time:00:04.32 | Syncing DropCube2\nFra:24 Mem:12.07M (Peak 13.10M) | Time:00:04.32 | Syncing DropCube3\nFra:24 Mem:12.07M (Peak 13.10M) | Time:00:04.32 | Syncing PreflightCamera\nFra:24 Mem:12.07M (Peak 13.10M) | Time:00:04.32 | Syncing PreflightAreaLight\nFra:24 Mem:12.07M (Peak 13.10M) | Time:00:04.32 | Rendering 1 / 8 samples\nFra:24 Mem:12.07M (Peak 13.10M) | Time:00:08.17 | Rendering 8 / 8 samples\nSaved: '/kaggle/working/ai-engine-blender-runtime-preflight/eevee_preflight.png'\nTime: 00:08.44 (Saving: 00:00.25)\n\n\nBlender quit\n\nEGL Error (0x3001): EGL_NOT_INITIALIZED: EGL is not initialized, or could not be initialized, for the specified EGL display connection.\n\nManaged to successfully fallback to surfaceless EGL rendering!\n\nEGL Error (0x3009): EGL_BAD_MATCH: Arguments are inconsistent (for example, a valid context requires buffers not supplied by a valid surface).\nEGL Error (0x3001): EGL_NOT_INITIALIZED: EGL is not initialized, or could not be initialized, for the specified EGL display connection.\n\nManaged to successfully fallback to surfaceless EGL rendering!\n\n",
+      "status": "COMPLETED"
+    },
+    "temporary_write_read": {
+      "path": "/kaggle/working/ai-engine-blender-runtime-preflight/temporary-write-read.txt",
+      "size_bytes": 51,
+      "status": "COMPLETED",
+      "verified_contents": true
+    }
+  },
+  "started_utc": "2026-10-20T15:20:27.947778+00:00"
+}

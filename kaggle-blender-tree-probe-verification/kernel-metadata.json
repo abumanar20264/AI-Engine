@@ -1,0 +1,20 @@
+{
+  "id": "haroonbaaraabumanar/ai-engine-kaggle-tree-mount-verification",
+  "title": "AI-Engine Kaggle Tree Mount Verification",
+  "code_file": "verify_published_tree.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "haroonbaaraabumanar/ai-engine-kaggle-tree-probe"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [],
+  "model_sources": [],
+  "docker_image": "",
+  "machine_shape": "None"
+}

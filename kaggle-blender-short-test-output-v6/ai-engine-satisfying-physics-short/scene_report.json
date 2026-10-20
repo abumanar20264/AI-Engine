@@ -1,0 +1,181 @@
+{
+  "fps": 24,
+  "frame_count": 120,
+  "frame_end": 120,
+  "frame_start": 1,
+  "motion": {
+    "ball_end_x": -0.88,
+    "ball_start_x": -2.8,
+    "domino_count": 10,
+    "fixed_ground": "Fixed stage",
+    "maximum_domino_rotation_radians": 1.5359,
+    "mode": "KEYFRAMED_KINEMATIC_CHAIN",
+    "status": "COMPLETED"
+  },
+  "motion_mode": "KEYFRAMED_KINEMATIC_CHAIN",
+  "motion_note": "Deterministic visual choreography using animated rigid bodies; dynamic solver impacts are not claimed.",
+  "motion_samples": [
+    {
+      "ball_x": -2.8,
+      "domino_y_rotations": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frame": 1
+    },
+    {
+      "ball_x": -1.12,
+      "domino_y_rotations": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frame": 20
+    },
+    {
+      "ball_x": -0.88,
+      "domino_y_rotations": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frame": 24
+    },
+    {
+      "ball_x": -0.88,
+      "domino_y_rotations": [
+        0.917,
+        0.0558,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frame": 30
+    },
+    {
+      "ball_x": -0.88,
+      "domino_y_rotations": [
+        1.5359,
+        1.5354,
+        1.4753,
+        0.917,
+        0.0558,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "frame": 42
+    },
+    {
+      "ball_x": -0.88,
+      "domino_y_rotations": [
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5228,
+        1.3296,
+        0.416,
+        0.0
+      ],
+      "frame": 60
+    },
+    {
+      "ball_x": -0.88,
+      "domino_y_rotations": [
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359
+      ],
+      "frame": 84
+    },
+    {
+      "ball_x": -0.88,
+      "domino_y_rotations": [
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359
+      ],
+      "frame": 108
+    },
+    {
+      "ball_x": -0.88,
+      "domino_y_rotations": [
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359,
+        1.5359
+      ],
+      "frame": 120
+    }
+  ],
+  "render": {
+    "duration_seconds": 465.158,
+    "engine": "BLENDER_EEVEE",
+    "expected_video": "/kaggle/working/ai-engine-satisfying-physics-short/satisfying_physics_test.mp4",
+    "fps": 24,
+    "frame_count": 120,
+    "resolution": [
+      720,
+      1280
+    ],
+    "status": "COMPLETED"
+  },
+  "render_engine": "BLENDER_EEVEE",
+  "resolution": [
+    720,
+    1280
+  ],
+  "title": "Satisfying Physics Test"
+}

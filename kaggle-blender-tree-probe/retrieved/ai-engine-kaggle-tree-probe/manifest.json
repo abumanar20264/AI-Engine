@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "mode": 493,
+      "path": "bin/probe.sh",
+      "sha256": "15120701c5dd983eddeb32d2b06dd7d3919b078cb251961a35779a88b9824724",
+      "size_bytes": 35
+    },
+    {
+      "mode": 420,
+      "path": "nested/level-two/level-three/deep.txt",
+      "sha256": "04bd837a1fbd1800d13a24e66f244135a141f54e78e6830b12f40042b0768981",
+      "size_bytes": 10
+    },
+    {
+      "mode": 420,
+      "path": "root.txt",
+      "sha256": "fe35c5ffec3197ce7ba07b1f6707878b112562bff152e6a3c5a13ab1d29c11c9",
+      "size_bytes": 10
+    }
+  ],
+  "symlinks": [
+    {
+      "path": "nested-link.txt",
+      "target": "nested/level-two/level-three/deep.txt"
+    }
+  ]
+}

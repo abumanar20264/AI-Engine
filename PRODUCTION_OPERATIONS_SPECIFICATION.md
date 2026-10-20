@@ -1,12 +1,14 @@
 # AI-Engine — Production Operations Specification
 **Document ID:** AI-ENGINE-PRODUCTION-SOP  
-**Version:** 1.0.0  
-**Status:** Operational production standard; implementation and hardware benchmarks pending  
+**Version:** 1.0.1
+
+**Status:** Blender approved; compatibility test, implementation, and hardware benchmarks pending
+
 **Applies to:** Visual Physics Experiments — Satisfying Systems, Physics in Action, The Experiment  
 **Parent specification:** [REVIEW_AND_UPDATED_PROJECT_FOUNDATION.md](./REVIEW_AND_UPDATED_PROJECT_FOUNDATION.md)  
 **Last updated:** 2026-10-20
 
-> **Purpose and limits.** This document removes avoidable ambiguity from the production workflow. It defines required inputs, outputs, acceptance tests, failure handling, records, and provisional delivery settings. It does not pretend to know the best engine, actual render speed, achievable quality on the available machine, audience performance, or monetization. Those items must be measured. Any value marked **PROVISIONAL** is a controlled starting point, not a proven optimum.
+> **Purpose and limits.** This document removes avoidable ambiguity from the production workflow. It defines required inputs, outputs, acceptance tests, failure handling, records, and provisional delivery settings. Blender is the approved primary engine; this document does not claim that its Kaggle compatibility, actual render speed, achievable quality on the available machine, audience performance, or monetization have been measured. Those items must be tested or measured. Any value marked **PROVISIONAL** is a controlled starting point, not a proven optimum.
 
 ## 0. Governing rules
 
@@ -517,7 +519,7 @@ For published videos, add publication URL/date, observation date, views, and any
 
 ## 15. Approved engine and compatibility gate
 
-**Decision:** Blender is the project's sole approved primary production engine. See [BLENDER_KAGGLE_ENGINE_SPECIFICATION.md](./BLENDER_KAGGLE_ENGINE_SPECIFICATION.md) for the authoritative engine decision, requirements, Kaggle operating model, local control workflow, checkpoint policy, and compatibility gate.
+**Decision:** Blender is the project's sole approved primary production engine. EEVEE remains provisional until it passes the compatibility gate in the actual Kaggle runtime. See [BLENDER_KAGGLE_ENGINE_SPECIFICATION.md](./BLENDER_KAGGLE_ENGINE_SPECIFICATION.md) for the authoritative engine decision, requirements, Kaggle operating model, local control workflow, checkpoint policy, and compatibility gate.
 
 Approval of Blender is an architecture decision; it does not mean the chosen Blender version, renderer, or Kaggle runtime has passed an empirical test. Bulk production remains blocked until the minimal compatibility gate in the engine specification passes.
 
@@ -552,7 +554,7 @@ A successful test must be supported by logs and inspectable outputs. A score or 
 
 - If the minimal Blender workflow passes, authorize only a small controlled pilot and collect representative production measurements.
 - If one component fails, diagnose and correct that component within Blender before considering a broader architecture change.
-- Reconsider the engine only if a documented mandatory requirement cannot be met after reasonable, evidence-based remediation.
+- Investigate an alternative engine only if Blender cannot meet a documented mandatory requirement after reasonable, evidence-based remediation and separate approval is obtained.
 - Do not interpret this decision as proof of market demand, virality, monetization, or scaled-production economics.
 
 ## 16. Compute, checkpoints, and recovery
@@ -675,20 +677,20 @@ Reject a long-form plan that is only a compilation, repeats the same result, or 
 - Scene/experiment parameters and fidelity claims are recorded.
 - Simulation defects have severity levels and retest rules.
 - Visual, audio, export, rights, and archive gates are defined.
-- Tool selection requires a measured benchmark.
+- Blender/EEVEE compatibility and the export path require measured validation.
 - Templates exist for concepts, scenes, defects, decisions, and releases.
 - Unknowns are explicitly assigned a test rather than silently guessed.
 
 ### Production feasibility is NOT proven until
 - A real benchmark has been run on the available hardware.
-- A candidate engine and export path have been selected using measured results.
+- A pinned Blender version, EEVEE compatibility, and an export path have passed the required validation.
 - At least one scene has passed the complete workflow.
 - Actual active labor, render time, failures, and cost have been logged.
 - Three comparable pilot Shorts have passed QA.
 - Any publication and audience conclusions are supported by actual data.
 
 ### Explicitly unresolved
-- Engine and renderer.
+- Kaggle compatibility of Blender and provisional EEVEE, plus the exact Blender version to pin.
 - Actual hardware/accelerator availability and compatible versions.
 - Final frame rate and render quality settings.
 - Real per-video production time and cost.
@@ -704,5 +706,9 @@ These items are not omissions in the procedure; they are empirical or owner deci
 ### 1.0.0 — 2026-10-20
 - Established a stage-gated production lifecycle for all three pillars.
 - Added concept and scene specification requirements, complexity classes, prototype tests, simulation validation, defect severity, render baseline, audio standards, QA, rights tracking, archive conventions, benchmark scorecard, recovery rules, and release templates.
-- Marked untested export/audio settings as provisional and kept engine choice, runtime, cost, and market performance open until measured.
+- At version 1.0.0, marked untested export/audio settings as provisional and treated engine choice, runtime, cost, and market performance as open pending evidence.
 - No production software was installed, no engine was selected, no scene was built, and no video was rendered by creating this document.
+
+### 1.0.1 — 2026-10-20
+- Aligned engine status with the approved Blender decision; kept EEVEE and Kaggle compatibility unvalidated pending the required test.
+- Clarified that alternative-engine investigation requires a documented Blender requirement failure and separate approval.

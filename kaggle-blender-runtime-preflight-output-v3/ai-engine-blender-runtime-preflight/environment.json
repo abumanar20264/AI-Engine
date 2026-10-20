@@ -1,0 +1,23 @@
+{
+  "architecture": "x86_64",
+  "cpu_logical_count": 4,
+  "cpu_models": [
+    "Intel(R) Xeon(R) CPU @ 2.20GHz"
+  ],
+  "disk_working": {
+    "free_bytes": 20940505088,
+    "total_bytes": 20957446144,
+    "used_bytes": 163840
+  },
+  "gpu_query": {
+    "status": "nvidia-smi not available"
+  },
+  "memory": {
+    "MemAvailable": "31763364 kB",
+    "MemTotal": "32869452 kB",
+    "SwapFree": "0 kB",
+    "SwapTotal": "0 kB"
+  },
+  "os_release": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.5 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+  "tpu_device_paths": []
+}

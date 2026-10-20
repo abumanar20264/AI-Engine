@@ -1,0 +1,8 @@
+COMMAND: ["/usr/bin/apt-cache", "-o", "Dir::Etc::sourcelist=/kaggle/working/ai-engine-blender-runtime-preflight/ubuntu-official.sources", "-o", "Dir::Etc::sourceparts=-", "-o", "Dir::State::lists=/kaggle/working/ai-engine-blender-runtime-preflight/apt-state/lists", "-o", "APT::Get::List-Cleanup=0", "policy", "blender"]
+EXIT_CODE: 0
+blender:
+  Installed: (none)
+  Candidate: 4.0.2+dfsg-1ubuntu8
+  Version table:
+     4.0.2+dfsg-1ubuntu8 500
+        500 https://archive.ubuntu.com/ubuntu noble/universe amd64 Packages

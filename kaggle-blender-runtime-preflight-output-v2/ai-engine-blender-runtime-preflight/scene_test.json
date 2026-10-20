@@ -1,0 +1,60 @@
+{
+  "render": {
+    "engine": "BLENDER_EEVEE",
+    "path": "/kaggle/working/ai-engine-blender-runtime-preflight/eevee_preflight.png",
+    "size_bytes": 10651,
+    "status": "COMPLETED"
+  },
+  "simulation": {
+    "frames_simulated": 48,
+    "ground": "Ground",
+    "objects": [
+      "DropCube1",
+      "DropCube2",
+      "DropCube3"
+    ],
+    "samples": [
+      {
+        "cube_z": [
+          1.1,
+          2.25,
+          3.4
+        ],
+        "frame": 1
+      },
+      {
+        "cube_z": [
+          0.39909,
+          1.20258,
+          2.35258
+        ],
+        "frame": 12
+      },
+      {
+        "cube_z": [
+          0.4,
+          1.19996,
+          1.99991
+        ],
+        "frame": 24
+      },
+      {
+        "cube_z": [
+          0.4,
+          1.19995,
+          1.9999
+        ],
+        "frame": 36
+      },
+      {
+        "cube_z": [
+          0.4,
+          1.19995,
+          1.9999
+        ],
+        "frame": 48
+      }
+    ],
+    "status": "COMPLETED"
+  }
+}

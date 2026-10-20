@@ -1,0 +1,100 @@
+{
+  "artifacts": [
+    {
+      "name": "environment.json",
+      "sha256": "41b2d75b434e00fd2233bdb0f8e517b85c5bba3b06d70eb8e57b879cfe6684c6",
+      "size_bytes": 884
+    },
+    {
+      "name": "temporary-write-read.txt",
+      "sha256": "850fa61abd0b44e6f33ea54cfa9cb0b5872e38a2abac5bb3f5b49b6773b65b7d",
+      "size_bytes": 51
+    }
+  ],
+  "completed_utc": "2026-10-20T15:14:18.537996+00:00",
+  "overall_status": "BLOCKED",
+  "platform": "Linux-6.18.48+-x86_64-with-glibc2.39",
+  "python": "3.13.15 (main, Aug  6 2026, 11:06:22) [GCC 13.3.0]",
+  "scene_test": {
+    "status": "NOT TESTED"
+  },
+  "stages": {
+    "blender_background_startup": {
+      "reason": "Blender was not available after the allowed runtime package-source attempt.",
+      "status": "BLOCKED"
+    },
+    "blender_detection": {
+      "apt_sources": {
+        "all_official_distribution_hosts": false,
+        "hosts": [
+          "archive.ubuntu.com",
+          "cli.github.com",
+          "cloud.r-project.org",
+          "ppa.launchpadcontent.net",
+          "r2u.stat.illinois.edu",
+          "security.ubuntu.com"
+        ]
+      },
+      "path": null,
+      "path_after_install_attempt": null,
+      "status": "FAILED"
+    },
+    "blender_install": {
+      "apt_hosts": [
+        "archive.ubuntu.com",
+        "cli.github.com",
+        "cloud.r-project.org",
+        "ppa.launchpadcontent.net",
+        "r2u.stat.illinois.edu",
+        "security.ubuntu.com"
+      ],
+      "reason": "apt tools are unavailable or configured package sources are not exclusively official Ubuntu/Debian hosts.",
+      "status": "BLOCKED"
+    },
+    "blender_version": {
+      "reason": "Blender was not available after the allowed runtime package-source attempt.",
+      "status": "BLOCKED"
+    },
+    "eevee_availability": {
+      "reason": "Blender was not available after the allowed runtime package-source attempt.",
+      "status": "BLOCKED"
+    },
+    "environment": {
+      "details": {
+        "architecture": "x86_64",
+        "cpu_logical_count": 4,
+        "cpu_models": [
+          "AMD EPYC 7B12"
+        ],
+        "disk_working": {
+          "free_bytes": 20940513280,
+          "total_bytes": 20957446144,
+          "used_bytes": 155648
+        },
+        "gpu_query": {
+          "status": "nvidia-smi not available"
+        },
+        "memory": {
+          "MemAvailable": "31715672 kB",
+          "MemTotal": "32869448 kB",
+          "SwapFree": "0 kB",
+          "SwapTotal": "0 kB"
+        },
+        "os_release": "PRETTY_NAME=\"Ubuntu 24.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"24.04\"\nVERSION=\"24.04.5 LTS (Noble Numbat)\"\nVERSION_CODENAME=noble\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=noble\nLOGO=ubuntu-logo\n",
+        "tpu_device_paths": []
+      },
+      "status": "COMPLETED"
+    },
+    "scene_render_and_simulation": {
+      "reason": "Blender was not available after the allowed runtime package-source attempt.",
+      "status": "BLOCKED"
+    },
+    "temporary_write_read": {
+      "path": "/kaggle/working/ai-engine-blender-runtime-preflight/temporary-write-read.txt",
+      "size_bytes": 51,
+      "status": "COMPLETED",
+      "verified_contents": true
+    }
+  },
+  "started_utc": "2026-10-20T15:14:18.509922+00:00"
+}

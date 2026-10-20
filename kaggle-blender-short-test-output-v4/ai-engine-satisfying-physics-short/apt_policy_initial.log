@@ -1,0 +1,2 @@
+COMMAND: ["/usr/bin/apt-cache", "-o", "Dir::Etc::sourcelist=/kaggle/working/ai-engine-satisfying-physics-short/ubuntu-official.sources", "-o", "Dir::Etc::sourceparts=-", "-o", "Dir::State::lists=/kaggle/working/ai-engine-satisfying-physics-short/apt-state/lists", "-o", "APT::Get::List-Cleanup=0", "policy", "blender ffmpeg"]
+EXIT_CODE: 0
