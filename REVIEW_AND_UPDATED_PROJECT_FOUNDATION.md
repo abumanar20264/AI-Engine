@@ -542,7 +542,136 @@ Primary source: https://support.google.com/youtube/answer/1311392
 
 ---
 
-## 14. Current decision memo
+## 14. Additional candidate review — cross-generational, family-friendly visual content
+
+**Status: PROPOSED CANDIDATE EXPANSION.** The following three formats were proposed for the global English-language audience: (C) size and scale comparisons, (D) animal hypotheticals / unusual biology, and (E) visual riddles / brain teasers. This section evaluates their fit against the project's constraints and a small public evidence scan. It does not approve a niche or substantiate claims of guaranteed virality.
+
+### 14.1 Correct the core premise
+
+“Family-friendly” and “made for kids” are not synonyms. YouTube says a video is not automatically made for kids simply because it is safe for everyone or children may watch it; the decision depends on intended audience and other factors. A video aimed at children as one of its target audiences can count as child-directed or “mixed audience,” so the creator must make the audience declaration accurately rather than selecting “not made for kids” merely to preserve features. Sources:
+- YouTube Help, *Determining if your content is made for kids*: https://support.google.com/youtube/answer/9528076
+- YouTube Help, *Set your channel or video's audience*: https://support.google.com/youtube/answer/9527654
+
+This is a strategic choice, not a cosmetic label. If content is designated “made for kids,” YouTube restricts features including comments and personalized ads, alongside other engagement and monetization features. See: https://support.google.com/youtube/answer/9609276. Do not assume a family-friendly general-audience strategy is automatically a child-directed strategy, and do not misclassify child-directed content for commercial convenience.
+
+The claim that cross-generational videos achieve “fantastic” retention or that replay loops guarantee recommendation is **not established**. YouTube's official explanation groups recommendation signals into appeal, engagement, and satisfaction, and emphasizes matching videos to viewers. Looping may be one observed behavior, but it is not a standalone guarantee. Sources:
+- https://support.google.com/youtube/answer/16533387
+- https://support.google.com/youtube/answer/16559650
+- https://support.google.com/youtube/answer/16559651
+
+### 14.2 Candidate C — size and scale comparisons
+
+**Public evidence sampled**
+- MoreBeckBros, “How BIG is Universe (Size Comparison)” — approximately 3.73 million views at the YouTube page snapshot: https://www.youtube.com/watch?v=TiUMtIxE_KE
+- Mr Scientific, “UNIVERSE SIZE COMPARISON” — approximately 4.35 million views at the YouTube page snapshot: https://www.youtube.com/watch?v=fCmWZehG7Bg
+- “Universe Size Comparison 2025” and “Ultimate Geography Size Comparison” were listed at roughly 151.5K and 168.1K views respectively on a third-party comparison page: https://socialcounts.org/compare/youtube-video-live-view-count/VxFY-Zq77CQ/youtube-video-live-view-count/0GmsjfIRs8w
+- A small comparison-focused channel, Spacemarioedition, was listed with about 4.28K subscribers and 1.77M lifetime channel views; its cited long-form comparison had far fewer views than a popular Short. These are third-party snapshots, not verified analytics: https://universe-size-comparison.fandom.com/wiki/Spacemarioedition
+
+**Interpretation:** There is evidence that universe/scale comparison is a viable visual subject, including large-view examples and smaller results. The public sample is not sufficient to claim “viral success” is typical, nor does it show that children and adults watch the same videos in equal proportions.
+
+**Technical fit — high (inference):**
+- Deterministic vector scaling, labeled silhouettes, rulers, logarithmic scales, and camera moves can be rendered without character animation or diffusion models.
+- This is a good CPU-first prototype candidate; T4 use may be unnecessary unless optional art assets are generated.
+- The main accuracy trap is false comparability: size, mass, volume, distance, age, and scale are different measures. Astronomical objects may have uncertain or changing estimates. Each comparison needs a declared unit, scale, and source, with logarithmic scaling clearly labeled where used.
+- The niche is already familiar. Distinctive value must come from a strong question, accurate scale, pacing, and a surprising but well-supported sequence—not just a generic countdown.
+
+**Proposed verdict:** Highest initial technical feasibility of the three new candidates; audience fit remains a hypothesis.
+
+### 14.3 Candidate D — animal hypotheticals and unusual biology
+
+**Public evidence sampled**
+- WildCiencias was listed with approximately 573K subscribers and 191M channel views, with recent topics including animal-vs-animal questions and hypothetical introductions of predators into new ecosystems: https://similarchannels.com/c/wildciencias
+- Animal Battle TV was listed at about 649K subscribers and 15.38M lifetime views; its top-video list includes hypothetical animal/prehistoric matchups from hundreds of thousands to a few million views: https://vidiq.com/youtube-stats/channel/UCYBn79tqT7g172gJUkuN5DQ/
+- A channel describing itself as “WHAT IF WILD LIFE” explicitly describes its animal encounters as AI-generated simulations rather than real events: https://vling.net/en/channel/UCHqZ90v7_IHap8gdH5DV71A/channel-info
+
+**Interpretation:** There is an existing audience for animal comparisons and hypothetical encounters, but the examples include stylized, game-like, or AI-simulated content. They do not prove demand for a more scientifically rigorous format or show that hypothetical “who would win” claims can be answered objectively.
+
+**Technical fit — medium to high (inference):**
+- Static animal plates with slow pans, parallax, silhouettes, range/weight/force graphics, and habitat maps are feasible without multi-character animation.
+- Accurate anatomy, proportions, behavior, habitat, and extinct-animal reconstructions need reference sources and human review. Generated art can invent anatomical errors.
+- “Who would win?” is often underdetermined: species, size, age, health, terrain, surprise, and behavior alter outcomes. Present scenarios and uncertainties rather than asserting a scientific certainty.
+- Repeated AI-generated fights can become interchangeable or misleading. Each episode should have a distinct educational thesis and clearly label fictional scenarios.
+
+**Proposed verdict:** Viable visual storytelling option, but greater risk of sensationalism, scientific overclaim, and generic AI output than size comparisons.
+
+### 14.4 Candidate E — visual riddles and brain teasers
+
+**Public evidence sampled**
+- Hanging Out's public statistics page lists “Brain Teasers 65 #shorts” at approximately 11.23M views, while another brain-teaser Short is listed at about 6.08M views. The same page also shows a riddle video at roughly 154K views, a useful counterexample to uniform success: https://us.youtubers.me/hanging-out/youtube-videos-stats
+- AJESU 1M is described as an English-language guessing/quiz channel, with about 4M subscribers and 1.5B total views across hundreds of videos in a third-party channel profile: https://open.subsub.io/channels/ajesu1m/view
+- MindYourLogic Studios describes multiple quiz/riddle brands and reports large combined audiences across its channels: https://studios.mindyourlogic.com/Youtube
+- Riddles for Shorts's public vidIQ page shows high channel subscriber count but relatively low view counts for several listed recent long-form puzzle videos. The channel's performance varies by format and upload: https://vidiq.com/youtube-stats/channel/UCcwxYuyhVkG0BCk43NMhAZQ/
+
+**Interpretation:** Brain teasers and guessing formats can reach very large audiences, especially as Shorts, but results vary materially by format, channel, and individual upload. This evidence does not establish that the format is easy to differentiate or that a high replay rate guarantees recommendation.
+
+**Technical fit — very high (inference):**
+- Most puzzles can be made with deterministic code and tested for exactly one intended answer.
+- Production cost is likely low relative to researched science explainers, but actual active labor has not been measured.
+- Quality control is critical: ambiguity, incorrect answer keys, cultural/English-language assumptions, inaccessible color-only clues, and reused puzzle templates can damage trust.
+- The format has a high commoditization risk. A channel must add original puzzle design, coherent difficulty progression, clear solutions, and a recognizable visual identity.
+- If the content is directed at children, the audience declaration and associated feature limitations must be considered before choosing a comment-driven growth strategy.
+
+**Proposed verdict:** Easiest low-cost production experiment, but differentiation and long-term channel identity are major risks.
+
+### 14.5 Comparative scorecard
+
+Ratings below are qualitative planning judgments, not measured performance. “High” means a relative fit with current project constraints, not a forecast of views.
+
+| Criterion | C: Scale comparisons | D: Animal hypotheticals | E: Visual riddles |
+|---|---|---|---|
+| CPU/vector production fit | High | Medium–high | Very high |
+| Need for generative imagery | Low / optional | Medium if using animal plates | None required |
+| Research / fact-check burden | Medium–high | High | Low–medium, but answer validation is strict |
+| Differentiation challenge | High | High | Very high |
+| Risk of misleading factual claims | Medium | High | Medium (ambiguous or wrong solutions) |
+| Evergreen potential | High | High | High, though puzzle format competition is dense |
+| Fit for long-form depth | High if scale is explained, not just ranked | Medium–high | Medium; requires more than repeated short puzzles |
+| Fit for Shorts | High | High | High |
+| Best first experiment | 45–60s scale sequence with sourced units | One clearly labeled hypothetical with evidence and uncertainty | One original puzzle with unambiguous solution |
+
+### 14.6 Updated project recommendation
+
+Do not fold all three new concepts into one channel without a unifying editorial promise. “Interesting things for everyone” is too broad to guide topic choice, visual identity, or returning-viewer expectations.
+
+**Recommended test order**
+1. **First test: scale and size comparisons.** It has the cleanest fit with vector graphics, no character continuity, low GPU dependence, and a clear visual progression. Treat this as the leading *prototype candidate*, not a proven best niche.
+2. **Second test: animal biology / hypothetical comparisons.** Test a science-led treatment with explicit uncertainty and accurate visuals, not a generic AI fight.
+3. **Separate low-cost benchmark: visual riddles.** Test this as a different channel-format hypothesis. Do not combine puzzle Shorts with scale-science long-form until audience overlap is demonstrated.
+
+For a fair initial comparison, create one short prototype per format under the same production budget and quality gate. Record: active labor, factual defects, number of visual assets, rendering time, comprehension feedback from a small test group, and whether the premise is understandable without sound. If publishing, collect the same YouTube Studio measures after a predeclared time window. Do not use raw views alone to compare Shorts with long-form videos, or channels with different sizes and ages.
+
+### 14.7 What remains unproven
+
+- Whether the same viewers watch a candidate format alongside children or across multiple age groups.
+- Whether any candidate has above-average retention or repeat viewing relative to comparable videos.
+- Whether a new channel can break through without a large existing audience.
+- Whether size comparisons are less crowded or more profitable than other candidates.
+- Whether animal hypotheticals or riddles lead to better audience return, subscriber conversion, or production economics.
+- Whether the creator's intended audience should be declared “made for kids,” “not made for kids,” or varies by individual video. This must be decided from the actual creative intent and content, not from a growth tactic.
+
+### 14.8 Sources added in this revision
+
+1. YouTube Help, *Determining if your content is made for kids*: https://support.google.com/youtube/answer/9528076
+2. YouTube Help, *Set your channel or video's audience*: https://support.google.com/youtube/answer/9527654
+3. YouTube Help, *What happens when content is made for kids*: https://support.google.com/youtube/answer/9609276
+4. YouTube Help, *YouTube's Recommendation System*: https://support.google.com/youtube/answer/16533387
+5. YouTube Help, *Understand content performance*: https://support.google.com/youtube/answer/16559650
+6. YouTube Help, *Good to know about recommendations*: https://support.google.com/youtube/answer/16559651
+7. MoreBeckBros, *How BIG is Universe (Size Comparison)*: https://www.youtube.com/watch?v=TiUMtIxE_KE
+8. Mr Scientific, *UNIVERSE SIZE COMPARISON*: https://www.youtube.com/watch?v=fCmWZehG7Bg
+9. SocialCounts comparison page: https://socialcounts.org/compare/youtube-video-live-view-count/VxFY-Zq77CQ/youtube-video-live-view-count/0GmsjfIRs8w
+10. Spacemarioedition channel overview: https://universe-size-comparison.fandom.com/wiki/Spacemarioedition
+11. WildCiencias channel overview: https://similarchannels.com/c/wildciencias
+12. Animal Battle TV statistics: https://vidiq.com/youtube-stats/channel/UCYBn79tqT7g172gJUkuN5DQ/
+13. WHAT IF WILD LIFE channel overview: https://vling.net/en/channel/UCHqZ90v7_IHap8gdH5DV71A/channel-info
+14. Hanging Out video statistics: https://us.youtubers.me/hanging-out/youtube-videos-stats
+15. AJESU 1M channel overview: https://open.subsub.io/channels/ajesu1m/view
+16. MindYourLogic Studios: https://studios.mindyourlogic.com/Youtube
+17. Riddles for Shorts statistics: https://vidiq.com/youtube-stats/channel/UCcwxYuyhVkG0BCk43NMhAZQ/
+
+---
+
+## 15. Current decision memo
 
 ### Established by cited external documentation
 - YouTube’s monetization policy explicitly addresses repetitive or mass-produced “inauthentic content” and distinguishes reused content. Originality and viewer value matter; AI assistance alone does not establish a violation or guarantee eligibility. Source: https://support.google.com/youtube/answer/1311392.
@@ -558,11 +687,11 @@ Primary source: https://support.google.com/youtube/answer/1311392
 - Whether a particular visual style helps retention or click-through.
 
 ### Immediate next actions
-1. Treat the public-demand scan in Section 13 as preliminary evidence, not a niche decision.
-2. Choose six pilot topics (three per candidate) and record sources before scripting.
-3. Run the local deterministic visual benchmark.
-4. Time the complete workflow for each pilot and record active labor by stage.
-5. Review quality, production effort, and—if published—YouTube Studio analytics before approving a niche or building the production engine.
+1. Treat the public-demand scans in Sections 13 and 14 as preliminary evidence, not a niche decision.
+2. Approve a prototype shortlist explicitly; current leading prototype candidate is scale/size comparisons, with animal biology and visual riddles as separate hypotheses.
+3. Produce one short prototype per selected format under a comparable quality and time budget.
+4. Record active labor, factual defects, rendering time, and comprehension feedback; if published, compare YouTube Studio analytics over a predeclared window.
+5. Only after the prototype gate, decide whether to run a six-video pilot or build production tooling.
 
 ### Formal approval
 
