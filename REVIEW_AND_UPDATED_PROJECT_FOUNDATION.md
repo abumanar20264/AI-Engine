@@ -51,7 +51,9 @@ The channel should be:
 | Target a global audience with English metadata and minimal language dependence | **APPROVED** |
 | Develop long-form videos after the Shorts pilot provides evidence | **APPROVED IN PRINCIPLE** |
 | Public channel name, logo, and final visual identity | NOT SELECTED |
-| Specific simulation engine, renderer, AI models, voice, or editing stack | NOT SELECTED |
+| Primary 3D scene/simulation/render engine | **BLENDER APPROVED**; Kaggle compatibility not yet validated |
+| Initial renderer | EEVEE **PROVISIONAL** pending a minimal runtime compatibility test |
+| AI models, voice, and final editing stack | NOT SELECTED |
 | Production automation or unattended publishing | NOT APPROVED |
 | Claims about likely views, revenue, retention, or monetization eligibility | NOT ESTABLISHED |
 | Full-scale production | BLOCKED until the prototype gate is passed |
@@ -430,7 +432,7 @@ The local persistent project archive remains the source of truth. Temporary GPU 
 
 ## 8. Proposed technical architecture
 
-No specific tool or model is approved merely because it appears in this document. Select the stack through a small benchmark using the actual hardware and intended scene complexity.
+Blender is approved as the sole primary 3D production engine by the decision recorded in [BLENDER_KAGGLE_ENGINE_SPECIFICATION.md](./BLENDER_KAGGLE_ENGINE_SPECIFICATION.md). This is an architecture decision, not a measured benchmark result. The pinned version and renderer must pass a small compatibility test in the actual Kaggle runtime before bulk production. Other stack components remain unselected until separately justified.
 
 ### 8.1 Design principles
 
@@ -442,22 +444,17 @@ No specific tool or model is approved merely because it appears in this document
 - **Human approval:** Automated generation may create candidates, but it must not automatically publish without review.
 - **Recoverability:** Every stage should produce explicit outputs and be restartable without losing prior work.
 
-### 8.2 Engine selection criteria
+### 8.2 Approved engine and validation criteria
 
-Benchmark candidate tools against the same small scene. Compare:
-- Physical behavior and stability.
-- Control over collision properties and constraints.
-- Ease of scripting or procedural scene creation.
+Blender is the approved primary engine. Do not restart broad engine comparisons unless Blender fails a documented mandatory requirement after reasonable remediation. Validate the chosen Blender version and initial EEVEE renderer using a minimal scene in the actual Kaggle runtime. Record:
+- Physical behavior and stability for the intended rigid-body scene.
+- Scripted scene creation and background execution.
 - Ability to render vertical output.
-- Preview and final render time.
-- CPU/GPU requirements and memory use.
-- Determinism and reproducibility.
-- Batch execution and error reporting.
-- Export quality and post-production integration.
-- License compatibility for commercial use.
-- Documentation and maintainability.
+- Preview time, CPU/GPU availability, memory use, and failure behavior.
+- Determinism/repeatability and logs.
+- Export or frame-sequence integrity and archive recovery.
 
-Do not select an engine based on feature lists alone. Record the actual test scene, hardware, settings, time, failures, and resulting frames.
+The detailed test procedure is maintained in [BLENDER_KAGGLE_ENGINE_SPECIFICATION.md](./BLENDER_KAGGLE_ENGINE_SPECIFICATION.md). Do not treat this architecture decision as a measured performance result.
 
 ### 8.3 Suggested module boundaries
 
