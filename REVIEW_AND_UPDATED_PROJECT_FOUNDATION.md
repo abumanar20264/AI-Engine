@@ -1,12 +1,12 @@
 # AI-Engine: Critical Research Review & Updated Project Foundation
 
 **Document ID:** AI-ENGINE-FOUNDATION  
-**Version:** 0.2.0-proposal  
+**Version:** 0.3.0-research-update  
 **Status:** PROPOSED — NOT APPROVED FOR IMPLEMENTATION  
 **Review date:** 2026-10-20  
 **Supersedes:** None. This is an additive review document; the original `README.md` remains unchanged.  
 **Repository:** https://github.com/abumanar20264/AI-Engine  
-**Scope:** English-language, global-audience video formats and a limited-compute, AI-assisted production workflow.
+**Scope:** English-language, global-audience video formats and a limited-compute, AI-assisted production workflow. This revision adds a preliminary public-demand scan; it does not validate audience demand for a new channel.
 
 > **Decision boundary:** This document authorizes research and small, reversible experiments only. It does not authorize building a production system, committing to a niche, purchasing services, or claiming that any model has been tested.
 
@@ -382,7 +382,7 @@ A video cannot be marked ready to publish unless all required checks pass.
 2. Which models and model versions are actually present in Kaggle, and can they be used under their license and access conditions?
 3. What does a verified 700–1,000-word script cost in active research and editing time for candidates A and B?
 4. Can a 45–90 second prototype communicate a clear causal explanation without character animation or generative video?
-5. Which specific videos across large and small channels demonstrate repeated demand, and what counterexamples exist?
+5. Which specific videos across large and small channels demonstrate repeated demand, and what counterexamples exist? A preliminary sample is now recorded in Section 13; a matched, systematic sample is still open.
 6. Do comments contain repeated, verifiable requests for a deeper explanation, or are apparent gaps based only on a cursory search?
 7. Which data sources and map licenses are suitable for the supply-chain candidate?
 8. Can the creator sustain the required publication cadence without sacrificing research quality?
@@ -391,7 +391,157 @@ A video cannot be marked ready to publish unless all required checks pass.
 11. Which narration method gives acceptable pronunciation, pacing, licensing, and audio quality?
 12. What rights-clearance and disclosure checklist will be used before each upload?
 
-## 13. Current decision memo
+## 13. Preliminary public-demand study (2026-10-20)
+
+**Status: OBSERVATIONAL DESK RESEARCH — NOT A MARKET FORECAST.** This section records a first public scan of two candidate formats. It is not a randomized sample, not a full competitive audit, and not evidence of likely views, CTR, retention, RPM, or monetization for a new channel.
+
+### 13.1 Research question and method
+
+**Question:** Is there visible, repeated audience demand for (A) engineering/system failures and technical post-mortems, and (B) supply-chain, transport, and infrastructure explainers, across more than one established channel?
+
+**Method used**
+- Reviewed public video lists and channel-scan pages with visible titles, view counts, and in several cases upload dates and durations.
+- Included multiple channels per candidate rather than treating one successful creator as proof of demand.
+- Prioritized long-form examples and included recent uploads where the pages exposed them. Some counterexamples and lower-performing examples are deliberately retained.
+- Recorded the displayed counts as a snapshot from pages crawled around 2026-10-20. The underlying pages state that their data is drawn from the YouTube Data API and refreshed periodically; individual counts may differ from a later live view.
+- Used public view counts only as **reach signals**. They do not reveal traffic source, click-through rate, retention, viewer satisfaction, production costs, monetization status, or how much of a channel’s audience is transferable to a new creator.
+
+**Limitations:** The sample is purposive and partly based on third-party pages, not a complete export from YouTube Studio. The channels vary greatly in size, age, topic breadth, upload cadence, and video age. The results establish that these subjects can attract viewers; they do not prove that one niche is easier to enter or more profitable. This scan does not include a systematic comment analysis or a reliable estimate of hours required to make each format.
+
+### 13.2 Candidate A — engineering/system failures and technical post-mortems
+
+The candidate includes infrastructure failures, engineering decisions, technical accidents, and causal explanations of how a system failed. The best editorial version is not merely a disaster recap: it explains the mechanism, evidence, decision chain, and what changed afterward.
+
+| Channel / sample video | Public views shown | Signal and caveat |
+|---|---:|---|
+| Practical Engineering — “The Wild Story of the Taum Sauk Dam Failure” | 11.4M | A clear failure-focused topic can travel far on a large specialist channel; this is an outlier, not a baseline. |
+| Practical Engineering — “Bridge Demolition is Complicated” | 576K | A relevant engineering topic can also perform below the channel’s median. |
+| Practical Engineering — “The Hidden Engineering of Pressure Regulators” | 808.5K | Recent technical explainer; less sensational but still reached a substantial audience. |
+| Practical Engineering — “Every US Electrical Outlet Explained” | 1.4M | Adjacent technical infrastructure topic, not a failure post-mortem. |
+| Practical Engineering — “Stopping the Unstoppable” | 5.1M | Engineering intervention / mechanism topic; supports breadth within the engineering-explainer umbrella. |
+| Plainly Difficult — “Bridge Collapsed Under …” | 301K | Recent failure/disaster title; exact displayed title is truncated on the statistics page. |
+| Plainly Difficult — “Every Corner Cut Led to …” | 618K | A recent causal-failure framing exceeded several other recent uploads on the same channel. |
+| Plainly Difficult — “Brand New Dam Fails Catastrophically” | 286K | A failure topic with moderate, not exceptional, reach. |
+| Plainly Difficult — “The Deadliest Industrial …” | 250K | Industrial-disaster subject; the page truncates the full title. |
+| Brick Immortar — “A COLLISION OF BLAME: The Total Collapse of Baltimore’s Key Bridge” | 446.7K | A topical bridge-collapse analysis; the snapshot was roughly five weeks after publication. |
+| Brick Immortar — “DISASTROUS INDIFFERENCE: The Loss of SS El Faro” | 4.75M | Long-tail disaster analysis can accumulate millions of views. |
+| Brick Immortar — “CRUSH DEPTH: The Nightmarish Loss of USS Thresher” | 4.7M | Another high-performing technical disaster case on the same channel. |
+| Real Engineering — “NASA’S Plutonium Problem” | 4.1M | Adjacent high-stakes engineering/technical systems topic. |
+| Real Engineering — “The Insane Engineering of the P-38 Lightning” | 3.6M | Technical engineering storytelling can attract large audiences beyond pure disaster coverage. |
+
+**Sources for Candidate A**
+- Practical Engineering channel scan (video list, view estimates, median, and stated sample): https://prepublish.ai/youtube-channel/PracticalEngineeringChannel
+- Plainly Difficult video statistics and recent-upload table: https://www.speakrj.com/audit/report/UCb0MyY46T9ZYOzDHkYnIoXg/youtube/media-stats
+- Brick Immortar channel statistics and video list: https://vidiq.com/youtube-stats/channel/%40brickimmortar/
+- Real Engineering channel scan: https://prepublish.ai/youtube-channel/RealEngineering
+
+**Interpretation:** There is repeated, cross-channel evidence of an audience for failure analysis and engineering explanation. The observed range is wide: from hundreds of thousands to several million views, with exceptional outliers. Therefore, the evidence supports **topic viability**, not a reliable expected-view estimate. Candidate A’s differentiation opportunity is a more rigorous, visual, source-led causal explanation—not copying disaster thumbnails or narration patterns.
+
+**Production implications (inference, not measured):**
+- A causal timeline, failure tree, annotated diagram, sourced photographs, and simple physics/engineering animations can explain many cases without recurring characters or generated video.
+- Fact-checking may be demanding: distinguish confirmed findings, preliminary reports, competing hypotheses, and hindsight claims. Avoid assigning blame beyond what primary investigations support.
+- Copyright clearance can be material if the format relies on CCTV, news clips, crash footage, or documentary footage. A vector-first visual language reduces dependency on unlicensed clips but does not remove the need for source attribution and careful evidence handling.
+- Some topics are emotionally sensitive. Avoid exploitative thumbnails, graphic footage, and overconfident causal claims.
+
+### 13.3 Candidate B — supply chain, transport, and infrastructure explainers
+
+The candidate explains how goods, people, energy, and infrastructure systems work: logistics networks, railways, airports, shipping, roads, construction projects, and the economics or bottlenecks that shape them.
+
+| Channel / sample video | Public views shown | Signal and caveat |
+|---|---:|---|
+| Wendover Productions — “How the Channel Tunnel Works” | 2.1–2.2M | Recent long-form infrastructure explainer with substantial reach. Different trackers show slightly different snapshots. |
+| Wendover Productions — “How the Trucking Industry Got So Terrible” | 3.9M | Strong example of a familiar system reframed around a problem. |
+| Wendover Productions — “The Logistics of Natural Gas” | 2.3–2.4M | Complex supply-chain topic with broad explanatory framing. |
+| Wendover Productions — “The Logistics of Music Festivals” | 1.3M | Shows that logistics can be applied to a non-industrial, relatable subject. |
+| Wendover Productions — “The Logistics of Fruit” | 1.22M | Concrete everyday product connected to a global distribution system. |
+| Wendover Productions — “The Design of Airline Route Networks” | 1.7M | A systems/network explanation with clear visual potential. |
+| Wendover Productions — “Why Japanese Railways Win” | 1.8M | Transport comparison with an understandable central question. |
+| Wendover Productions — “The Failed Logistics of Hurricane Katrina” | 890K | A failure-related logistics story; below the channel’s reported median, useful as a counterexample. |
+| Half as Interesting — “Why Does the World’s Biggest Ship Exist?” | 1.17M | A specific transport question reached over one million views. |
+| Half as Interesting — “This Is the Shortest Train in the United States” | 728K | A narrower rail topic still drew a substantial audience. |
+| Half as Interesting — “The Crazy-Fast Logistics of Flower Distribution” | 167.6K | Counterexample: a logistics topic can underperform even on a relevant established channel. |
+| The B1M — “The UK’s £49BN Heathrow Gamble” | 1.33M | Recent airport-capacity/infrastructure story with clear stakes and a project angle. |
+| The B1M — “Can Britain’s Houses of …” | 647K | A recent built-environment topic; the source page truncates the title. |
+| RealLifeLore — “The Incredible Logistics Behind the World’s Longest Flight” | 696K | Logistics can work inside broader geography/aviation storytelling, though this example is below one million. |
+| Mustard — “Could This Change Air Travel Forever?” | 13M | Strong long-tail aviation example, but older and not a fair benchmark for a new channel’s early performance. |
+
+**Sources for Candidate B**
+- Wendover Productions channel scan and recent uploads: https://prepublish.ai/youtube-channel/Wendoverproductions
+- “The Logistics of Fruit” YouTube video page: https://www.youtube.com/watch?v=NmhDcZHg7ik
+- Half as Interesting channel scan: https://prepublish.ai/youtube-channel/halfasinteresting
+- “Why Does the World’s Biggest Ship Exist?” YouTube video page: https://www.youtube.com/watch?v=WFxnsU1hu9k
+- The B1M video page for “The UK’s £49BN Heathrow Gamble”: https://www.youtube.com/watch?v=x-yXy6NLWGY
+- The B1M recent video statistics: https://www.speakrj.com/audit/report/UC6n8I1UDTKP1IWjQMg6_TwA/youtube/media-stats
+- RealLifeLore channel scan: https://prepublish.ai/youtube-channel/RealLifeLore
+- Mustard channel scan: https://prepublish.ai/youtube-channel/MustardChannel
+
+**Interpretation:** Candidate B has repeated demand across several distinct channel brands and a wide range of subject applications. Strong examples often connect a complex system to a clear human-scale question, a constraint, a failure, a cost, or a surprising consequence. However, the lower-performing flower-logistics and Hurricane Katrina examples show that the category label itself does not guarantee performance. The large Wendover results also reflect a mature channel, established audience, and high production quality; they cannot be treated as a forecast for a new entrant.
+
+**Production implications (inference, not measured):**
+- Maps, flow diagrams, route/network graphics, timelines, charts, and annotated public documents offer a credible CPU-first production style.
+- The format needs careful data provenance: route geometry, trade figures, capacity, dates, project budgets, and comparisons must be sourced and dated.
+- Some infrastructure stories can be evergreen; project delays, policy disputes, strikes, disruptions, and new capacity decisions can create timely angles. A balanced channel plan should not depend entirely on news cycles.
+- Topic selection should focus on a sharp explanatory question rather than a generic “how supply chains work” treatment.
+
+### 13.4 Cross-candidate comparison
+
+| Criterion | Candidate A: failures / technical post-mortems | Candidate B: supply chain / infrastructure |
+|---|---|---|
+| Evidence of existing audience | Present across Practical Engineering, Plainly Difficult, Brick Immortar, and Real Engineering | Present across Wendover, Half as Interesting, The B1M, RealLifeLore, and Mustard |
+| Range of observed results | Hundreds of thousands to multi-million-view examples; notable outliers | Hundreds of thousands to multi-million-view examples; notable outliers |
+| Repeatable visual grammar | Failure timeline, mechanism diagram, fault tree, evidence board, before/after | Map, network flow, capacity constraint, route comparison, timeline, cost breakdown |
+| Main research burden | Technical correctness, investigation findings, causality, attribution, footage rights | Data freshness, map/route accuracy, economic assumptions, source comparability |
+| Main editorial risk | Sensationalism, premature blame, graphic or reused footage | Generic broad explainers, unsupported statistics, overly broad topic scope |
+| Initial production hypothesis | Strong fit for focused case studies and vector diagrams | Strong fit for maps and system diagrams; potentially broader topic supply |
+| Evidence that is still missing | Actual time-to-research, repeatable production effort, pilot audience response | Actual time-to-research, repeatable production effort, pilot audience response |
+
+**No aggregate winner is declared.** The sample is not random or matched for video age, channel size, or production budget. Summing or averaging these counts would create false precision. The most defensible conclusion is that both candidates are viable enough to justify a controlled pilot, and neither has been proven superior for a new creator.
+
+### 13.5 Updated recommendation
+
+**Proposed next step: run a six-video pilot, not a production-engine build.** Produce three videos in each candidate format using the same constraints:
+1. Comparable target length and narration standard.
+2. A written source ledger and claim-level fact check.
+3. Primarily deterministic visuals; no multi-character animation requirement.
+4. Record active labor separately for research, scripting, visual creation, narration, editing, and quality assurance.
+5. Record visual defects, factual corrections, rendering time, and any paid or licensed assets.
+6. If published, evaluate results after a predeclared window and report views together with impressions, CTR, average view duration, retention, and traffic source where YouTube Studio exposes them. Do not judge solely by raw views or a single viral outlier.
+7. If publication is not yet appropriate, compare blind internal reviews for factual clarity, comprehension, pacing, and production time; treat that as a production test, not a demand test.
+
+For each candidate, select one topic that is evergreen and one with a clear current or practical consequence, plus a third topic chosen from the evidence review. Do not make all three episodes variants of the same headline. Keep the audience, production quality bar, and length comparable enough that the test is interpretable.
+
+### 13.6 Monetization and AI policy guardrail
+
+YouTube’s official policy says repetitive or mass-produced “inauthentic content” can be ineligible for monetization; reused content is assessed separately. The policy also says the substance should offer original creative, educational, or entertainment value, and that using automated tools does not by itself determine eligibility. Therefore, the engine should automate workflow steps, not mass-produce interchangeable episodes. Each video needs a distinct thesis, independently verified research, original explanatory value, and meaningful editorial review.
+
+Primary source: https://support.google.com/youtube/answer/1311392
+
+### 13.7 Research log and confidence
+
+- **Research date:** 2026-10-20.
+- **Candidate A:** At least four distinct channels reviewed; multiple relevant videos documented.
+- **Candidate B:** At least five distinct channels reviewed; multiple relevant videos documented.
+- **Confidence that these broad subjects have existing audiences:** Moderate.
+- **Confidence about which candidate is better for a new channel:** Low.
+- **Confidence about monetization, RPM, CTR, retention, or workload:** Insufficient evidence.
+- **Not done:** No comment-level demand analysis, no full systematic sample of 8+ videos per channel, no direct YouTube Studio analytics, no new-channel pilot, no production timing experiment, and no model/Kaggle benchmark.
+
+### 13.8 Sources added in this revision
+
+1. Practical Engineering channel scan: https://prepublish.ai/youtube-channel/PracticalEngineeringChannel
+2. Plainly Difficult recent video statistics: https://www.speakrj.com/audit/report/UCb0MyY46T9ZYOzDHkYnIoXg/youtube/media-stats
+3. Brick Immortar video statistics: https://vidiq.com/youtube-stats/channel/%40brickimmortar/
+4. Real Engineering channel scan: https://prepublish.ai/youtube-channel/RealEngineering
+5. Wendover Productions channel scan: https://prepublish.ai/youtube-channel/Wendoverproductions
+6. Half as Interesting channel scan: https://prepublish.ai/youtube-channel/halfasinteresting
+7. The B1M video statistics: https://www.speakrj.com/audit/report/UC6n8I1UDTKP1IWjQMg6_TwA/youtube/media-stats
+8. RealLifeLore channel scan: https://prepublish.ai/youtube-channel/RealLifeLore
+9. Mustard channel scan: https://prepublish.ai/youtube-channel/MustardChannel
+10. YouTube Help, monetization policies: https://support.google.com/youtube/answer/1311392
+
+---
+
+## 14. Current decision memo
 
 ### Established by cited external documentation
 - YouTube’s monetization policy explicitly addresses repetitive or mass-produced “inauthentic content” and distinguishes reused content. Originality and viewer value matter; AI assistance alone does not establish a violation or guarantee eligibility. Source: https://support.google.com/youtube/answer/1311392.
