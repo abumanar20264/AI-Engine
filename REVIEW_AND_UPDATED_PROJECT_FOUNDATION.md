@@ -796,6 +796,185 @@ Do not answer these questions by assumption. Use recorded tests and current sour
 
 ---
 
+## 18. Visual quality specification — operational draft
+
+This section translates the research response into reviewable production criteria. It is an internal design specification, not a claim that these choices are proven to increase views or retention. The first prototype batch must test the criteria against actual rendered scenes.
+
+### 18.1 Shared visual principles
+
+Every pillar should follow these shared principles:
+
+- **Single focal event:** At any key moment, a viewer should be able to identify the primary moving object, interaction, or outcome without searching the frame.
+- **Mobile legibility:** The important geometry and contact points must remain visible at vertical-phone size. Fine detail is secondary to silhouette, contrast, and readable motion.
+- **Causal readability:** The framing should make it possible to follow what triggers what. Do not hide a critical collision, force, or state change behind another object or a camera cut.
+- **Consistent scene logic:** Object scale, materials, lighting, shadows, camera perspective, and motion should remain coherent within an episode.
+- **Intentional motion:** Acceleration, deceleration, pauses, impacts, and transitions must serve the action. Use artistic timing only when it does not misrepresent a stated physical comparison.
+- **Purposeful detail:** Add materials, reflections, particles, depth of field, camera movement, and secondary motion only when they improve readability or the intended experience.
+- **Visible resolution:** The ending must show the result of the setup. A loop is optional and must not replace a meaningful payoff.
+- **Sound-off comprehension:** The essential premise and result should remain understandable without audio. Sound can add texture and impact but cannot be the only carrier of critical information.
+
+These are acceptance principles, not demands for photorealism. A clean stylized scene can pass; an expensive render can fail.
+
+### 18.2 Pillar-specific art direction
+
+| Dimension | Satisfying Systems | Physics in Action | The Experiment |
+|---|---|---|---|
+| Primary visual objective | Order, rhythm, pattern, smooth flow, or a satisfying final state | Make the interaction and physical response easy to see | Make the question, changed condition, and outcome easy to compare |
+| Preferred framing | Stable wide or orthographic/isometric view when the overall arrangement matters; close-up only when it preserves context | Framing that reveals contact, trajectory, deformation, and response | Matched framing for comparisons; split-screen or sequential comparison where it improves clarity |
+| Motion emphasis | Continuous, coordinated, well-timed movement | Credible acceleration, collisions, rebound, balance, transfer, or collapse | Clear before/after divergence attributable to the declared variable |
+| Text use | Usually unnecessary; brief text only if it clarifies the visual task | Brief labels only when needed to identify a material, condition, or rule | A concise question and minimal condition labels may be useful |
+| Payoff | Completion, alignment, transformation, stable arrangement, or deliberate loop | A visible physical consequence | A result that answers the stated question, including an unexpected or failed outcome |
+| Common rejection reason | Generic motion with no distinctive arrangement or resolution | Motion defects that make the physical response confusing | Unclear variable, inconsistent comparison, or a conclusion unsupported by the scene |
+
+The table describes starting defaults, not rigid templates. Deviations are acceptable when the concept clearly benefits from them.
+
+### 18.3 Visual fidelity modes
+
+Choose one mode for each scene and document it in the concept card:
+
+1. **Stylized procedural:** Geometry and motion are intentionally designed or generated from explicit rules. Prioritize clarity and repeatability; do not imply measured physical accuracy.
+2. **Plausible simulation:** Motion is produced by a simulation intended to look physically credible, but parameters, solver limits, and simplifications may prevent scientific conclusions.
+3. **Evidence-oriented experiment:** The scene is intended to compare conditions or demonstrate a physical relationship. Record the changed variable, held-constant conditions, relevant parameters, and limitations. Do not present the render as real-world measurement unless it is supported by suitable validation.
+
+Photorealistic rendering is not proof of physical accuracy. The chosen mode must govern captions, narration, claims, and the level of technical review.
+
+### 18.4 Camera and rendering rules
+
+- Establish the action with a framing that shows the relevant objects and their relationship before using close-ups.
+- Keep the key event within the central mobile-safe area; verify the actual exported vertical video rather than relying only on the editor viewport.
+- Avoid shallow depth of field when it obscures a collision, comparison, target, or chain-reaction link.
+- Use motion blur only when it preserves the trajectory and does not conceal defects.
+- Check highlights, reflections, transparent materials, shadows, and dark objects against the final phone-size image.
+- Do not mandate ray tracing, ambient occlusion, metallic materials, or cinematic lighting in every scene. Enable expensive features only if the preview shows a meaningful improvement.
+- Render a low-cost preview of the critical event before final materials and full-resolution rendering.
+- Record the chosen frame rate, resolution, simulation settings, renderer, and relevant software versions with the scene.
+
+No fixed renderer, palette, camera lens, resolution, frame rate, or render-time target is approved by this section. These require a hardware-backed prototype benchmark.
+
+## 19. Hook and payoff patterns — hypotheses to test
+
+The following are candidate editorial patterns, not established ranking signals or guarantees of retention. Test them with distinct concepts and comparable production quality.
+
+### Satisfying Systems
+- Begin with a visually incomplete pattern, a constrained arrangement, or a mechanism at the threshold of motion.
+- Make the desired order or final state inferable quickly.
+- Deliver a progression toward alignment, completion, transformation, or a clearly designed loop.
+- Reject loops that merely repeat motion without a meaningful visual idea or that hide a broken ending.
+
+### Physics in Action
+- Show the object, surface, structure, or interaction before the decisive event.
+- Keep the contact point and resulting motion visible.
+- Use a clear consequence—rebound, deformation, transfer, imbalance, or collapse—as the payoff.
+- Avoid cuts or effects that conceal whether the observed response follows from the stated setup.
+
+### The Experiment
+- State or show one concise question, challenge, or prediction.
+- Make the compared conditions distinguishable and keep other relevant conditions constant where practical.
+- Show the result in a form that can be compared directly.
+- If the outcome is surprising, explain only what the test supports; do not overstate causation when other variables changed.
+
+### Test protocol
+
+For each pilot video, record the intended hook pattern, time to first meaningful action, whether the premise is understandable with audio muted, whether the payoff is visible, and reviewer notes. After publication, compare available channel analytics only when enough comparable observations exist. Public view counts alone cannot establish retention, rewatch behavior, click-through rate, or causation.
+
+Do not claim that a seamless loop automatically causes YouTube to distribute a video more widely. Treat loop design as an editorial choice and test its observed audience response.
+
+## 20. Simulation quality gate
+
+Every scene must pass a preview inspection before final rendering and a full-export inspection before release.
+
+### 20.1 Preview inspection
+
+- [ ] The scene starts from documented initial conditions.
+- [ ] The main action and its cause are visible from the selected camera.
+- [ ] There are no unintended object intersections, tunneling, teleportation, flicker, or unexplained motion.
+- [ ] Resting objects do not exhibit distracting jitter or drift.
+- [ ] Stacks, joints, constraints, and collisions behave consistently with the chosen scene mode.
+- [ ] Comparison runs use the same baseline settings except for the declared variable.
+- [ ] The outcome is reproducible enough for the purpose of the episode; any artistic intervention is documented.
+- [ ] The scene can be simplified or reworked if the selected simulation method cannot produce credible behavior.
+
+### 20.2 Final-export inspection
+
+- [ ] Watch the complete exported file, not just the preview or timeline.
+- [ ] Confirm the intended action is legible at phone size and in vertical framing.
+- [ ] Check the opening, key contact events, result, and final frame for visual defects.
+- [ ] Check for dropped or duplicated frames, unintended black frames, crop errors, and encoding artifacts.
+- [ ] Check audio levels, synchronization, clipping, abrupt cuts, and rights.
+- [ ] Verify all on-screen labels and factual claims against the scene specification.
+- [ ] Archive the scene source, parameters, software/asset manifest, preview, final export, and review decision.
+
+A scene fails if a defect changes the viewer's interpretation of the event, even if the render completes successfully. Cosmetic defects may be judged by severity, but the reviewer must record the decision rather than silently waive the check.
+
+## 21. Operational originality standard
+
+The existing 8/10 scorecard remains an internal screening tool only; it is not a validated predictor of performance or monetization. Apply the following additional checks before approving an idea:
+
+1. **Premise delta:** Write one sentence explaining what is structurally new relative to the closest examples found in the competitor ledger.
+2. **Mechanism delta:** Identify the new rule, geometry, constraint, causal chain, comparison, or outcome. A color/material/camera change alone is insufficient.
+3. **Episode-specific payoff:** Describe the result unique to this episode and why it is not interchangeable with a prior upload.
+4. **Reference review:** Record the closest known competitor examples and URLs. If the scene closely reproduces a distinctive sequence, redesign it rather than relying on superficial changes.
+5. **Production record:** Preserve the concept card, scene specification, simulation parameters, source project, and human review record.
+6. **Series variation:** Reusable assets and recurring formats are allowed, but each episode must contribute a materially different question, mechanism, progression, or result.
+
+Passing this internal standard does not guarantee YouTube monetization eligibility. Review the current official policy and evaluate the actual channel and videos; do not treat this score as a substitute for policy compliance.
+
+## 22. Evidence quality and claim control
+
+The research response currently available in `README.md` is useful as a set of creative and technical hypotheses, but it does not provide a traceable video-by-video evidence ledger sufficient to substantiate its market conclusions. It must not be cited as completed empirical market research until its examples and sources are added.
+
+### 22.1 Required evidence record
+
+For each competitor video used to support a conclusion, record:
+
+- Exact video title and URL, plus channel URL.
+- Publication date, observation date, visible view count, duration, and visible subscriber count where available.
+- Pillar, format, premise, hook, visual style, apparent production method, and payoff.
+- At least one comparable video from the same channel when available.
+- Why the example supports the stated conclusion and what it does not establish.
+- Any counterexample or competing explanation.
+- Confidence level and source limitations.
+
+### 22.2 Claim labels
+
+Label future research findings as one of:
+
+- **Observed fact:** Directly visible or stated by a traceable source, with date and source.
+- **Interpretation:** A reasoned reading of an observed example; alternatives should be acknowledged.
+- **Design decision:** A choice deliberately adopted by this project.
+- **Hypothesis:** A proposition that needs a prototype or channel-analytics test.
+- **Unknown:** Evidence is insufficient or the relevant data is private/unavailable.
+
+### 22.3 Claims that must not be repeated as facts without evidence
+
+- Numerical estimates of how much content can be understood without dialogue.
+- Claims that a sound treatment increases quality or performance by a particular percentage or multiplier.
+- Claims that seamless loops trigger or improve algorithmic distribution.
+- Claims that a particular lighting/rendering technique is typical of high-performing videos unless supported by a documented sample.
+- Claims that any pillar, visual style, duration, or hook pattern is commercially superior based only on isolated public view counts.
+
+Public views and subscriber counts cannot reveal private retention, impressions click-through rate, RPM, revenue, traffic sources, or the causal reason a video performed as it did. Record those fields as unavailable unless the channel owner supplies legitimate analytics.
+
+### 22.4 Research completion gate
+
+Do not label competitive research complete until the evidence ledger includes examples across all three pillars, both strong and ordinary/weak comparables where discoverable, source links, observation dates, and explicit limitations. If examples cannot be verified, mark the conclusion as unverified rather than filling the gap with inference.
+
+## 23. Immediate documentation actions
+
+Before choosing a production engine or building automation:
+
+1. Prepare one concept card per pillar using the same required fields.
+2. Select the intended visual fidelity mode for each concept.
+3. Score originality and document the closest known references.
+4. Build only a minimal prototype scene for the most informative technical test.
+5. Use the shared visual and simulation quality gates above to assess the prototype.
+6. Record measured construction, simulation, preview, final-render, and correction time on the actual available hardware.
+7. Revise the visual specification based on observed failures and reviewer feedback.
+8. Keep market-performance claims open until a traceable competitor study and, later, a controlled publishing test provide evidence.
+
+These actions refine the existing pilot gates; they do not authorize bulk production, purchases, engine selection, or automated publishing.
+
+
 ## Appendix A — Primary policy and technical references
 
 Use current official documentation and re-check it before implementation or publication.
@@ -812,6 +991,12 @@ These sources document policies or tools. They do not validate this channel’s 
 ---
 
 ## Change log
+
+### 1.1.0 — 2026-10-20
+- Added operational visual-quality specifications for the three pillars, with clear distinctions between stylized procedural scenes, plausible simulations, and evidence-oriented experiments.
+- Added testable hook/payoff hypotheses, simulation QA gates, an operational originality standard, and an evidence/claim-control framework.
+- Explicitly downgraded unsupported numerical and algorithmic claims from the research response to unverified hypotheses.
+- Kept market demand, performance, monetization, rendering targets, and engine choice unvalidated pending evidence and prototype tests.
 
 ### 1.0.0 — 2026-10-20
 - Replaced the previous multi-niche candidate list with one approved editorial product: Visual Physics Experiments.
