@@ -1,10 +1,11 @@
 # AI-Engine — Visual Physics Experiments Channel Product Specification
 
 **Document ID:** AI-ENGINE-PRODUCT-VISUAL-PHYSICS  
-**Version:** 1.0.0-approved-direction  
+**Version:** 1.2.0-production-spec-linked  
 **Status:** EDITORIAL DIRECTION APPROVED — PRODUCTION SYSTEM NOT IMPLEMENTED  
 **Decision date:** 2026-10-20  
 **Repository:** https://github.com/abumanar20264/AI-Engine  
+**Production SOP:** [PRODUCTION_OPERATIONS_SPECIFICATION.md](./PRODUCTION_OPERATIONS_SPECIFICATION.md) — authoritative stage-gated production procedure  
 **Audience:** Global audience; primarily English-language packaging, with many videos understandable without spoken language  
 **Launch format:** YouTube Shorts  
 **Expansion path:** Long-form YouTube videos after evidence from the Shorts pilot  
@@ -961,6 +962,8 @@ Do not label competitive research complete until the evidence ledger includes ex
 
 ## 23. Immediate documentation actions
 
+The production workflow is now specified in [PRODUCTION_OPERATIONS_SPECIFICATION.md](./PRODUCTION_OPERATIONS_SPECIFICATION.md). That SOP defines the required production records, stages, exit criteria, simulation tests, render/audio baselines, release QA, and benchmark gate. It does not imply the production system has been implemented or validated on hardware.
+
 Before choosing a production engine or building automation:
 
 1. Prepare one concept card per pillar using the same required fields.
@@ -991,6 +994,10 @@ These sources document policies or tools. They do not validate this channel’s 
 ---
 
 ## Change log
+
+### 1.2.0 — 2026-10-20
+- Linked the dedicated production operations SOP as the authoritative execution procedure.
+- Clarified that detailed production documentation does not establish technical feasibility or measured production capacity.
 
 ### 1.1.0 — 2026-10-20
 - Added operational visual-quality specifications for the three pillars, with clear distinctions between stylized procedural scenes, plausible simulations, and evidence-oriented experiments.
