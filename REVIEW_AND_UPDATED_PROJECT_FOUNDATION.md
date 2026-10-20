@@ -1,11 +1,12 @@
 # AI-Engine — Visual Physics Experiments Channel Product Specification
 
 **Document ID:** AI-ENGINE-PRODUCT-VISUAL-PHYSICS  
-**Version:** 1.2.0-production-spec-linked  
+**Version:** 1.3.0-audit-register-linked  
 **Status:** EDITORIAL DIRECTION APPROVED — PRODUCTION SYSTEM NOT IMPLEMENTED  
 **Decision date:** 2026-10-20  
 **Repository:** https://github.com/abumanar20264/AI-Engine  
 **Production SOP:** [PRODUCTION_OPERATIONS_SPECIFICATION.md](./PRODUCTION_OPERATIONS_SPECIFICATION.md) — authoritative stage-gated production procedure  
+**Audit register:** [DOCUMENT_AUDIT_AND_GAP_REGISTER.md](./DOCUMENT_AUDIT_AND_GAP_REGISTER.md) — section-by-section review and unresolved tests  
 **Audience:** Global audience; primarily English-language packaging, with many videos understandable without spoken language  
 **Launch format:** YouTube Shorts  
 **Expansion path:** Long-form YouTube videos after evidence from the Shorts pilot  
@@ -994,6 +995,9 @@ These sources document policies or tools. They do not validate this channel’s 
 ---
 
 ## Change log
+
+### 1.3.0 — 2026-10-20
+- Linked the section-by-section audit register and its empirical test/decision list.
 
 ### 1.2.0 — 2026-10-20
 - Linked the dedicated production operations SOP as the authoritative execution procedure.
