@@ -515,41 +515,45 @@ Do not merge active labor and unattended render time into one figure. Both matte
 
 For published videos, add publication URL/date, observation date, views, and any analytics legitimately available from YouTube Studio. Public views cannot establish retention, RPM, revenue, or causal reasons for performance. Capture metrics at consistent intervals selected before the test; record the actual observation times rather than backfilling guessed values.
 
-## 15. Engine and tool selection gate
+## 15. Approved engine and compatibility gate
 
-No engine, renderer, AI model, editing tool, or sound source is approved until it passes a small benchmark.
+**Decision:** Blender is the project's sole approved primary production engine. See [BLENDER_KAGGLE_ENGINE_SPECIFICATION.md](./BLENDER_KAGGLE_ENGINE_SPECIFICATION.md) for the authoritative engine decision, requirements, Kaggle operating model, local control workflow, checkpoint policy, and compatibility gate.
 
-### 15.1 Benchmark scene
+Approval of Blender is an architecture decision; it does not mean the chosen Blender version, renderer, or Kaggle runtime has passed an empirical test. Bulk production remains blocked until the minimal compatibility gate in the engine specification passes.
 
-Use the same benchmark across candidates:
+### 15.1 Required compatibility scene
+
+Use one small Blender scene to verify the actual intended workflow:
 - One rigid object rolls or falls onto a surface.
 - One controlled collision/rebound.
 - One small chain reaction or stacked-object interaction.
 - One vertical camera setup.
 - One representative material/light setup.
-- One short preview and one target-quality render.
-- One export and playback check.
+- One short preview render.
+- One output export or verified frame sequence.
+- One archive/reopen check.
 
-If a candidate tool cannot support one of these tests, document why and use the closest comparable test; do not fabricate a score.
+Keep the scene and frame count small to minimize compute use. Do not run a full episode or compare multiple engines at this stage.
 
-### 15.2 Scorecard
+### 15.2 Required evidence
 
-Score each category 1–5 and attach evidence; a score without a test note is invalid.
+Record the following for the pinned Blender version and actual runtime:
+- Blender version, OS, driver/runtime details, and available hardware.
+- Renderer and settings used.
+- Scene/config revision and random seed where applicable.
+- Whether background execution and output paths work.
+- Wall-clock time, memory/resource observations where available, logs, exit code, and failures.
+- Output integrity, repeatability observations, and archive verification.
+- Known limitations and the exact next action if any requirement fails.
 
-- Physical credibility for the intended scene.
-- Stability and repeatability.
-- Scriptability/procedural control.
-- Visual quality at phone size.
-- Preview and final render performance on actual hardware.
-- Memory/VRAM use and failure behavior.
-- Vertical export and post-production compatibility.
-- Debugging, logs, and recovery.
-- Learning and maintenance burden.
-- License and commercial-use compatibility.
-- Dependency stability and documentation.
-- Cost and operational constraints.
+A successful test must be supported by logs and inspectable outputs. A score or claim without a test note is not evidence.
 
-Record hardware model, OS, driver/runtime versions, engine version, settings, output, time, memory, failures, and subjective visual assessment. Select only after comparing the measured results and the project’s stated priorities. If no candidate passes, simplify the product’s visual requirements or revise the workflow before proceeding.
+### 15.3 Decision rule
+
+- If the minimal Blender workflow passes, authorize only a small controlled pilot and collect representative production measurements.
+- If one component fails, diagnose and correct that component within Blender before considering a broader architecture change.
+- Reconsider the engine only if a documented mandatory requirement cannot be met after reasonable, evidence-based remediation.
+- Do not interpret this decision as proof of market demand, virality, monetization, or scaled-production economics.
 
 ## 16. Compute, checkpoints, and recovery
 
