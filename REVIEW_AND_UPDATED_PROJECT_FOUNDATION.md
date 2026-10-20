@@ -524,7 +524,8 @@ Primary source: https://support.google.com/youtube/answer/1311392
 - **Confidence that these broad subjects have existing audiences:** Moderate.
 - **Confidence about which candidate is better for a new channel:** Low.
 - **Confidence about monetization, RPM, CTR, retention, or workload:** Insufficient evidence.
-- **Not done:** No comment-level demand analysis, no full systematic sample of 8+ videos per channel, no direct YouTube Studio analytics, no new-channel pilot, no production timing experiment, and no model/Kaggle benchmark.
+- **Sample coverage:** More than eight relevant video examples are documented for each candidate, spanning at least four channels per candidate. This is a purposive desk sample, not a matched or randomized sample, and it does not contain eight examples from every channel.
+- **Not done:** No comment-level demand analysis, no systematic matched sample, no direct YouTube Studio analytics, no new-channel pilot, no production timing experiment, and no model/Kaggle benchmark.
 
 ### 13.8 Sources added in this revision
 
@@ -557,11 +558,11 @@ Primary source: https://support.google.com/youtube/answer/1311392
 - Whether a particular visual style helps retention or click-through.
 
 ### Immediate next actions
-1. Populate the demand evidence ledger for candidates A and B.
-2. Run the local deterministic visual benchmark.
-3. Time one sourced script for each candidate.
-4. Make two comparable short prototypes.
-5. Review the evidence and explicitly approve, revise, or reject the next phase.
+1. Treat the public-demand scan in Section 13 as preliminary evidence, not a niche decision.
+2. Choose six pilot topics (three per candidate) and record sources before scripting.
+3. Run the local deterministic visual benchmark.
+4. Time the complete workflow for each pilot and record active labor by stage.
+5. Review quality, production effort, and—if published—YouTube Studio analytics before approving a niche or building the production engine.
 
 ### Formal approval
 
