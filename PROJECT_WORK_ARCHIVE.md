@@ -1895,3 +1895,11 @@ The Kaggle UI separately displayed **524.9 s** for this run; it is a broader wal
 **Verification and boundaries:** The full local test run immediately before commit reported 52 tests, `OK (skipped=1)`; the only skip was Windows symlink creation denied with `WinError 1314`. `git diff --cached --check` passed before commit. No Kaggle job, Blender install, render, benchmark, credential access, or force push occurred during commit/synchronization. The v16 `.blend` is still not locally recovered; the prior Kaggle HTTP 429 result stands.
 
 **Git state and next recommendation:** At the time of this record, the application/documentation commit is present on both `main` and `origin/main`. The `.gitignore` and this archive addendum are the only intended follow-up changes and require their own small commit/push; afterward verify that no non-ignored untracked files or tracked modifications remain. Recommendation: continue with local artifact retrieval only when Kaggle's output-listing endpoint permits it; do not rerun the successful remote task solely to obtain the artifact.
+
+## 2026-10-21 17:57 +03:00 - Archive follow-up synchronized
+
+**Completed:** The follow-up ignore/archive commit is `f30d719a4d28add7b3109eccb401db0c46bfdba8` (`Archive synchronization and ignore local evidence`). It was pushed to `origin/main`; post-push fetch verified local `HEAD` and `origin/main` both equal this commit. The latest `git status --short --branch` reported `main...origin/main` with no modified, staged, or non-ignored untracked files. Historical local evidence remains on disk under the explicitly ignored directories listed above; it was not deleted or added to Git.
+
+**Verification:** No test code changed after the 52-test run documented above; the follow-up contains only `.gitignore` rules and this archive record. Push and remote SHA equality were verified; no force push, Kaggle task, or accelerator use occurred.
+
+**Next recommendation:** Resume local v16 artifact recovery only when Kaggle output listing is available. This remains blocked by the previously observed HTTP 429; the remote Blender verification evidence is retained and no local `.blend` recovery is claimed.
