@@ -1601,3 +1601,287 @@ The Kaggle UI separately displayed **524.9 s** for this run; it is a broader wal
 
 - Removed trailing spaces from the new `CURRENT_PROJECT_STATUS.md` and from edited status/date lines in the gap register and product foundation, so newly added lines do not introduce avoidable `git diff --check` warnings.
 - No content decisions, production files, runtime settings, or historical archive entries were changed in this formatting-only follow-up.
+
+## 2026-10-21 - Project contract and local persistence foundation
+
+**Date/time:** 2026-10-21 14:20 +03:00 (Jordan Standard Time).
+**Objective and authorization:** Implement the first approved product-code phase: a versioned project/scenario contract, input validation, safe local save/load, automated tests, and narrowly scoped updates to the current-status and gap documents. No UI, Blender scene integration, Kaggle job, or later product phase was authorized for implementation in this step.
+
+**COMPLETED — implementation:**
+- Added a version-1 project document with UUID, name, timezone-aware creation time, project status, rigid-body-chain scenario and object parameters, gravity, camera/video settings, optional audio configuration, task status/error/run references, and video/report output references.
+- Added strict field/value/state validation with actionable `ProjectValidationError` messages. The vertical 720×1280, 24 FPS, 120-frame default remains at 8 EEVEE samples; no production renderer configuration was changed.
+- Added project-local JSON save/load/list with a 1 MB read limit, duplicate-key and UTF-8/JSON validation, canonical UUID path validation, symbolic-link checks, and same-directory temporary write plus atomic replacement. Temporary-file cleanup errors are surfaced rather than silently ignored.
+- Added a minimal `pyrightconfig.json` source path so editor analysis resolves the `src`-layout package. No package dependencies were added.
+
+**Files created or modified:**
+- Created `src/ai_engine/__init__.py`, `src/ai_engine/project_store.py`, `tests/test_project_store.py`, and `pyrightconfig.json`.
+- Updated `CURRENT_PROJECT_STATUS.md` and `DOCUMENT_AUDIT_AND_GAP_REGISTER.md` to mark only the contract/store foundation as implemented and tested; UI, scene generation, Kaggle orchestration, audio, and export remain gaps.
+- Appended this entry to `PROJECT_WORK_ARCHIVE.md`; previous entries were retained.
+- No existing Kaggle runner, Notebook, benchmark output, diagnostic file, credential, or production setting was changed.
+
+**VERIFIED — tests and analysis:**
+- Command: `.venv\Scripts\python.exe -m unittest discover -s C:\AI-Engine\tests -v`. Final result: 14 tests run, 13 passed, 1 skipped, 0 failures. The skipped symlink test could not create a Windows symbolic link because the process lacks the required privilege.
+- Command: `.venv\Scripts\python.exe -m py_compile` for `src\ai_engine\project_store.py`, `src\ai_engine\__init__.py`, and `tests\test_project_store.py`; exit code 0.
+- Parsed `pyrightconfig.json` with PowerShell `ConvertFrom-Json`; valid.
+- Pylance diagnostics for the implementation and test file returned no diagnostics after type-narrowing and source-path configuration.
+- The tests cover default values, invalid inputs/state combinations, JSON round-trip, list/update behavior, duplicate keys/corrupt JSON, traversal rejection, storage-root errors, and failed atomic replacement cleanup.
+
+**ERRORS, blockers, and recovery:**
+- The generic test tool did not discover the `unittest` test file; direct standard-library discovery was used instead.
+- An intermediate run after removing the test's source-path bootstrap failed with `ModuleNotFoundError: ai_engine`. Restoring the test-local `src` path bootstrap fixed the runtime import; the final full test run passed. Editor import resolution is separately configured through `pyrightconfig.json`.
+- Symbolic-link behavior remains unverified in this Windows session because symlink creation was denied; the test records a skip rather than claiming that check passed.
+
+**NOT TESTED / resource boundary:** No Blender process, Kaggle API/job, renderer, audio tool, video export, benchmark, accelerator, or credential was accessed. No external package was installed. Unit tests completed in under one second. No Git stage, commit, or push was performed.
+
+**Next recommended step (proposed):** Build the smallest control UI that creates/opens a project, edits the existing contract, saves through `ProjectStore`, and displays validation errors. Keep this phase separate from the scenario-to-Blender adapter and Kaggle job lifecycle.
+
+## 2026-10-21 - Local project control UI
+
+**Date/time:** 2026-10-21 14:34:36 +03:00 (Jordan Standard Time).
+**Objective and authorization:** Implement the second approved product round: a working local control UI wired to the current project contract and `ProjectStore`, with create/edit/save/open/list and clear validation errors. Preserve all pre-existing local work. No `git add`, commit, push, Kaggle job, render, credential access, or production setting change was authorized.
+
+**Baseline before implementation:**
+- Workspace was `C:\AI-Engine`, branch `main`, HEAD `b897a52f9322a6a06907a128d970b64a209a3a2a`. Existing local changes in `CURRENT_PROJECT_STATUS.md`, `DOCUMENT_AUDIT_AND_GAP_REGISTER.md`, `PROJECT_WORK_ARCHIVE.md`, `pyrightconfig.json`, `src/`, and `tests/` were present and preserved.
+- Existing tests: `.venv\Scripts\python.exe -m unittest discover -s C:\AI-Engine\tests -v` ran 14 tests: 13 passed, 1 skipped, 0 failed. The skip was the Windows symlink-privilege test.
+- No existing product UI or UI framework was found. `tkinter` import failed (`ModuleNotFoundError`) in the project venv. The existing version-1 contract and `ProjectStore` were reviewed and not changed.
+
+**COMPLETED — implementation:**
+- Added a dependency-free browser UI served by Python's standard-library `http.server`, bound to `127.0.0.1`. The web service delegates project creation to `create_project`, validation/persistence to `ProjectStore`, and UI operations through a separate `ProjectService`.
+- The UI creates unsaved project drafts, edits the project name, supported rigid-body-chain objects (including add/remove within the contract bounds), gravity, camera, video format/rate/frame count, EEVEE samples, and audio enable/source/volume settings. Only the implemented experiment type and object shapes are offered. The default remains 8 EEVEE samples.
+- Added saved-project listing/opening, per-field validation messages, save state, empty-storage handling, and clear responses for corrupt project files. No render/start-job control is shown; the interface explicitly states that Blender/Kaggle execution, audio production, and video export are not connected.
+- Added request-size, content-type, duplicate-JSON-key, non-finite-number, and Host-header checks. Project JSON is stored through `ProjectStore` in the repository-local `projects\` directory, created on first save; `/projects/` is ignored by Git to avoid tracking user project data.
+- Updated README and current-status/gap documentation; appended this session record without rewriting the preceding archive history.
+
+**Files created:**
+- `run_control_ui.py`
+- `src\ai_engine\control_app.py`
+- `src\ai_engine\project_service.py`
+- `src\ai_engine\web\index.html`
+- `src\ai_engine\web\control.css`
+- `src\ai_engine\web\control.js`
+- `tests\test_control_app.py`
+- `tests\test_project_service.py`
+
+**Files modified:**
+- `.gitignore` — exclude local `/projects/` data.
+- `README.md` — correct current implementation summary and next step.
+- `CURRENT_PROJECT_STATUS.md` — record the tested UI boundary and add run steps.
+- `DOCUMENT_AUDIT_AND_GAP_REGISTER.md` — record evidence and remaining production gaps.
+- `PROJECT_WORK_ARCHIVE.md` — append this entry.
+
+**VERIFIED — tests and runtime:**
+- Final command: `.venv\Scripts\python.exe -m unittest discover -s C:\AI-Engine\tests -v`. Result: 23 tests run, 22 passed, 1 skipped, 0 failed. This includes the existing project-store tests and new service/HTTP integration tests for missing storage, create/edit/save/list/load, invalid data, field paths (including vector components), duplicate JSON keys, wrong content type, and corrupt project files.
+- Python `py_compile` passed for the new service, HTTP app, launcher, and tests. `git diff --check` passed. Pylance diagnostics for the new application/service/tests returned no diagnostics. `pyrightconfig.json` parsed successfully.
+- `node --check` could not run because Node is not installed; the browser loaded and executed the UI JavaScript directly.
+- Browser E2E on the local loopback server verified draft creation, editing mass to 3.5 kg and gravity Z to -1.6, the visible `audio.source` validation message when audio was enabled without a source, successful save after adding `audio/impact.wav`, saved-project listing, and reopening with the edits restored. Sample count remained 8. The isolated browser-test project directory was inspected, then removed; the server was stopped and verified not responsive.
+- Verified the documented launcher help and that `git check-ignore --no-index projects\sample-project.json` reports the path ignored.
+
+**ERRORS and recovery:**
+- An initial assertion expected different validation wording than the contract actually emits; the test was corrected to assert the observed range message. The API already returned the correct field and validation failure.
+- Pylance found an inherited HTTP-server attribute type conflict and test type issues; these were corrected, and final diagnostics are clean.
+- The browser automation environment does not support `prompt()`. The UI was changed to create a real draft using contract defaults and let the user edit the name in the form; the full browser flow then passed.
+- Node was unavailable for a standalone JavaScript syntax command; direct browser loading/execution verified the client script instead.
+- The existing symbolic-link test remains skipped because Windows denied symlink creation; no symlink privilege/settings were changed.
+
+**NOT TESTED / resource boundary:** No Blender or Kaggle process, video render/export, audio generation/mixing, accelerator, package install, or production pipeline operation occurred. No credential or `kaggle.json` was accessed. No production renderer defaults changed. The interface is local project management only, not an end-to-end production application.
+
+**Git and preserved work:** No Git staging or commit/push occurred. Pre-existing diagnostics, benchmark upload copies, `pyrightconfig.json`, contract files/tests, and prior local documentation changes were left in place. Only the dedicated `.control-ui-browser-test-projects\` directory created for this browser test was cleaned up after verifying its sole JSON file was the test output.
+
+**Next recommended step (proposed):** Implement a scenario-to-Blender adapter that reads a saved project document and generates a testable scene, retaining the current fixed scene as a regression fixture. Add a task-start control only when it is connected to a real, validated execution path.
+
+## 2026-10-21 14:50-14:53 +03:00 - Round 3: saved project to Blender scene prototype
+
+**Objective and authorization:** Implement the requested first scenario-to-Blender path from the locally saved project, preserve all pre-existing local changes, run available tests, and document the exact verification boundary. No stage, commit, push, Kaggle job, or credential access was authorized or performed.
+
+**Completed — implementation:**
+- Added `src/ai_engine/scene_adapter.py` to validate the versioned project contract and produce a Blender-independent `ScenePlan` for the supported `rigid_body_chain` experiment. Project video dimensions, FPS, frame count, camera, gravity, object shapes/dimensions/mass/friction/restitution, and EEVEE sample count are mapped. The adapter rejects unsupported experiment types, invalid motion frame counts, overlap/unreachable launcher-target arrangements, non-downward Z gravity, and a camera with identical view/aim points.
+- Added `src/ai_engine/blender_scene_builder.py`, a Blender-side builder requiring Blender 4.0.2. It creates ground and rigid-body objects, a kinematic launcher animation followed by dynamic release, camera, lights, materials, and scene output settings; it saves a `.blend` and a JSON report. It marks simulation/render as not executed.
+- Added `src/ai_engine/scene_generation.py` and `generate_project_scene.py` to load the saved project through `ProjectStore`, validate output containment/non-overwrite, check Blender version, invoke the builder, and validate the resulting report/artifacts. A missing Blender executable is reported without creating the output directory.
+- Added adapter and saved-project generation tests. Preserved the existing 8-sample project default. The builder/report and CLI no longer claim CPU as an observed rendering device; device is unset because no rendering occurs.
+- Updated `CURRENT_PROJECT_STATUS.md`, `DOCUMENT_AUDIT_AND_GAP_REGISTER.md`, and `README.md` to distinguish the code prototype from verified Blender execution and corrected stale statements about whether a scene adapter exists. This archive entry is appended; prior entries are retained.
+
+**Files created:** `generate_project_scene.py`; `src/ai_engine/scene_adapter.py`; `src/ai_engine/blender_scene_builder.py`; `src/ai_engine/scene_generation.py`; `tests/test_scene_adapter.py`; `tests/test_scene_generation.py`.
+
+**Files modified:** `README.md`; `CURRENT_PROJECT_STATUS.md`; `DOCUMENT_AUDIT_AND_GAP_REGISTER.md`; `PROJECT_WORK_ARCHIVE.md`.
+
+**Commands executed and verified:**
+- `.venv\Scripts\python.exe -m unittest discover -s C:\AI-Engine\tests -v` — **34 tests, 33 passed, 1 skipped, 0 failed**. The skipped test is the pre-existing symbolic-link test; Windows denied symlink privilege (`WinError 1314`).
+- `.venv\Scripts\python.exe -m py_compile` for the new adapter, builder, generation service, CLI, and tests — passed.
+- `.venv\Scripts\python.exe generate_project_scene.py --help` — passed; expected CLI arguments and usage displayed.
+- `git diff --check` — passed.
+- Pylance diagnostics for `scene_adapter.py`, `blender_scene_builder.py`, `scene_generation.py`, and the related tests — no diagnostics after corrections.
+- `Get-Command blender` and `.venv\Scripts\python.exe -c "import importlib.util; print(importlib.util.find_spec('bpy') is not None)"` — Blender command not found and `bpy_available=False`.
+
+**Errors and recovery:** The first post-implementation full test run had 2 failures: one test expected a different unsupported-scenario message, and the missing-Blender path created the output directory prematurely. The adapter now gives an explicit supported-type error, and output directory creation occurs only after a successful version check. The next test run exposed the stale output-directory assumption while the early mkdir remained; that mkdir was removed. The optional test-runner tool did not discover these unittest files, so the repository's `unittest discover` command was used and completed the full suite. Pylance also reported an unused test keyword-argument parameter; the mock now reads and asserts its timeout value.
+
+**Verified:** Project-store-to-plan conversion, adapter validation boundaries, command preparation, output checks, report parsing/validation, CLI help, Python syntax, and the full local test suite. Blender 4.0.2 and EEVEE settings are represented in code and mock evidence only.
+
+**Not tested / unresolved:** Blender executable and `bpy` are unavailable locally, so no actual `.blend` file was generated. Blender API compatibility, actual scene save, rigid-body evaluation/collision, real rendering, and render-device behavior remain unverified. The existing Kaggle notebook is present as a local file and its cells are not executed in the current notebook session; no active Kaggle execution was initiated. A separate authorization request for a minimal CPU-only scene-build test in that notebook received no user response, so the remote run was not started. No Blender/Kaggle execution, video/audio work, accelerator use, or new dependency installation occurred. No automatic transfer from the local UI/project store to Kaggle exists.
+
+**Git and preserved work:** Branch `main`; no staging, commit, or push. Previously modified docs/`.gitignore` and the untracked `src/`, `tests/`, `pyrightconfig.json`, UI launcher, benchmark-upload folders, and Blender-tree-restore diagnostic artifacts were preserved. No existing diagnostics, benchmark evidence, user data, or credentials were removed or modified.
+
+**Next recommended step (proposed):** After explicit authorization, use the existing Kaggle notebook for one bounded CPU-only scene-build test, explicitly transferring the saved project JSON and application package. Then inspect the resulting `.blend` and verify the launcher and first rigid-body collision. Do not add a UI start button or claim working scene generation until this runtime test passes; establish CPU/render-device behavior from actual run evidence.
+
+### 2026-10-21 14:56 +03:00 - Runtime availability follow-up
+
+- **Objective:** Continue investigating whether the outstanding actual-Blender verification can be completed from an already available local runtime, without installing/downloading software, using Kaggle credentials, or starting an unapproved remote run.
+- **Inspected:** Repository-local `.tools`, Blender runtime/preflight folders, saved Kaggle output folders, and repository `.blend`/`blender.exe` candidates. The local downloads cache contained no Blender installer/archive, no existing generated `.blend` artifact was found in the checked outputs, and no Blender executable was found in the workspace or standard install locations. Python reports `bpy_available=False`.
+- **Verified:** The existing Kaggle notebook is present, but its code cell is not executed in the current notebook session. A bounded remote scene build would require an actual Kaggle runtime and explicit project/package transfer; this environment exposed no verified active Kaggle kernel to run it. A request to authorize that CPU-only remote scene-build test received no response, so no remote execution was started.
+- **Not completed:** No `.blend` file has been produced or inspected; Blender API behavior, simulation/collision, and render-device behavior remain unverified. No packages or software were installed/downloaded; no Kaggle job or accelerator quota was used.
+- **Changes/tests:** No source changes resulted from this availability-only follow-up; the final local test run remains 34 tests, 33 passed, 1 skipped, 0 failed, and `git diff --check` passed. Git remains unstaged; no commit or push.
+- **Next recommended step (proposed):** Obtain either an available Blender 4.0.2 executable path or explicit access/approval to the existing Kaggle notebook runtime. Then run and inspect the bounded scene-build test before treating the scenario-to-Blender path as complete.
+
+## 2026-10-21 16:02 +03:00 - Blender 4.0.2 saved-project integration verified on Kaggle
+
+**Objective and authorization:** Complete the explicitly requested real Blender 4.0.2 integration test using the existing Kaggle runtime if accessible. The user authorized a bounded CPU-only test, but not a full render, benchmark, credential inspection, software installation, Git staging, commit, or push.
+
+**Files created or modified:**
+- `src/ai_engine/scene_integration.py` — orchestrates loading a saved `ProjectStore` project, Blender scene generation, separate-process reopen, verification, and a JSON integration report.
+- `src/ai_engine/blender_scene_integration_verifier.py` — checks Blender 4.0.2, reopened `.blend`, EEVEE settings, rigid-body objects, and measured movement across the contact frames.
+- `verify_saved_project_scene.py` — local CLI entry point for the saved-project integration test.
+- `kaggle-blender-short-test/run_scene_integration_kaggle.py` — test-only Kaggle runner using the existing hash-verified Blender runtime restoration path, saving a project with `ProjectStore`, and invoking the integration test.
+- `tests/test_scene_generation.py` — local mocked-process tests and safeguards confirming production runner `main()` is not executed.
+- `kaggle-blender-short-test/.scene-integration-v13-upload/` — isolated test notebook, CPU-only kernel metadata, sanitized source bundle, extracted runtime-restoration helper, Kaggle v14 logs, and parsed run/wrapper/Blender-verification JSON reports under `verified-evidence-v14/`.
+- `CURRENT_PROJECT_STATUS.md` and `DOCUMENT_AUDIT_AND_GAP_REGISTER.md` — updated to reflect the one-case real-Blender result and remaining UI/job/render/audio gaps.
+- `PROJECT_WORK_ARCHIVE.md` — this chronological entry; earlier records remain intact.
+
+**Remote test and recovery:**
+- Confirmed the existing preflight kernel was accessible through the repository's installed Kaggle CLI (`kaggle.exe` version 2.2.4); kernel metadata had GPU/TPU disabled and used the already-attached Blender runtime and build-manifest Datasets.
+- Submitted test-only Kernel v13 with a 300-second timeout. It failed before starting Blender because Kaggle did not expose the adjacent ZIP in `/kaggle/input`; the downloaded failure report states `Expected one uploaded source bundle, found 0`.
+- Corrected the packaging by embedding the exact reviewed ZIP in the test notebook. Its SHA-256 was `6d9491c39632d93e9659e6828dc1af46a9001d19ba2cf81833526de2d315a9df`. Submitted Kernel v14 with GPU/TPU disabled and a 300-second timeout. Kaggle status returned `COMPLETE`.
+- Kernel v14 completed in approximately 52 seconds. Its actual run report and Blender verifier report both returned `PASSED`; the verifier ran in a separate Blender process and checked the saved `.blend`.
+- Verified measurements: target static before contact; contact at frame 20; target moved `0.6633543968200684 m` toward the chain by frame 29; launcher contact-position error was `5.960464455334602e-09 m`. Blender 4.0.2 and EEVEE settings checks passed; the project retained the default 8 samples.
+- The generated remote artifact path was `/kaggle/working/ai-engine-scene-integration/project-store/generated-scenes/9002ca83-58ba-4312-8edf-ddbcd6932969/9002ca83-58ba-4312-8edf-ddbcd6932969.blend`. The verifier confirmed reopening; the `.blend` itself was not downloaded locally.
+- No video rendering, benchmark, audio work, accelerator use, or render-device measurement occurred. This verifies only one rigid-body-chain case, not a production workflow or UI-to-Kaggle job integration.
+
+**Actual commands and checks:**
+- `.venv\Scripts\python.exe -m unittest discover -s C:\AI-Engine\tests -v` — **38 tests; 37 passed, 1 skipped, 0 failed**. The skip is the existing Windows symlink test blocked by `WinError 1314`.
+- `.venv\Scripts\python.exe -m unittest discover -s C:\AI-Engine\tests -p "test_scene*.py" -v` — **15 passed, 0 failed**.
+- `.venv\Scripts\python.exe -m py_compile` on the integration, verifier, Kaggle runner, CLI, and relevant test — passed.
+- `git diff --check` — passed after final documentation changes.
+- `python -m json.tool` on the retained v14 run, wrapper, verifier, and raw kernel-log JSON — passed.
+- Kaggle CLI: `kernels status` confirmed v14 `COMPLETE`; `kernels logs` returned the actual successful JSON output. The raw logs and the exact run/wrapper/verifier JSON objects reconstructed from those log records are preserved in `kaggle-blender-short-test/.scene-integration-v13-upload/verified-evidence-v14/`.
+- Kaggle `kernels output` returned HTTP 429 on targeted retrieval. An earlier unfiltered retrieval was stopped after it copied 240 attached-runtime files (38,520,028 bytes) locally; a later pattern attempt selected a runtime asset `.blend`, not the generated scene. These partial output copies remain in the dedicated upload folder, were not used as test evidence, and were not deleted.
+
+**Errors, blockers, and boundaries:** Kernel v13 packaging failed as described and was corrected before v14. Kaggle's output-list API rate-limited retrieval, so remote logs/report evidence was used to verify creation and successful reopen; no local `.blend` artifact is available. Blender is still unavailable locally. Render-device behavior, video export, sound, production-scale behavior, and a general job lifecycle remain untested/unimplemented.
+
+**Resource use and Git:** Kaggle GPU/TPU disabled; one bounded test kernel completed in approximately 52 seconds. No credentials were inspected. No dependency was installed. Branch remains `main`, no staging/commit/Git push occurred, and the pre-existing modifications and untracked files remain preserved. The Kaggle kernel version push is not a Git push.
+
+**Next recommended step (proposed):** Implement explicit local-project transfer and a bounded, tracked Kaggle job lifecycle (submission, status, logs, artifact/report recovery, timeouts, and failure handling); connect it to the UI only after those operations have their own tests. Expand actual Blender tests for supported settings. Keep 8 EEVEE samples as the default; do not introduce rendering or claim a render-device result based on this non-rendering test.
+
+## 2026-10-21 16:54 +03:00 - Round 4: tracked task lifecycle and UI-to-Kaggle integration
+
+**Objective and authorization:** Implement the explicitly requested production-task state model, persistent event history, local UI task controls, CPU-only Kaggle project transfer, and bounded Blender integration run. Authorized by the user. No stage, commit, or push; no credentials inspection; no full render, benchmark, audio, or dependency installation.
+
+**Files created or modified for this round:**
+- `.gitignore` — ignore the root-level persistent `.ai-engine-task-state/` database while preserving the existing `/projects/` rule.
+- `src/ai_engine/task_store.py` — persist tasks and append-only transition events in SQLite; enforce transition rules, explicit errors, timestamps, and result-only-on-success behavior. Connections now close deterministically.
+- `src/ai_engine/task_manager.py` — create/track background task workers, recover active tasks conservatively, and record only executor-validated results as success.
+- `src/ai_engine/kaggle_executor.py` — package a saved project and task context into the existing v14 CPU-only notebook; submit, poll, capture logs, validate task/project IDs and Blender evidence, and retain concise failure diagnostics.
+- `src/ai_engine/control_app.py` — add task start, project task history, and task status API routes; persist task state outside the project JSON directory.
+- `src/ai_engine/web/index.html`, `src/ai_engine/web/control.js`, `src/ai_engine/web/control.css` — add task controls and status/events/errors/report references; fix function scope so browser handlers are available.
+- `kaggle-blender-short-test/run_scene_integration_kaggle.py` — consume transferred project/task IDs and write task-isolated integration outputs.
+- `tests/test_task_lifecycle.py`, `tests/test_control_app.py` — cover state transitions, event persistence, transfer/metadata, CLI calls, strict output validation, failure logs, task HTTP routes, and unsaved-project errors.
+- `CURRENT_PROJECT_STATUS.md`, `DOCUMENT_AUDIT_AND_GAP_REGISTER.md` — document only observed v15 behavior, the cancelled remote status, and remaining gaps.
+- `.task-lifecycle-v15-ui/projects/7c00914e-77d3-4733-b4b1-6c985426b2e3.json`, `.task-lifecycle-v15-ui/.ai-engine-task-state/tasks.sqlite3`, and `.task-lifecycle-v15-ui/.ai-engine-task-state/runs/ef355a55-c0d5-43f3-b9f9-7bd2e28f40c4/` — retain the actual UI-created project, task history, submitted bundle/notebook, raw failure logs, validated integration report, and parsed successful-run logs.
+- `.task-lifecycle-v15-ui/kaggle-output-v15/ai-engine-blender-runtime-preflight.log` — retain filtered Kaggle output; no `.blend` was returned.
+
+**Local verification:**
+- `.venv\Scripts\python.exe -m unittest discover -s C:\AI-Engine\tests -v` — **50 tests, 49 passed, 1 skipped, 0 failed**. The skip is the existing Windows symlink-privilege case (`WinError 1314`).
+- `.venv\Scripts\python.exe -m py_compile` on the changed task, API, test, and Kaggle-runner files — passed.
+- `git diff --check` — passed.
+- Pylance diagnostics for `task_store.py`, `task_manager.py`, `kaggle_executor.py`, and `control_app.py` — no diagnostics. Test doubles report only unused-parameter warnings.
+- Browser: served the loopback app on port 8766 with isolated storage; after reload, the page had no JavaScript page errors. Created and saved a project, started an actual CPU-only task, and observed its status/history/error in the UI.
+- `node --check` was attempted but Node.js is not installed. The PowerShell `Invoke-WebRequest` readiness check could not run non-interactively; `curl.exe` then returned HTTP 200 for the UI.
+- Early focused tests exposed SQLite connections that stayed open and task-database initialization that created the projects directory. Both were corrected; the focused and full suites passed after correction.
+
+**Actual Kaggle execution and evidence:**
+- The installed Kaggle CLI is v2.2.4. A read-only status query confirmed prior kernel v14 was `COMPLETE`, establishing current CLI/API access without reading credentials.
+- The UI submitted the saved project above as Kaggle kernel v15 with GPU and TPU disabled. Kaggle's emitted run report and wrapper reported `PASSED`; Blender 4.0.2 generated a `.blend`, reopened it in a separate Blender process, passed EEVEE and rigid-body checks, and measured **0.6633543968200684 m** target motion after contact. The report records verifier exit code 0 and no render/benchmark/audio operation.
+- Kaggle's versioned status returned `KernelWorkerStatus.CANCEL_ACKNOWLEDGED`, not `COMPLETE`. The TaskManager therefore persisted the task as **failed** and retained that terminal state. The strict report validator was then run directly against the captured genuine v15 logs and passed; this post-failure validation did not change the failed task state and does not establish a successful real TaskManager terminal transition.
+- A filtered `kernels output` request succeeded but returned only `ai-engine-blender-runtime-preflight.log` (16,267 bytes), not the `.blend`. The remote report's verifier confirms the remote Blender process reopened it. The `.blend` itself remains on Kaggle and was not downloaded.
+- One short CPU-only kernel v15 ran; the emitted execution report spans approximately 40 seconds. No GPU/TPU quota was used. No full render, benchmark, or audio ran. No Kaggle credentials were opened or printed.
+
+**Cleanup, errors, and Git:** Thirteen inspected test-only temporary roots left by earlier failing test runs were removed; they contained generated fixture projects and SQLite databases: `.test-control-app-96_k9az8/`, `.test-control-app-d5zlk8q0/`, `.test-control-app-mevsevae/`, `.test-control-app-unj_0vc2/`, `.test-control-app-y0a9bffc/`, `.test-control-app-yhe7ho0r/`, `.test-control-app-yy0may4q/`, `.test-task-lifecycle-7mrszzyr/`, `.test-task-lifecycle-hficzim5/`, `.test-task-lifecycle-imcs4okv/`, `.test-task-lifecycle-j8yy_7ie/`, `.test-task-lifecycle-upy1cg3r/`, and `.test-task-lifecycle-zubw6j86/`. The remote cancel-ack status remains unresolved; the v15 evidence directory and all pre-existing diagnostics, benchmark evidence, and untracked work were preserved. Branch remains `main`, with local uncommitted changes; no staging, commit, or Git push occurred.
+
+**Next step (recommendation, not completed work):** Investigate why Kaggle reports `CANCEL_ACKNOWLEDGED` after a passing notebook/Blender report. Then run one bounded task through the UI and confirm remote status, persisted terminal state, report/log references, and artifact recovery agree. Keep EEVEE at 8 samples; do not add final rendering or audio yet.
+
+## 2026-10-21 17:18 +03:00 - Round 4 follow-up: Kaggle terminal-state validation and v16
+
+**Objective and authorization:** Resolve the v15 mismatch between Kaggle's `CANCEL_ACKNOWLEDGED` status and its task-matched passing Blender report, preserve the existing failed task record, and prove one new bounded task reaches a validated terminal state. This continues the user's explicit Round 4 authorization. No stage, commit, or push; the installed Kaggle CLI used its existing authorized authentication, but no credential file/token was inspected, printed, or changed; no full render, benchmark, audio, or accelerator use.
+
+**Files modified:**
+- `src/ai_engine/kaggle_executor.py` — parse Kaggle worker statuses explicitly; treat `CANCEL_REQUESTED` as nonterminal, retrieve logs after `COMPLETE` or `CANCEL_ACKNOWLEDGED`, persist the logs, and pass the remote status to strict task/project/Blender report validation. `CANCEL_ACKNOWLEDGED` does not itself mean success.
+- `src/ai_engine/task_manager.py` — record the observed remote status in the validation event and explicitly describe the evidence-based success case if Kaggle acknowledged cancellation.
+- `src/ai_engine/web/control.js` — show the validated remote status alongside the Blender version and result paths.
+- `tests/test_task_lifecycle.py` — cover cancellation-request polling, strict validation of logs after cancellation acknowledgement, manager result/event behavior, and explicit `ERROR` diagnostics.
+- `CURRENT_PROJECT_STATUS.md` and `DOCUMENT_AUDIT_AND_GAP_REGISTER.md` — update the active status with the v16 result; retain v15 as historically failed and note that the `.blend` remains remote.
+- `PROJECT_WORK_ARCHIVE.md` — append this dated record.
+- `.task-lifecycle-v15-ui/.ai-engine-task-state/tasks.sqlite3` and `.task-lifecycle-v15-ui/.ai-engine-task-state/runs/fc1b8d1e-4cb4-4b4e-a3cb-eff7778884e7/` — preserve the v16 task record, CPU-only upload bundle/notebook, raw Kaggle logs, and validated integration report.
+
+**Investigation and v15 evidence:** The installed Kaggle CLI/API returned `CANCEL_ACKNOWLEDGED` for v15. The previous CLI code treated any status containing `CANCEL` as immediate failure, before checking task-specific output. The updated executor fetched actual v15 logs and validated the matching task/project report and Blender checks successfully. The original v15 SQLite terminal status remains `failed`; it was not rewritten. Kaggle still did not return the `.blend` locally.
+
+**Actual Kaggle run:** Submitted saved project `7c00914e-77d3-4733-b4b1-6c985426b2e3` as kernel v16, task `fc1b8d1e-4cb4-4b4e-a3cb-eff7778884e7`. The run used the actual `TaskManager` and completed through `queued → preparing → running → validating → succeeded`; Kaggle returned `COMPLETE`. The validated report records Blender **4.0.2**, `.blend` save and separate-process reopen, EEVEE settings, rigid-body checks, and **0.6633543968200684 m** post-contact target motion. The remote `.blend` path is recorded in the task result but the file itself was not downloaded. The v16 kernel completed in approximately 125 seconds; GPU/TPU were disabled. No video render, benchmark, audio, credential-file inspection, or package installation occurred.
+
+**Local verification and recovery:** `.venv\Scripts\python.exe -m unittest discover -s tests -p test_task_lifecycle.py -v` — **12 passed**. Full suite `.venv\Scripts\python.exe -m unittest discover -s tests -v` — **52 tests, 51 passed, 1 skipped, 0 failed**; the skip is the existing Windows symlink privilege test (`WinError 1314`). `.venv\Scripts\python.exe -m py_compile src\ai_engine\kaggle_executor.py src\ai_engine\task_manager.py tests\test_task_lifecycle.py` and `git diff --check` passed. The `runTests` helper did not recognize this unittest file, so the repository's unittest runner was used. An initial focused run exposed a case-sensitive status regex and was stopped; the regex was corrected. One subsequent focused run caught an outdated expectation for the former cancellation behavior; the test was updated to assert explicit `ERROR` handling. The final focused and full runs passed. The interrupted test left `.test-task-lifecycle-fh4auvo4/`; its contents were inspected as generated fixtures and that exact directory was removed.
+
+**Remaining boundaries and Git:** The v16 run was started through the actual `TaskManager` using the UI-created saved project; the browser-started v15 record remains failed, so an updated browser-started successful run was not observed. The `.blend` is not locally available, and no final rendering/audio workflow is implemented. The production default remains 8 EEVEE samples. Branch remains `main` at `b897a52f9322a6a06907a128d970b64a209a3a2a`; all source/docs/evidence remain local and unstaged. No commit or Git push occurred. Existing unrelated/untracked diagnostics and evidence were preserved.
+
+**Next step (recommendation, not completed work):** Verify the updated result/status presentation in the browser and retrieve the v16 `.blend` from Kaggle for local inspection. Keep the task scoped to the bounded rigid-body-chain test; do not start final rendering or audio.
+
+## 2026-10-21 17:21 +03:00 - Verification addendum: browser task result presentation
+
+**Completed verification:** Started the local control UI on loopback port 8767 using the retained v15 project directory and task database. The server returned HTTP 200; the browser opened the saved project and rendered both persisted task records. It showed v15 as `failed` and v16 as `succeeded`, with v16's Kaggle `COMPLETE` status, Blender 4.0.2, remote `.blend` path, report/log paths, and successful lifecycle event. The UI view was read-only; no project was saved and no new Kaggle task was started. The temporary server was stopped after the check, and a subsequent request received no HTTP response.
+
+**Files and checks:** Updated the active next-step statements in `CURRENT_PROJECT_STATUS.md` and `DOCUMENT_AUDIT_AND_GAP_REGISTER.md` to reflect the completed browser check. No code or task-state changes were made in this verification step. The remaining recommendation is to recover the v16 `.blend` for local inspection; no rendering/audio work should begin beforehand.
+
+## 2026-10-21 17:33 +03:00 - Round 5: v16 Blender artifact recovery attempt
+
+**Objective and authorization:** Recover the exact Blender scene generated by task `fc1b8d1e-4cb4-4b4e-a3cb-eff7778884e7` for project `7c00914e-77d3-4733-b4b1-6c985426b2e3`, verify it locally if possible, and preserve existing project evidence. Authorized by the user's Round 5 request. No task rerun, rendering, benchmark, installation, stage, commit, or push; no credentials were inspected or printed.
+
+**Files inspected:** `.task-lifecycle-v15-ui/.ai-engine-task-state/tasks.sqlite3`; the v16 `integration-report.json` and `kaggle-kernel-16-logs.json`; `src/ai_engine/task_store.py`; the installed Kaggle CLI implementation in `.venv/Lib/site-packages/kaggle/api/kaggle_api_extended.py`; `CURRENT_PROJECT_STATUS.md`; `DOCUMENT_AUDIT_AND_GAP_REGISTER.md`; `PROJECT_WORK_ARCHIVE.md`; local installation paths and PATH for Blender.
+
+**Identity and remote creation evidence (verified):**
+- The reopened SQLite task is `succeeded`, project ID `7c00914e-77d3-4733-b4b1-6c985426b2e3`, remote kernel version `16`; its stored `remote_blend_file` matches the path in the report.
+- The retained task-matched report identifies kernel slug `haroonbaaraabumanar/ai-engine-blender-runtime-preflight`, task/project IDs above, status `PASSED`, Blender **4.0.2**, verifier exit code 0, and all required scene/reopen/EEVEE/rigid-body/motion checks as true. The measured target motion is **0.6633543968200684 m**.
+- Exact remote path in both task result and report: `/kaggle/working/ai-engine-scene-integration/fc1b8d1e-4cb4-4b4e-a3cb-eff7778884e7/project-store/generated-scenes/7c00914e-77d3-4733-b4b1-6c985426b2e3/7c00914e-77d3-4733-b4b1-6c985426b2e3.blend`.
+- Evidence-file integrity hashes (these are **not** hashes of the `.blend`): report JSON SHA-256 `d085789df2d8179d0583a12cbd746c5a457acac5189259acdb39ef54567c62d6`; retained Kaggle log JSON SHA-256 `52e9073c99dc7cf987900efe50ec341565e2d864a3af0ff13376fa8890c5a966`.
+
+**Retrieval attempt and result:** Installed Kaggle CLI **2.2.4** supports `kernels output`, a kernel argument, an output path, and `--file-pattern`. Created the new, previously nonexistent directory `.task-lifecycle-v15-ui/v16-recovered-artifacts/`, then attempted twice to retrieve only the exact project-ID `.blend` from `haroonbaaraabumanar/ai-engine-blender-runtime-preflight/16` using regex `^7c00914e-77d3-4733-b4b1-6c985426b2e3\.blend$`. Both attempts failed before returning an output-file listing with HTTP **429 Too Many Requests** from `kernels.KernelsApiService/ListKernelSessionOutput`; the destination remains empty. The Kaggle Output page showed the `ai-engine-scene-integration` output root, but its task-specific tree could not be expanded because the browser interaction was blocked by the unavailable reCAPTCHA service; no direct file link was observed or inferred. Inspection of the installed CLI implementation shows that `kernels output` parses a version suffix but constructs the output-list request using owner and kernel slug only, without a version field. No later kernel was submitted during this task, but the endpoint returned no listing with which to independently bind a downloaded file to v16. Thus, remote file **creation and Blender reopen are verified**, while output publication/listing and download remain unverified; no local `.blend` was produced or substituted.
+
+**Local Blender and tests:** No `blender.exe` was found on PATH, under `C:\Program Files\Blender Foundation`, `C:\Program Files (x86)\Blender Foundation`, `C:\Tools\Blender`, in the project `.tools`, or in `.venv\Scripts`; no local Blender opening or physics check was possible. Local focused tests: `.venv\Scripts\python.exe -m unittest discover -s tests -p test_task_lifecycle.py -v` — final run **12 passed, 0 failed**. The first run had a Windows `PermissionError [WinError 32]` while a test temporary SQLite file was being cleaned up; the single affected test passed in isolation, and the subsequent full focused rerun passed all 12. Revalidation of persisted task/report/log identity and all Blender check flags passed. `git diff --check` passed. No code tests for an artifact-download feature exist; the retrieval was attempted using the installed CLI rather than a new implementation.
+
+**Files changed and preserved evidence:** Updated `CURRENT_PROJECT_STATUS.md` and `DOCUMENT_AUDIT_AND_GAP_REGISTER.md` to state the exact 429 blocker and the unverified local-recovery boundary; appended this record. Created `.task-lifecycle-v15-ui/v16-recovered-artifacts/` as the dedicated destination; it contains no file. Inspected and removed `.test-task-lifecycle-qf7wxnbq/`, the exact generated fixture left by a transient test cleanup lock after confirming it contained only the SQLite test database and no Python process remained. Existing v15/v16 task records, logs, reports, notebooks, benchmarks, and other untracked files were preserved. No artifact size, retrieval timestamp, or `.blend` SHA-256 can be reported because the file was not returned.
+
+**Git and next step:** Workspace remains `C:\AI-Engine`, branch `main`, HEAD `b897a52f9322a6a06907a128d970b64a209a3a2a`; all work is local and unstaged, with no commit or push. Recommendation: retry the exact output retrieval only after Kaggle's output-list API is available, preferably through an endpoint/CLI that binds the output to version 16; then compute the downloaded file's size and SHA-256 and open a copy using Blender 4.0.2 if a compatible local executable is available through an approved path. Do not treat remote report verification or an empty recovery directory as local `.blend` validation.
+
+## 2026-10-21 17:36 +03:00 - Round 5 follow-up: Kaggle Output UI fallback
+
+**Completed additional attempt:** Opened the approved Kaggle notebook Output page in the existing browser session after the CLI returned HTTP 429. The Output tree displayed the runtime dataset and `ai-engine-scene-integration` root, consistent with the v16 report path. Attempts to expand the task-specific folder in the browser did not expose children; Kaggle reported that the reCAPTCHA service was unavailable, and the row remained collapsed. No file item, download link, or v16-specific output listing became visible. Did not click the notebook-wide download action because it could retrieve unrelated/large outputs and would not identify the target file.
+
+**Evidence and disposition:** The CLI destination `.task-lifecycle-v15-ui/v16-recovered-artifacts/` remains empty. The UI fallback does not resolve whether the specific `.blend` was published in the downloadable output listing; generation and reopen in the remote Blender process remain proven by the task-matched report. No artifact was synthesized or substituted. `git diff --check` passed. No source changes, Kaggle job, render, credential access, or artifact cleanup occurred during this follow-up.
+
+**Final browser interaction check (17:37 +03:00):** A final targeted attempt to scroll/click the exact `ai-engine-scene-integration` tree node timed out while waiting for the browser locator to become stable; no further file listing or link appeared. Stopped further UI/API retries to avoid hammering a rate-limited service or using an unbounded notebook-output download. `git diff --check` passed; branch remains `main` at `b897a52f9322a6a06907a128d970b64a209a3a2a`, with no staged changes.
+
+## 2026-10-21 17:53 +03:00 - Repository cleanup and clean-commit preparation
+
+**Objective and authorization:** Clean the latest local implementation for a non-destructive commit and GitHub synchronization, retain valuable run evidence, and keep the archive synchronized with the work. Authorized by the user's request to clean the project, commit the latest changes, and push them. No stage, commit, or push has yet been performed at the time of this entry.
+
+**Workspace and initial Git state (verified):** The active directory is `C:\AI-Engine`; branch `main` was at `b897a52f9322a6a06907a128d970b64a209a3a2a`; `origin` points to `https://github.com/abumanar20264/AI-Engine.git`; before this cleanup the local branch and `origin/main` were aligned. Git status was cleanly separated into modified documentation/ignore rules, untracked application source and tests, and local runtime/evidence directories. No credentials were inspected or printed.
+
+**Files inspected and implementation prepared for version control:**
+- Updated `.gitignore`, `README.md`, `CURRENT_PROJECT_STATUS.md`, `DOCUMENT_AUDIT_AND_GAP_REGISTER.md`, and this archive. The status/README now describe the implemented project UI, scene adapter, persistent task lifecycle, and bounded Kaggle path, while preserving the documented HTTP 429 blocker for local v16 artifact recovery and the fact that audio/final-video production are not implemented.
+- Application and launcher files: `src/ai_engine/__init__.py`; `src/ai_engine/blender_scene_builder.py`; `src/ai_engine/blender_scene_integration_verifier.py`; `src/ai_engine/control_app.py`; `src/ai_engine/kaggle_executor.py`; `src/ai_engine/project_service.py`; `src/ai_engine/project_store.py`; `src/ai_engine/scene_adapter.py`; `src/ai_engine/scene_generation.py`; `src/ai_engine/scene_integration.py`; `src/ai_engine/task_manager.py`; `src/ai_engine/task_store.py`; `src/ai_engine/web/control.css`; `src/ai_engine/web/control.js`; `src/ai_engine/web/index.html`; `run_control_ui.py`; `generate_project_scene.py`; `verify_saved_project_scene.py`; `kaggle-blender-short-test/run_scene_integration_kaggle.py`; and `pyrightconfig.json`.
+- Tests: `tests/test_control_app.py`; `tests/test_project_service.py`; `tests/test_project_store.py`; `tests/test_scene_adapter.py`; `tests/test_scene_generation.py`; and `tests/test_task_lifecycle.py`.
+- Added stable, source-controlled Kaggle task template files `kaggle-blender-short-test/scene-integration-kernel-template/ai-engine-satisfying-physics-short.ipynb` and `kaggle-blender-short-test/scene-integration-kernel-template/kernel-metadata.json`. The notebook and metadata were copied from the previously used upload template and their SHA-256 hashes matched; metadata was parsed as JSON and confirms both GPU and TPU disabled. Updated `src/ai_engine/kaggle_executor.py` to consume this stable project path instead of relying on an ignored/local upload-only directory.
+- Updated `tests/test_task_lifecycle.py` to join the task worker before test fixture cleanup, addressing the observed Windows SQLite cleanup race.
+
+**Cleanup performed and preservation boundary:** Removed 238 re-downloaded partial Blender runtime files from the local Kaggle-output cache (38,513,976 bytes total) after confirming they were not the scene-validation evidence; moved the small v13 failure log and wrapper report into `kaggle-blender-short-test/.scene-integration-v13-upload/download-attempt-diagnostics-v13/`; removed generated Python `__pycache__` directories and the empty v16 recovery directory. Inspected and removed the exact remaining generated fixture `.test-task-lifecycle-8hsfrfe5/` after verifying it contained only the test SQLite database and no Python process remained. Preserved the v14-v16 reports/logs, v10/v12 notebooks and metadata, Kaggle tree/dataset probes, `.task-lifecycle-v15-ui/` task database and project, `.venv/`, `.tools/`, and all other local diagnostics/evidence. No repository-wide deletion or credential-file operation occurred. Historical evidence remains intentionally untracked and is excluded from the proposed commit.
+
+**Commands and checks actually run:** `git status --short --branch`; `git diff --stat`; `git diff --check`; `git remote -v`; `git ls-files --others --exclude-standard`; `git check-ignore -v kaggle.json .venv .tools ...`; content/path/size inspection of the proposed source and retained evidence; and `.\.venv\Scripts\python.exe -m unittest discover -s tests -v`.
+
+**Tests (observed):** Full local unittest suite: **52 tests, OK, 1 skipped, 0 failures** (5.940 seconds). The skipped test is symbolic-link rejection; Windows returned `WinError 1314` because creating a symlink is not privileged in this environment. The test run did not use Blender or Kaggle. `git diff --check` passed during inspection. JSON parsing, GPU/TPU-disabled metadata checks, and template hash comparison passed. Kaggle output retrieval was not retried in this cleanup task; the previously recorded HTTP 429 and absence of a local `.blend` remain unchanged.
+
+**Errors, blockers, and resource use:** No source/test failure remained. The optional symlink test could not run because Windows denied symlink creation. No Kaggle kernel, accelerator, render, or benchmark was started; no new dependency or Blender installation was made. GitHub synchronization remains pending the final staged review and authorized push.
+
+**Git and next steps:** No files are staged; no commit or push has occurred. `kaggle.json`, `.venv/`, `.tools/`, SQLite state, and retained run evidence remain outside the proposed commit. Recommendation: stage only the enumerated source, tests, stable CPU-only notebook template, launch/configuration files, and relevant documentation; review staged paths and diff for accidental evidence/credential inclusion; commit with the required co-author trailer; recheck `origin/main` without force-push; then append the resulting commit ID and push verification to this archive in a small follow-up archive-only commit and push both commits. The local v16 `.blend` recovery remains a separate HTTP 429 blocker, not a reason to fabricate or substitute an artifact.

@@ -2,3 +2,5 @@
 .venv/
 /kaggle.json
 __pycache__/
+/projects/
+/.ai-engine-task-state/

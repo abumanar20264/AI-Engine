@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI-Engine Project Studio</title>
+    <link rel="stylesheet" href="/assets/control.css">
+    <script src="/assets/control.js" defer></script>
+  </head>
+  <body>
+    <main class="layout">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">AI-ENGINE / LOCAL WORKSPACE</p>
+          <h1>Project Studio</h1>
+          <p class="subtitle">Prepare and save a validated physics experiment.</p>
+        </div>
+        <div class="top-actions">
+          <span class="local-pill">LOCAL ONLY</span>
+          <button id="new-project" class="button button-primary" type="button">New project</button>
+        </div>
+      </header>
+
+      <section class="notice" role="note">
+        Projects stay local. A saved project can start a tracked CPU-only Kaggle Blender scene-validation task; this does not render video or produce audio.
+      </section>
+
+      <div class="workspace">
+        <aside class="sidebar">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">LIBRARY</p>
+              <h2>Saved projects</h2>
+            </div>
+            <button id="refresh-projects" class="icon-button" type="button" aria-label="Refresh projects">↻</button>
+          </div>
+          <p id="project-list-status" class="muted">Loading saved projects…</p>
+          <ul id="project-list" class="project-list"></ul>
+        </aside>
+
+        <section class="editor-panel">
+          <div class="editor-heading">
+            <div>
+              <p class="eyebrow">PROJECT EDITOR</p>
+              <h2 id="editor-title">Create a project to begin</h2>
+            </div>
+            <span id="save-state" class="state-badge">Not saved</span>
+          </div>
+          <div id="global-message" class="message" role="status" aria-live="polite"></div>
+
+          <form id="project-form" hidden novalidate>
+            <section class="form-section">
+              <h3>Project</h3>
+              <label class="field" data-field="name">
+                <span>Project name</span>
+                <input id="project-name" name="name" type="text" maxlength="200" required>
+                <small class="field-error"></small>
+              </label>
+              <div class="field">
+                <span>Experiment type</span>
+                <select id="scenario-type" disabled>
+                  <option value="rigid_body_chain">Rigid-body chain</option>
+                </select>
+                <small class="hint">Only the rigid-body chain contract is currently implemented.</small>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <div class="section-heading">
+                <div>
+                  <h3>Rigid-body objects</h3>
+                  <p class="hint">Configure 2–64 interacting objects.</p>
+                </div>
+                <button id="add-object" class="button button-secondary" type="button">Add object</button>
+              </div>
+              <div id="objects" class="objects"></div>
+            </section>
+
+            <section class="form-section">
+              <h3>Scene and camera</h3>
+              <div class="field-grid">
+                <label class="field" data-field="scenario.gravity_m_s2">
+                  <span>Gravity (m/s²)</span>
+                  <div class="vector-inputs" data-vector="scenario.gravity_m_s2"></div>
+                  <small class="field-error"></small>
+                </label>
+                <label class="field" data-field="scenario.camera.position">
+                  <span>Camera position (X, Y, Z)</span>
+                  <div class="vector-inputs" data-vector="scenario.camera.position"></div>
+                  <small class="field-error"></small>
+                </label>
+                <label class="field" data-field="scenario.camera.target">
+                  <span>Camera target (X, Y, Z)</span>
+                  <div class="vector-inputs" data-vector="scenario.camera.target"></div>
+                  <small class="field-error"></small>
+                </label>
+                <label class="field" data-field="scenario.camera.lens_mm">
+                  <span>Camera lens (mm)</span>
+                  <input id="camera-lens" type="number" min="10" max="200" step="any">
+                  <small class="field-error"></small>
+                </label>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <h3>Video settings</h3>
+              <div class="field-grid field-grid-five">
+                <label class="field" data-field="scenario.video.width">
+                  <span>Width</span><input id="video-width" type="number" min="16" max="4320" step="1">
+                  <small class="field-error"></small>
+                </label>
+                <label class="field" data-field="scenario.video.height">
+                  <span>Height</span><input id="video-height" type="number" min="16" max="7680" step="1">
+                  <small class="field-error"></small>
+                </label>
+                <label class="field" data-field="scenario.video.fps">
+                  <span>FPS</span><input id="video-fps" type="number" min="1" max="120" step="1">
+                  <small class="field-error"></small>
+                </label>
+                <label class="field" data-field="scenario.video.frame_count">
+                  <span>Frames</span><input id="video-frames" type="number" min="1" max="3600" step="1">
+                  <small class="field-error"></small>
+                </label>
+                <label class="field" data-field="scenario.video.eevee_samples">
+                  <span>EEVEE samples</span>
+                  <select id="video-samples">
+                    <option>1</option><option>2</option><option>4</option><option>8</option>
+                    <option>16</option><option>32</option><option>64</option><option>128</option><option>256</option>
+                  </select>
+                  <small class="hint">Default: 8 samples.</small>
+                  <small class="field-error"></small>
+                </label>
+              </div>
+            </section>
+
+            <section class="form-section">
+              <h3>Audio settings</h3>
+              <label class="check-field">
+                <input id="audio-enabled" type="checkbox">
+                <span>Audio required for this project</span>
+              </label>
+              <div class="field-grid">
+                <label class="field" data-field="audio.source">
+                  <span>Audio source reference</span>
+                  <input id="audio-source" type="text" maxlength="2048" placeholder="Required only when audio is enabled">
+                  <small class="field-error"></small>
+                </label>
+                <label class="field" data-field="audio.volume">
+                  <span>Audio volume (0–2)</span>
+                  <input id="audio-volume" type="number" min="0" max="2" step="any">
+                  <small class="field-error"></small>
+                </label>
+              </div>
+              <p class="hint">This records project settings only; no sound is generated or mixed.</p>
+            </section>
+
+            <footer class="form-actions">
+              <span id="project-meta" class="muted"></span>
+              <button id="save-project" class="button button-primary" type="submit">Save project</button>
+            </footer>
+          </form>
+          <section id="task-panel" class="task-panel" aria-labelledby="task-heading">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">PRODUCTION TASK</p>
+                <h3 id="task-heading">Blender scene validation</h3>
+              </div>
+              <button id="start-task" class="button button-primary" type="button" disabled>
+                Start CPU-only task
+              </button>
+            </div>
+            <p class="hint">Uses the saved project. Kaggle submission, Blender 4.0.2 scene creation, file reopen, and physics checks are tracked. No render, benchmark, or audio step is included.</p>
+            <p id="task-list-status" class="muted">Save or open a project to view its tasks.</p>
+            <div id="task-list" class="task-list"></div>
+          </section>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
