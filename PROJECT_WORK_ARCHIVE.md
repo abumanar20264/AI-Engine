@@ -1304,3 +1304,55 @@ Remove the one completed CPython installer cache; the 2,357 individual `.pyc` ca
 - **VERIFIED — commit:** `e5ddd1fba2ad303167bae2d528d0fcd7d87776e0`, message `chore: clean safe generated workspace artifacts`. The commit contains only `PROJECT_WORK_ARCHIVE.md` (65 insertions); the 2,374 removed files were untracked/ignored local artifacts and were intentionally not staged.
 - **VERIFIED — push:** Before pushing, fetched `origin/main` and confirmed it still equaled the expected base `e0e85c46782db9530b78ae28154a4aa090e56ce2`. Normal non-force `git push origin main` succeeded. A post-push fetch verified both local `HEAD` and `origin/main` equal `e5ddd1fba2ad303167bae2d528d0fcd7d87776e0`.
 - No stage/commit/push was performed for any diagnostic files, credentials, or Kaggle assets. This entry will be included in an archive-only follow-up commit; its SHA will be reported in the final status.
+
+## 2026-10-21 - Measured Kaggle Shorts production run (Kernel v8)
+
+**Date/time:** 2026-10-21 10:35 +03:00. Kaggle runner start/end below are recorded from the remote report.
+**Objective and authorization:** Add monotonic per-stage timing to the existing CPU-only Blender Short runner, push the existing production notebook, execute one full measured Kaggle run, validate the MP4, preserve a JSON measurement record, compare only directly measured/matched values, and synchronize the intended changes to `origin/main`. The archive Dataset route is retained; no unpacked-tree publication work was attempted.
+
+### Changes and production execution
+
+- **MODIFIED:** `kaggle-blender-short-test\short_test_runner.py` adds `time.monotonic()` timings for Dataset input discovery, archive and manifest hashes, manifest validation, archive extraction, full restored-tree verification, Blender and embedded-Python subprocess checks, in-smoke physics and EEVEE render, Short scene setup and animation render, `ffprobe`, full decode, contact-sheet extraction, visible-motion validation, and MP4 SHA-256. It reports CPU/memory environment fields, cache status, a Kernel v7 comparison, and explicitly leaves MP4-finalization-only time null because finalization overlaps Blender's render call.
+- **MODIFIED:** `kaggle-blender-short-test\ai-engine-satisfying-physics-short.ipynb` is synchronized to the runner. The executable notebook cell matched the runner exactly at pre-push validation; the notebook metadata still used the two existing private Datasets and disabled GPU/TPU. Resolution, FPS, frame count, scene, EEVEE, and inputs were not changed.
+- **VERIFIED — Kaggle push/run:** `kaggle kernels push --path C:\AI-Engine\kaggle-blender-short-test --timeout 1800` pushed **Kernel v8**, actual Kaggle run/session ID **`360689524`**. Kaggle Logs showed `Overall status: COMPLETED`; Blender version, embedded Python, EEVEE/physics smoke, Short render, ffprobe, full video decode, and first/middle/last-frame extraction completed successfully. The Kaggle Output tab displayed the generated `short_test_report.json` (43.44 kB), `scene_report.json`, the MP4, and the smoke PNG.
+- **Environment:** CPU-only; 4 logical CPU cores; Kaggle host Python `3.13.15`; restored Blender `4.0.2` with embedded Python `3.10.13`; Linux `6.18.48+-x86_64-with-glibc2.39`; no `nvidia-smi`, and no TPU devices. Memory byte values are not available in the captured output view and are left null in the local normalized summary.
+- **Cache:** `MISS_RESTORED`. The existing private runtime Dataset's archive was hash-checked and extracted into writable `/kaggle/working`; restore verification passed. The runtime Dataset still contains only the archive, not an unpacked Blender tree.
+
+### Measured times from the remote runner report
+
+All durations are seconds from `time.monotonic()` and may be nested; do not add subprocess totals to their in-process substage times.
+
+| Stage | Seconds | Evidence/meaning |
+|---|---:|---|
+| Input discovery | 4.068903 | Located the one expected archive and build manifest |
+| Archive SHA-256 | 22.905459 | Verified archive digest `5583a5588736da8858c522ef17fff5d73be59c47a6fe91ad29c6f3263e22086a` |
+| Manifest SHA-256 / structure validation | 1.512168 / 0.015113 | Verified manifest digest `5ae5f52d3338e5b61cbd366a6fb19b51e54fa93309a6ce7bca7b9cde22a5d052` and expected entries |
+| Archive extraction | 32.084690 | Archive restored into `/kaggle/working` |
+| Restored-tree checks and SHA-256 inventory | 4.871667 | Required manifest-backed file/tree/mode/symlink verification passed |
+| Restore function total | 65.460177 | Includes nested discovery, hashes, extraction, and checks |
+| Blender version subprocess / embedded Python subprocess | 0.419 / 1.540 | Both version gates passed |
+| EEVEE/rigid-body smoke subprocess | 8.562 | Passed; physics-loop interval 0.012719376 and EEVEE PNG render interval 7.844822082 |
+| Short scene setup | 0.127913 | Blender-internal scene preparation |
+| 120-frame render including MP4 write/finalization | 412.360 | Blender-internal animation-render call |
+| MP4 finalization only | N/A | Writer completion overlaps the render interval; no non-overlapping measurement exists |
+| ffprobe / complete MP4 decode | 0.983 / 0.313 | Both validations passed |
+| Contact-sheet extraction / visible-motion validation | 0.349 / 0.312 | Three sampled frames; visible-motion threshold passed |
+| MP4 SHA-256 | 0.001053 | File digest computed after validation |
+| Runner total | **501.796** | Start `2026-10-21T07:16:29.486033Z`, end `2026-10-21T07:24:51.282836Z` |
+
+The Kaggle UI separately displayed **524.9 s** for this run; it is a broader wall-time boundary than the runner's 501.796 s. Kernel v7's UI showed **604.6 s**, while the archived runner report recorded **583.558 s**. These timing sources are compared only within their own matched series.
+
+### Output and comparison to Kernel v7
+
+- **VERIFIED — MP4:** 259,531 bytes, SHA-256 `394f29f2611d4a719107db38f412e08b056d6f3cfa1464a99095b646e2da2274`; H.264 High, 720×1280, 24/1 FPS, 120 frames, 5.000000 s. `ffprobe` checks, complete decode, and visible-motion check passed. Smoke PNG: 3,807 bytes (same byte size as the archived v7 result); output smoke-image SHA-256 `e594806e5c779246f51960138c075b409701d5b02b785bbe8dcd77f37cfb569b`.
+- **VERIFIED — matched runner-time comparison:** Kernel v7 583.558 s vs v8 501.796 s, delta **81.762 s**, change **+14.011% faster**, calculated as `((583.558 - 501.796) / 583.558) × 100`. Both MP4s were 259,531 bytes with the same codec, resolution, FPS, frame count, and duration. The output SHA-256 differs, while the scene and encoding settings did not change.
+- **Separately measured Kaggle UI comparison:** v7 604.6 s vs v8 524.9 s, delta 79.7 s and **+13.182%** on the UI wall-time measure. This is not substituted for the runner-timer comparison.
+- **Kernel v7 per-stage times:** N/A. Historical output retrieval returned HTTP `429 Too Many Requests`; no stage times are inferred or back-calculated. The local `run-v4-report.json` is a distinct full-restore/runtime check, not v7 production: archive SHA 3.335547 s, extraction 30.651143 s, tree inventory/hash 4.538482 s, Blender startup 0.380801 s, embedded Python 1.438743 s, and combined EEVEE/physics 8.401786 s (PNG 3,797 bytes). These are historical context only, not comparable v7 stage baselines.
+
+### Reports, errors, and Git actions
+
+- **Created locally:** `kaggle-blender-tree-restore-probe\full-dataset-verification\performance-run-v8-output\performance-run-v8-summary.json` is a normalized, analysis-ready JSON summary of the remote runner report and UI evidence; it adds the Kaggle run/session ID and version. The original generated `short_test_report.json` and scene/video outputs remain in the Kaggle Kernel v8 output. They were not copied into Git or downloaded as large artifacts.
+- **Retrieval limitation:** The v7 report attempt returned HTTP 429. After v8 completed, Kaggle CLI status/log/output requests returned `Permission 'kernels.get' was denied`; therefore the full remote JSON was reviewed in the signed-in Kaggle Output UI, and the local JSON is explicitly a normalized summary rather than a byte-for-byte raw report copy. The Kaggle UI Logs and Output tabs independently showed success, output files, and the report size.
+- **Commands/checks executed:** local Python AST and notebook-JSON parsing; exact notebook code-cell/runner equality; Kaggle metadata assertions (expected datasets, GPU/TPU disabled); `git diff --check`; Kaggle CLI push, status/log/output retrieval attempts; and Kaggle UI review of v8 Logs/Output. No Kaggle Dataset was modified, no package was installed, and no accelerator quota was used.
+- **Not tested:** No second full run was started. The one v8 run completed all user-required production and MP4 validation gates. Memory values were not captured in the local evidence summary; the remote report viewer showed the memory object but did not expose its values in the saved review snapshot.
+- **Recommendation:** Keep the detailed remote report with Kernel v8 and the local summary JSON/this archive entry as the analysis trail; compare future runs using the monotonic runner timer and report Kaggle UI wall time separately.

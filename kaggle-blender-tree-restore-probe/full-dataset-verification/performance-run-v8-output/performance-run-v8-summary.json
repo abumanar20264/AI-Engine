@@ -1,0 +1,169 @@
+{
+  "schema_version": 1,
+  "report_kind": "normalized_summary_of_kaggle_runner_report",
+  "evidence_source": {
+    "remote_report_name": "short_test_report.json",
+    "remote_report_size_bytes": 43440,
+    "retrieval": "Viewed in the Kaggle v8 Output tab; CLI output retrieval was denied after HTTP 429 responses.",
+    "kernel_slug": "haroonbaaraabumanar/ai-engine-blender-runtime-preflight",
+    "kernel_version": 8,
+    "kaggle_run_id": "360689524",
+    "kaggle_run_url": "https://www.kaggle.com/code/haroonbaaraabumanar/ai-engine-blender-runtime-preflight/versions/8",
+    "kaggle_run_status": "successful",
+    "kaggle_ui_wall_seconds": 524.9
+  },
+  "status": "COMPLETED",
+  "started_utc": "2026-10-21T07:16:29.486033+00:00",
+  "completed_utc": "2026-10-21T07:24:51.282836+00:00",
+  "runner_elapsed_seconds": 501.796,
+  "timing_method": "time.monotonic; stage intervals may be nested",
+  "environment": {
+    "os": "Linux-6.18.48+-x86_64-with-glibc2.39",
+    "machine": "x86_64",
+    "kernel_python": "3.13.15",
+    "blender_version": "4.0.2",
+    "blender_embedded_python": "3.10.13",
+    "logical_cpu_count": 4,
+    "accelerator": "CPU-only",
+    "nvidia_smi_available": false,
+    "tpu_devices": [],
+    "memory_bytes": null,
+    "memory_note": "Memory values were not exposed in the captured report view."
+  },
+  "inputs": {
+    "runtime_dataset": "haroonbaaraabumanar/ai-engine-blender-4-0-2-runtime",
+    "payload_type": "single TAR.XZ archive",
+    "archive_name": "blender-4.0.2-linux-x64.tar.xz",
+    "archive_sha256": "5583a5588736da8858c522ef17fff5d73be59c47a6fe91ad29c6f3263e22086a",
+    "manifest_dataset": "haroonbaaraabumanar/ai-engine-blender-4-0-2-build-manifest",
+    "manifest_sha256": "5ae5f52d3338e5b61cbd366a6fb19b51e54fa93309a6ce7bca7b9cde22a5d052",
+    "restored_tree": "/kaggle/working/ai-engine-blender-4-0-2-runtime/blender-4.0.2-linux-x64",
+    "cache_status": "MISS_RESTORED",
+    "restore_verification": "PASSED",
+    "inventory_expectations_verified": {
+      "regular_files": 5302,
+      "directories": 699,
+      "symlinks": 85,
+      "regular_file_bytes": 1315515076,
+      "sha256_against_build_manifest": true,
+      "unix_modes_and_executable": true
+    }
+  },
+  "stage_durations_seconds": {
+    "input_discovery": 4.068903,
+    "archive_sha256": 22.905459,
+    "manifest_sha256": 1.512168,
+    "manifest_validation": 0.015113,
+    "archive_extraction": 32.08469,
+    "restored_tree_validation_and_hashes": 4.871667,
+    "restore_function_total": 65.460177,
+    "blender_version_subprocess_including_startup": 0.419,
+    "embedded_python_subprocess_including_startup": 1.54,
+    "eevee_physics_smoke_subprocess": 8.562,
+    "physics_smoke_simulation": 0.012719376000006832,
+    "eevee_smoke_render": 7.844822082000007,
+    "video_tools_prepare": 0.000387,
+    "short_scene_setup": 0.127913,
+    "short_render_including_mp4_write_finalize": 412.36,
+    "mp4_write_finalize_only": null,
+    "ffprobe": 0.983,
+    "full_video_decode": 0.313,
+    "contact_sheet_extraction": 0.349,
+    "visible_motion_validation": 0.312,
+    "mp4_sha256": 0.001053,
+    "overall_runner_elapsed": 501.796
+  },
+  "runtime_tests": {
+    "blender_version_check": "PASSED",
+    "embedded_python_check": "PASSED",
+    "eevee_render_and_rigid_body_physics_smoke": "PASSED",
+    "eevee_engine": "BLENDER_EEVEE",
+    "smoke_png_bytes": 3807,
+    "short_scene_motion_validation": "PASSED",
+    "short_scene_motion_mode": "KEYFRAMED_KINEMATIC_CHAIN"
+  },
+  "video": {
+    "relative_path": "satisfying_physics_test0001-0120.mp4",
+    "size_bytes": 259531,
+    "sha256": "394f29f2611d4a719107db38f412e08b056d6f3cfa1464a99095b646e2da2274",
+    "codec": "h264",
+    "profile": "High",
+    "resolution": [720, 1280],
+    "fps": 24,
+    "frame_count": 120,
+    "duration_seconds": 5.0,
+    "ffprobe_metadata_validation": "PASSED",
+    "full_decode": "PASSED",
+    "visible_motion_check": {
+      "status": "COMPLETED",
+      "frames_decoded": 3,
+      "mean_absolute_rgb_difference": [4.356039839181286, 1.0329861111111112],
+      "threshold_passed": true
+    }
+  },
+  "comparison_to_kernel_v7": {
+    "baseline_run_id": "360664134",
+    "baseline_kernel_version": 7,
+    "baseline_runner_elapsed_seconds": 583.558,
+    "current_runner_elapsed_seconds": 501.796,
+    "elapsed_seconds_delta_baseline_minus_current": 81.762,
+    "elapsed_percent_change": 14.011,
+    "calculation": "((583.558 - 501.796) / 583.558) * 100",
+    "baseline_mp4_size_bytes": 259531,
+    "current_mp4_size_bytes": 259531,
+    "baseline_video": {
+      "codec": "h264",
+      "resolution": [720, 1280],
+      "fps": 24,
+      "frame_count": 120,
+      "duration_seconds": 5.0
+    },
+    "current_video_matches_baseline_specifications": true,
+    "baseline_eevee_physics_png_bytes": 3807,
+    "current_eevee_physics_png_bytes": 3807,
+    "baseline_stage_timings": null,
+    "baseline_stage_timings_note": "Kernel v7 report output retrieval was rate-limited; do not infer or back-calculate stage times.",
+    "separately_measured_kaggle_ui_wall_comparison": {
+      "kernel_v7_ui_seconds": 604.6,
+      "kernel_v8_ui_seconds": 524.9,
+      "delta_seconds": 79.7,
+      "percent_change": 13.182,
+      "note": "Kaggle UI run duration is a broader wall-time measure and is reported separately from the runner's monotonic elapsed time."
+    },
+    "video_hash_changed": true,
+    "scene_and_encoding_settings_changed": false,
+    "comparability_notes": [
+      "The measured run uses the existing CPU-only archive restore and the unchanged EEVEE scene at 720x1280, 24 FPS, 120 frames.",
+      "MP4 encoding/finalization is included in Blender's 412.36-second animation render call and cannot be separated without double counting.",
+      "Kernel v7's 604.6-second Kaggle UI duration and 583.558-second runner timer have distinct measurement boundaries.",
+      "The separate run-v4 restore report is historical context, not a Kernel v7 stage baseline."
+    ]
+  },
+  "historical_restore_run_v4": {
+    "source": "kaggle-blender-tree-restore-probe/full-dataset-verification/run-v4-report.json",
+    "run_type": "independent restore/runtime verification, not a Short production run",
+    "archive_sha256_seconds": 3.335547,
+    "extraction_seconds": 30.651143,
+    "inventory_hash_seconds": 4.538482,
+    "blender_startup_seconds": 0.380801,
+    "embedded_python_check_seconds": 1.438743,
+    "eevee_physics_combined_seconds": 8.401786,
+    "eevee_png_bytes": 3797,
+    "blender_version": "4.0.2",
+    "embedded_python_version": "3.10.13"
+  },
+  "timing_boundaries": {
+    "mp4_finalization": "Not independently measurable; overlaps Blender render.",
+    "runner_total": "Starts at module initialization timing marker and ends after output inventory, before final JSON write completes.",
+    "stage_durations": "Nested subprocess and in-process timings must not be summed."
+  },
+  "artifact_retrieval": {
+    "kaggle_report_exists_in_kernel_output": true,
+    "local_full_report_downloaded": false,
+    "cli_errors": [
+      "Kernel v7 output retrieval returned HTTP 429 Too Many Requests.",
+      "Kernel v8 output/status/log CLI calls returned Permission 'kernels.get' was denied."
+    ],
+    "evidence": "The Kaggle v8 Output tab displayed short_test_report.json (43.44 kB), the MP4 and scene report; the Kaggle v8 Logs tab showed Overall status: COMPLETED and successful render/decode/metadata stages."
+  }
+}

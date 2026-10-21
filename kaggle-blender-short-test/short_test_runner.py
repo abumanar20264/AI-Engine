@@ -23,6 +23,7 @@ OUTPUT.mkdir(parents=True, exist_ok=True)
 REPORT_PATH = OUTPUT / "short_test_report.json"
 KAGGLE_INPUT = Path("/kaggle/input")
 BLENDER_DATASET_REF = "haroonbaaraabumanar/ai-engine-blender-4-0-2-runtime"
+KAGGLE_KERNEL_SLUG = "haroonbaaraabumanar/ai-engine-blender-runtime-preflight"
 BLENDER_ARCHIVE_NAME = "blender-4.0.2-linux-x64.tar.xz"
 BLENDER_ARCHIVE_SHA256 = "5583a5588736da8858c522ef17fff5d73be59c47a6fe91ad29c6f3263e22086a"
 BUILD_MANIFEST_NAME = "ai_engine_blender_tree_manifest.json"
@@ -30,14 +31,65 @@ BUILD_MANIFEST_SHA256 = "5ae5f52d3338e5b61cbd366a6fb19b51e54fa93309a6ce7bca7b9cd
 BLENDER_TREE_NAME = "blender-4.0.2-linux-x64"
 BLENDER_RUNTIME_ROOT = Path("/kaggle/working/ai-engine-blender-4-0-2-runtime")
 BLENDER_TREE_ROOT = BLENDER_RUNTIME_ROOT / BLENDER_TREE_NAME
+KERNEL_V7_BASELINE = {
+    "kernel_version": 7,
+    "kaggle_run_id": "360664134",
+    "elapsed_seconds": 583.558,
+    "mp4_size_bytes": 259531,
+    "mp4_sha256": "50b83bfaccc43297e1d5c238814170e1a78876784b378c8c72153d51be72c882",
+    "codec": "h264",
+    "resolution": [720, 1280],
+    "fps": 24,
+    "frame_count": 120,
+    "duration_seconds": 5.0,
+    "eevee_physics_png_bytes": 3807,
+    "stage_measurements_available": False,
+    "source": "PROJECT_WORK_ARCHIVE.md Kernel v7 record; Kaggle UI run route /edit/run/360664134",
+}
+HISTORICAL_RESTORE_V4 = {
+    "source": "kaggle-blender-tree-restore-probe/full-dataset-verification/run-v4-report.json",
+    "run_type": "independent full restore/runtime verification; not the production Short run",
+    "archive_sha256_seconds": 3.335547,
+    "extraction_seconds": 30.651143,
+    "inventory_hash_seconds": 4.538482,
+    "blender_startup_seconds": 0.380801,
+    "embedded_python_check_seconds": 1.438743,
+    "eevee_physics_combined_seconds": 8.401786,
+    "eevee_png_bytes": 3797,
+    "blender_version": "4.0.2",
+    "embedded_python_version": "3.10.13",
+}
 report = {
     "title": "Satisfying Physics Test",
+    "timing_schema_version": 1,
     "started_utc": datetime.now(timezone.utc).isoformat(),
     "python": sys.version,
     "platform": platform.platform(),
+    "kaggle_kernel_slug": KAGGLE_KERNEL_SLUG,
+    "kaggle_kernel_version": os.environ.get("KAGGLE_KERNEL_VERSION"),
+    "timing_method": "time.monotonic; stage durations are measured independently and may be nested",
+    "environment": {
+        "python_version": sys.version.split()[0],
+        "platform": platform.platform(),
+        "machine": platform.machine(),
+        "cpu_count_logical": os.cpu_count(),
+        "memory_bytes": {},
+        "accelerator": "CPU-only",
+    },
     "stages": {},
     "artifacts": [],
+    "historical_baselines": {
+        "kernel_v7": KERNEL_V7_BASELINE,
+        "restore_run_v4": HISTORICAL_RESTORE_V4,
+    },
 }
+try:
+    for line in Path("/proc/meminfo").read_text(encoding="ascii").splitlines():
+        key, separator, value = line.partition(":")
+        if separator and key in ("MemTotal", "MemAvailable"):
+            report["environment"]["memory_bytes"][key] = int(value.split()[0]) * 1024
+except OSError as exc:
+    report["environment"]["memory_info_error"] = f"{type(exc).__name__}: {exc}"
 total_started = time.monotonic()
 
 
@@ -251,8 +303,10 @@ def inspect_blender_tree(tree_root, manifest):
 
 def restore_blender_runtime():
     started = time.monotonic()
+    input_discovery_started = time.monotonic()
     archive = find_unique_input_file(BLENDER_ARCHIVE_NAME)
     manifest_path = find_unique_input_file(BUILD_MANIFEST_NAME)
+    input_discovery_seconds = time.monotonic() - input_discovery_started
     archive_hash_started = time.monotonic()
     archive_sha256 = sha256_file(archive)
     archive_hash_seconds = time.monotonic() - archive_hash_started
@@ -261,12 +315,15 @@ def restore_blender_runtime():
             f"Blender archive SHA-256 mismatch: expected {BLENDER_ARCHIVE_SHA256}, "
             f"got {archive_sha256}."
         )
+    manifest_hash_started = time.monotonic()
     manifest_sha256 = sha256_file(manifest_path)
+    manifest_hash_seconds = time.monotonic() - manifest_hash_started
     if manifest_sha256 != BUILD_MANIFEST_SHA256:
         raise RuntimeError(
             f"Blender build manifest SHA-256 mismatch: expected "
             f"{BUILD_MANIFEST_SHA256}, got {manifest_sha256}."
         )
+    manifest_validation_started = time.monotonic()
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     expected = manifest.get("expected", {})
     if expected != {"directories": 699, "file_bytes": 1315515076, "files": 5302, "symlinks": 85}:
@@ -281,6 +338,7 @@ def restore_blender_runtime():
         or len({item["path"] for item in manifest["symlinks"]}) != expected["symlinks"]
     ):
         raise RuntimeError("Blender build manifest entries do not match expected counts.")
+    manifest_validation_seconds = time.monotonic() - manifest_validation_started
 
     restored = False
     extraction_seconds = 0.0
@@ -467,13 +525,17 @@ def restore_blender_runtime():
             "archive_sha256_seconds": round(archive_hash_seconds, 6),
             "manifest_path": str(manifest_path),
             "manifest_sha256": manifest_sha256,
+            "manifest_sha256_seconds": round(manifest_hash_seconds, 6),
             "mode": restore_mode,
             "restored_this_run": restored,
             "dataset_payload_type": "single TAR.XZ archive",
             "dataset_contains_unpacked_tree": False,
+            "input_discovery_seconds": round(input_discovery_seconds, 6),
             "free_disk_before_restore_bytes": free_disk_bytes,
+            "manifest_validation_seconds": round(manifest_validation_seconds, 6),
             "extraction_seconds": round(extraction_seconds, 6),
             "inventory_seconds": round(inventory_seconds, 6),
+            "cache_status": "MISS_RESTORED" if restored else "HIT_REUSED",
             "tree_root": str(BLENDER_TREE_ROOT),
             "blender_executable_mode": oct(stat.S_IMODE(blender.stat().st_mode)),
             "blender_executable": os.access(blender, os.X_OK),
@@ -685,8 +747,9 @@ def verify_blender_runtime(blender, environment):
     scene_script.write_text(
         "\n".join(
             [
-                "import bpy, json",
+                "import bpy, json, time",
                 "from mathutils import Vector",
+                "smoke_started = time.monotonic()",
                 "bpy.ops.wm.read_factory_settings(use_empty=True)",
                 "scene = bpy.context.scene",
                 "engines = [x.identifier for x in scene.render.bl_rna.properties['engine'].enum_items]",
@@ -718,10 +781,12 @@ def verify_blender_runtime(blender, environment):
                 "    scene.rigidbody_world.substeps_per_frame = 4",
                 "    scene.rigidbody_world.solver_iterations = 10",
                 "samples = []",
+                "physics_started = time.monotonic()",
                 "for frame in range(1, 49):",
                 "    scene.frame_set(frame)",
                 "    bpy.context.view_layer.update()",
                 "    if frame in (1, 48): samples.append({'frame': frame, 'cube_z': [round(float(c.matrix_world.translation.z), 5) for c in cubes]})",
+                "physics_seconds = time.monotonic() - physics_started",
                 "scene.render.engine = engine",
                 "if hasattr(scene, 'eevee') and hasattr(scene.eevee, 'taa_render_samples'): scene.eevee.taa_render_samples = 8",
                 "scene.render.resolution_x = 64",
@@ -730,8 +795,10 @@ def verify_blender_runtime(blender, environment):
                 "scene.render.image_settings.file_format = 'PNG'",
                 f"scene.render.filepath = {str(render_path)!r}",
                 "scene.frame_set(24)",
+                "eevee_render_started = time.monotonic()",
                 "bpy.ops.render.render(write_still=True)",
-                "print(json.dumps({'engine': engine, 'samples': samples}))",
+                "eevee_render_seconds = time.monotonic() - eevee_render_started",
+                "print(json.dumps({'engine': engine, 'samples': samples, 'physics_seconds': physics_seconds, 'eevee_render_seconds': eevee_render_seconds, 'smoke_total_seconds': time.monotonic() - smoke_started}))",
             ]
         )
         + "\n",
@@ -771,6 +838,9 @@ def verify_blender_runtime(blender, environment):
         {
             "engine": payload.get("engine") if payload else None,
             "physics_samples": samples,
+            "physics_seconds": payload.get("physics_seconds") if payload else None,
+            "eevee_render_seconds": payload.get("eevee_render_seconds") if payload else None,
+            "smoke_total_seconds": payload.get("smoke_total_seconds") if payload else None,
             "physics_verified": physics_ok,
             "render_path": str(render_path),
             "render_bytes": render_path.stat().st_size if render_ok else 0,
@@ -803,6 +873,8 @@ output = Path(sys.argv[sys.argv.index("--") + 1])
 report_path = output / "scene_report.json"
 scene_report = {
     "title": "Satisfying Physics Test",
+    "timing_method": "time.monotonic inside the Blender process",
+    "scene_setup_seconds": None,
     "motion_mode": "KEYFRAMED_KINEMATIC_CHAIN",
     "motion_note": "Deterministic visual choreography using animated rigid bodies; dynamic solver impacts are not claimed.",
     "resolution": [720, 1280],
@@ -832,6 +904,7 @@ def material(name, color, metallic=0.05, roughness=0.32, emission=0.0):
     return mat
 
 try:
+    scene_setup_started = __import__("time").monotonic()
     bpy.ops.object.select_all(action="SELECT")
     bpy.ops.object.delete(use_global=False)
     scene = bpy.context.scene
@@ -1036,6 +1109,9 @@ try:
     if scene_report["motion"]["status"] != "COMPLETED":
         raise RuntimeError("Short choreography did not produce ball travel and domino tipping.")
 
+    scene_report["scene_setup_seconds"] = round(
+        __import__("time").monotonic() - scene_setup_started, 6
+    )
     scene.render.filepath = str(output / "satisfying_physics_test")
     scene.frame_set(1)
     save_report()
@@ -1047,6 +1123,8 @@ try:
             "output_basename": str(output / "satisfying_physics_test"),
             "expected_video_pattern": "satisfying_physics_test*.mp4",
             "duration_seconds": round(__import__("time").monotonic() - render_started, 3),
+            "render_includes_mp4_write_finalize": True,
+            "mp4_write_finalize_seconds": None,
             "resolution": [scene.render.resolution_x, scene.render.resolution_y],
             "fps": scene.render.fps,
             "frame_count": scene.frame_end - scene.frame_start + 1,
@@ -1143,7 +1221,14 @@ def main():
         print("Overall status: FAILED; Blender runtime smoke checks did not pass.")
         return 2
 
+    video_tools_started = time.monotonic()
     ffmpeg, ffprobe = install_remote_video_tools_if_needed()
+    report["stages"]["video_tools_prepare"] = {
+        "status": "COMPLETED" if ffmpeg and ffprobe else "FAILED",
+        "duration_seconds": round(time.monotonic() - video_tools_started, 6),
+        "ffmpeg_available": bool(ffmpeg),
+        "ffprobe_available": bool(ffprobe),
+    }
     report["blender_executable"] = blender
     report["ffmpeg_executable"] = ffmpeg
     report["ffprobe_executable"] = ffprobe
@@ -1243,6 +1328,7 @@ def main():
             frame_rate = stream.get("avg_frame_rate", "")
             report["stages"]["video_probe"] = {
                 "status": "COMPLETED",
+                "ffprobe_duration_seconds": probe.get("duration_seconds"),
                 "codec_is_h264": stream.get("codec_name") == "h264",
                 "resolution_is_720x1280": (stream.get("width"), stream.get("height")) == (720, 1280),
                 "frame_rate_is_24": frame_rate in ("24/1", "24/1.000"),
@@ -1334,11 +1420,16 @@ def main():
             }
         report["stages"]["visible_motion_check"] = motion
 
+    video_hash_started = time.monotonic()
     report["video"] = {
         "path": str(video) if video is not None else None,
         "size_bytes": video.stat().st_size if video is not None else 0,
-        "sha256": hashlib.sha256(video.read_bytes()).hexdigest() if video is not None else None,
+        "sha256": sha256_file(video) if video is not None else None,
+        "hash_duration_seconds": None,
     }
+    report["video"]["hash_duration_seconds"] = round(
+        time.monotonic() - video_hash_started, 6
+    )
     required = (
         "video_probe",
         "full_video_decode",
@@ -1364,6 +1455,91 @@ def main():
             })
     report["completed_utc"] = datetime.now(timezone.utc).isoformat()
     report["elapsed_seconds"] = round(time.monotonic() - total_started, 3)
+    report["comparison"] = {
+        "baseline_kernel_version": KERNEL_V7_BASELINE["kernel_version"],
+        "baseline_kaggle_run_id": KERNEL_V7_BASELINE["kaggle_run_id"],
+        "baseline_elapsed_seconds": KERNEL_V7_BASELINE["elapsed_seconds"],
+        "current_elapsed_seconds": report["elapsed_seconds"],
+        "elapsed_seconds_delta_baseline_minus_current": round(
+            KERNEL_V7_BASELINE["elapsed_seconds"] - report["elapsed_seconds"], 3
+        ),
+        "elapsed_percent_change": round(
+            (
+                (KERNEL_V7_BASELINE["elapsed_seconds"] - report["elapsed_seconds"])
+                / KERNEL_V7_BASELINE["elapsed_seconds"]
+            ) * 100,
+            3,
+        ),
+        "baseline_mp4_bytes": KERNEL_V7_BASELINE["mp4_size_bytes"],
+        "current_mp4_bytes": report["video"]["size_bytes"],
+        "baseline_mp4_sha256": KERNEL_V7_BASELINE["mp4_sha256"],
+        "current_mp4_sha256": report["video"]["sha256"],
+        "baseline_video": {
+            key: KERNEL_V7_BASELINE[key]
+            for key in ("codec", "resolution", "fps", "frame_count", "duration_seconds")
+        },
+        "current_video": report.get("video_metadata"),
+        "baseline_stage_times": "N/A; no per-stage timings were retrieved for Kernel v7",
+        "current_cache_status": report["stages"]
+        .get("blender_dataset_restore", {})
+        .get("cache_status"),
+        "comparability_notes": [
+            "Kernel v7 was the production CPU-only run; this measured run uses the unchanged scene and 720x1280, 24 FPS, 120-frame settings.",
+            "Kernel v7 internal elapsed time is 583.558 seconds; its Kaggle UI separately displayed a 604.6-second run. Do not mix those timing sources.",
+            "Kernel v7 per-stage report retrieval was rate-limited (HTTP 429), so unmatched stages are N/A.",
+            "The run-v4 restore measurements are from a distinct restore/runtime verification and are not a Kernel v7 stage baseline.",
+        ],
+    }
+    restore_stages = report["stages"].get("blender_dataset_restore", {})
+    scene_timing = report.get("scene", {})
+    report["timing_summary_seconds"] = {
+        "input_discovery": restore_stages.get("input_discovery_seconds"),
+        "archive_sha256": restore_stages.get("archive_sha256_seconds"),
+        "manifest_sha256": restore_stages.get("manifest_sha256_seconds"),
+        "manifest_validation": restore_stages.get("manifest_validation_seconds"),
+        "archive_extraction": restore_stages.get("extraction_seconds"),
+        "restored_tree_validation_and_hashes": restore_stages.get("inventory_seconds"),
+        "restore_function_total": restore_stages.get("total_seconds"),
+        "restore_cache_status": restore_stages.get("cache_status"),
+        "blender_version_subprocess_including_startup": report["stages"]
+        .get("blender_version", {})
+        .get("duration_seconds"),
+        "embedded_python_subprocess_including_startup": report["stages"]
+        .get("blender_embedded_python", {})
+        .get("duration_seconds"),
+        "eevee_and_physics_smoke_subprocess": report["stages"]
+        .get("blender_eevee_physics_smoke", {})
+        .get("duration_seconds"),
+        "eevee_smoke_render": report["stages"]
+        .get("blender_eevee_physics_smoke", {})
+        .get("eevee_render_seconds"),
+        "physics_smoke_simulation": report["stages"]
+        .get("blender_eevee_physics_smoke", {})
+        .get("physics_seconds"),
+        "video_tools_prepare": report["stages"]
+        .get("video_tools_prepare", {})
+        .get("duration_seconds"),
+        "short_scene_setup": scene_timing.get("scene_setup_seconds"),
+        "short_render_and_mp4_write_finalize": scene_timing.get("render", {}).get(
+            "duration_seconds"
+        ),
+        "mp4_write_finalize_only": None,
+        "ffprobe": report["stages"].get("video_probe", {}).get(
+            "ffprobe_duration_seconds"
+        ),
+        "full_video_decode": report["stages"].get("full_video_decode", {}).get(
+            "duration_seconds"
+        ),
+        "contact_sheet_extraction": report["stages"].get("contact_sheet", {}).get(
+            "duration_seconds"
+        ),
+        "visible_motion_validation": report["stages"]
+        .get("visible_motion_check", {})
+        .get("duration_seconds"),
+        "mp4_sha256": report["video"].get("hash_duration_seconds"),
+        "task_total": report["elapsed_seconds"],
+        "non_additivity_note": "Subprocess totals include nested stage times; MP4 encoding/finalization occurs inside Blender render and is not independently separable from rendering.",
+    }
     write_json(REPORT_PATH, report)
     print("Overall status:", report["overall_status"])
     print("Video:", video, report["video"]["size_bytes"], "bytes", report["video"]["sha256"])
