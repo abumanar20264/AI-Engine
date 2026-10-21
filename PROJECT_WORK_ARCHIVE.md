@@ -1583,3 +1583,15 @@ The Kaggle UI separately displayed **524.9 s** for this run; it is a broader wal
 **Validation performed on the authored documentation:** Exact-string guards were used for each targeted replacement; all intended stale statements were matched once. Content is UTF-8 Markdown. The archive was updated by appending this entry only; its prior content was retained unchanged. No Kaggle run, render, dependency installation, cleanup, or credential access was performed. Repository-wide `git diff --check` cannot be run from this GitHub API editing session; the commit content will be re-fetched and checked for the expected text before completion.
 
 **Next step:** Start with scenario/project schema and persistence tests, then build the smallest control UI. Keep EEVEE at 8 samples pending full-resolution review. Do not treat this documentation update as implementation of the missing product features.
+
+
+### Continuation — final active-status cleanup after commit review
+
+**Baseline:** The preceding documentation update was committed as `f1db9b7cc00248957449530f2064b3029d0a5c9a` (`docs: reconcile current product status and archive`). A post-commit reread found two remaining presentation issues in active documentation.
+
+**Corrections made:**
+- Updated the legacy README closing section that still said the engine had not been selected and the simulation/video had not been tested. It now lists the remaining market research, full-resolution sample review, missing product components, and the next scenario/project-contract milestone.
+- Updated the product foundation's open question so it concerns extending the already validated Blender/EEVEE path into the complete pipeline, rather than repeating the passed compatibility test.
+- Moved the new `1.3.2` change-log entry above `1.3.1` to keep the active change log in reverse chronological order; prior historical entries were not rewritten.
+
+**Validation:** The targeted stale README sentence and the obsolete active compatibility question were matched once and replaced. The foundation changelog now lists 1.3.2 before 1.3.1. This follow-up is documentation-only; no runner, notebook, metadata, production setting, Kaggle resource, or credential was changed.

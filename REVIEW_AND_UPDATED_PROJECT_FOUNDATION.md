@@ -768,7 +768,7 @@ Reject or revise if:
 
 ## 16. Open questions that must remain open until tested
 
-- Can the pinned Blender version and provisional EEVEE satisfy the required workflow in the actual Kaggle runtime?
+- Can the validated Blender/EEVEE path be extended into a scenario-driven production pipeline with reliable project persistence, remote job handling, audio synchronization, and final-export QA?
 - Can the intended visual identity be created reliably on the available local hardware?
 - Does a small amount of text improve comprehension or interrupt the visual experience?
 - Which pillar produces repeatable audience interest rather than isolated spikes?
@@ -997,6 +997,11 @@ These sources document policies or tools. They do not validate this channel’s 
 ### 1.3.0 — 2026-10-20
 - Linked the section-by-section audit register and its empirical test/decision list.
 
+### 1.3.2 — 2026-10-21
+- Updated active compatibility statements to reflect the recorded Kernel v8 CPU-only Blender 4.0.2/EEVEE short-render result and v10/v12 sample timing evidence.
+- Clarified that the tested rendering path is not a user-facing product pipeline; replaced the obsolete compatibility-test next step with scenario/project persistence, control UI, scene adapter, job lifecycle, and audio integration milestones.
+- Retained all earlier change-log entries as historical records.
+
 ### 1.3.1 — 2026-10-20
 - Aligned the open questions and next steps with Blender's approved status and EEVEE's pending Kaggle compatibility test.
 - Clarified that investigating or changing to another engine requires a documented Blender mandatory-requirement failure and separate approval.
@@ -1018,8 +1023,3 @@ These sources document policies or tools. They do not validate this channel’s 
 - Preserved the distinction between an approved editorial direction and unvalidated market/technical outcomes.
 - No code, production assets, model tests, Kaggle runs, or publishing actions were performed by this document update.
 
-
-### 1.3.2 — 2026-10-21
-- Updated active compatibility statements to reflect the recorded Kernel v8 CPU-only Blender 4.0.2/EEVEE short-render result and v10/v12 sample timing evidence.
-- Clarified that the tested rendering path is not a user-facing product pipeline; replaced the obsolete compatibility-test next step with scenario/project persistence, control UI, scene adapter, job lifecycle, and audio integration milestones.
-- Retained all earlier change-log entries as historical records.
