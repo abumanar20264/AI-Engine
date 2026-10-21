@@ -1382,3 +1382,175 @@ The Kaggle UI separately displayed **524.9 s** for this run; it is a broader wal
 - **Git status at review:** Existing untracked diagnostic files/directories remain untouched. No files were staged; no commit or push was performed.
 - **Remaining limits:** One measured CPU-only Kaggle run does not prove all Kaggle runtime profiles, local Blender-version parity, unpacked-tree Dataset publication, scaled production, economic viability, or market success. The local JSON is a normalized summary, not the full raw remote report.
 - **Recommendation:** Keep the current Blender 4.0.2 archive-restore route for controlled pilot work; evaluate scale and economics separately using additional authorized evidence.
+
+## 2026-10-21 - EEVEE sample benchmark and Blender restore audit
+
+**Date/time:** 2026-10-21 12:21:04 +03:00.
+**Objective and authorization:** Evaluate the optional CPU-only EEVEE 8/4/2-sample benchmark and audit Blender restore timing without changing the production default. The already completed Kaggle Kernel v10 benchmark was used as the measured run; no duplicate render or new Kernel was launched.
+
+### Files reviewed and changes
+
+- **Reviewed:** `PROJECT_WORK_ARCHIVE.md`; `kaggle-blender-short-test/short_test_runner.py`; `kaggle-blender-short-test/ai-engine-satisfying-physics-short.ipynb`; `kaggle-blender-short-test/kernel-metadata.json`; and `kaggle-blender-tree-restore-probe/full-dataset-verification/performance-run-v8-output/performance-run-v8-summary.json`.
+- **MODIFIED:** This archive entry was appended. No earlier archive records were changed.
+- The runner and notebook already had local modifications when this work began. They were inspected, not changed here; their Python code cell was verified to exactly match `short_test_runner.py`. The benchmark switch remains optional, and the production default remains 8 samples.
+- Existing untracked diagnostics and benchmark-upload folders were preserved. No production settings, Kaggle inputs, or Git history were changed.
+
+### Kaggle benchmark evidence
+
+- **VERIFIED - Kernel:** Kaggle Kernel `haroonbaaraabumanar/ai-engine-blender-runtime-preflight`, version 10, run `360710783`, completed successfully. The internal benchmark run ID is `20261021T083149Z`. Kernel output reported CPU-only (Accelerator: None; no `nvidia-smi`; no TPU devices). Blender was 4.0.2 and the notebook Python was 3.13.15.
+- **VERIFIED - fixed settings:** All three variants used the same 720x1280 resolution, 24 FPS, 120 frames, H.264 MP4, and matching scene/physics/motion data. The runner's comparison reports `scene_equivalent_to_8_samples=true` for each variant.
+- **VERIFIED - measured sample results:** `render_and_mp4_write_seconds` includes Blender animation render and MP4 write/finalization; finalization-only time is not independently measurable. Per-sample `elapsed_seconds` includes render plus its validation stages.
+
+| EEVEE samples | Scene setup (s) | Render + MP4 (s) | Per-sample elapsed (s) | Change vs 8-sample render | MP4 bytes | MP4 SHA-256 |
+|---:|---:|---:|---:|---:|---:|---|
+| 8 | 0.138985 | 511.823 | 514.511888 | 0.000% | 259531 | `45296fe8c3da09e5987d1f1a1f2d6c95bb0f26ea7552d1d65e988bda83643ae3` |
+| 4 | 0.163842 | 268.390 | 270.463728 | +47.562% faster | 265304 | `fb172bdbddeead34d5e28a77d0136d64480124d8ee49eceeec66fcd732ae1f18` |
+| 2 | 0.146598 | 146.320 | 148.336542 | +71.412% faster | 273531 | `30e801fd936a6b6803ad284941f530aa07b08cf4a01dd1c85febf4670fec9a36` |
+
+- **VERIFIED - output checks:** The report marked all three variants `COMPLETED`, including H.264 metadata checks, complete video decode, contact-sheet extraction, and visible-motion validation. The reported MP4 names are distinct, with Blender frame-range suffixes: `satisfying_physics_test_samples_080001-0120.mp4`, `satisfying_physics_test_samples_040001-0120.mp4`, and `satisfying_physics_test_samples_020001-0120.mp4`.
+- **VERIFIED - visual artifact:** The comparison image uses the same sampled frames (0, 59, 119) for each row and is present at `ai-engine-satisfying-physics-short/eevee-sample-benchmark/20261021T083149Z/samples-08-04-02-comparison.png` in Kernel v10 output. The Kaggle preview was inspected. No gross composition or motion difference was apparent at the preview scale; subtle noise, fine-detail, shadow, and edge changes could not be judged confidently at that downscaled size. The report retains `PENDING_MANUAL_REVIEW`; visual quality is therefore **not approved** for a production setting change.
+- **VERIFIED - timing boundaries:** The runner report total was 1007.576 s; the benchmark section measured 934.071962 s. Kaggle Logs reported 1031.2 s wall time. These are different timing boundaries; the three render intervals must not be added to or compared as if they were one production render. The v8 comparable render+MP4 measurement was 412.360 s. The v10 8-sample render was 24.120% slower than that v8 single-run measurement, while v10 4- and 2-sample intervals were respectively 34.914% and 64.516% faster. This one-run comparison is sensitive to Kaggle runtime variability and is not a repeated-run performance guarantee.
+- **VERIFIED - restore measurements:** The first restore was `MISS_RESTORED`: input discovery 0.350755 s, archive SHA-256 2.535602 s, manifest SHA-256 0.123913 s, manifest validation 0.016180 s, extraction 38.527290 s, post-extraction inventory/hash 6.569376 s, total 48.125665 s. It verified 5,302 files (1,315,515,076 bytes), 699 directories, 85 resolved symlinks, modes and executable permission, with no inventory/hash/link mismatches.
+- The explicit second `restore_blender_runtime()` call was `HIT_REUSED`: input discovery 0.002783 s, archive SHA-256 1.270861 s, manifest SHA-256 0.006583 s, manifest validation 0.014273 s, extraction 0 s, inventory 13.057455 s, total 14.485559 s; all expected files, links, hashes, and modes remained verified.
+- **Inferred from code and measured timings - repeated work:** The miss path hashes each file while extracting, then hashes the full restored tree again during inventory. The second top-level restore call re-hashes the archive and manifest and, on a cache hit, calls `inspect_blender_tree()` before and after permission handling; the second full-tree pass is unconditional even when no mode changes are needed. The cache-hit inventory interval (13.057455 s) therefore includes redundant full-file reads. This is an opportunity, not a verified optimization.
+- **Proposed, not implemented:** Keep archive and manifest digest checks and one complete tree verification. Avoid calling the whole restore function a second time in the normal run; where a cache-hit permission repair occurs, re-check modes and links without re-hashing unchanged file contents, or hash only files whose bytes could have changed. Preserve all integrity checks and measure this change separately from EEVEE samples before adopting it.
+- **Proposed recommendation:** Use 4 samples only as the next quality-review candidate: it showed a 47.562% within-run render-time reduction versus 8 samples with identical scene/physics checks, while the preview exposed no gross visual change. Do not change production from 8 samples until full-resolution noise/detail/shadow/edge review and a controlled repeated comparison are complete. The 2-sample result is faster but has greater unverified quality risk.
+
+### Evidence retrieval, validation, and Git
+
+- **VERIFIED:** Kernel v10 status was `KernelWorkerStatus.COMPLETE`; Kaggle Logs showed Blender version, embedded Python, EEVEE/physics smoke, all three renders, all `ffprobe` and full-decode processes, contact sheets, and the combined comparison image completing successfully.
+- The original 111.01 kB `short_test_report.json`, per-sample logs/videos/contact sheets, and 1.44 MB comparison image remain in Kaggle Kernel v10 output. **Not downloaded locally:** one targeted Kaggle CLI output request returned HTTP `429 Too Many Requests`; no retry was made. Evidence was reviewed in the signed-in Kaggle Output/Logs UI, including a visual preview. No replacement report was created.
+- **Checks executed:** repository root `C:\AI-Engine`, branch `main`, and current HEAD were checked (`ab1971cbc94f4989f7f77013d2c230f229adc68e`); Kaggle CLI version/status; Python AST parse; notebook, metadata, and v8-summary JSON parsing; exact runner-cell equality; CPU-only metadata and v8 baseline assertions; Kaggle output/log review; one targeted output retrieval attempt; and `git diff --check`. All local parsing, synchronization, baseline, CPU-only, and diff checks passed. One redundant validation invocation initially failed due to PowerShell quoting in the inline Python command; the corrected command passed. Kaggle output retrieval returned HTTP 429; Kernel status and UI output/log inspection succeeded.
+- **Resource use:** No new Kaggle run or render was launched in this work session. The reviewed Kernel v10 used no GPU or TPU. No package was installed and no Kaggle accelerator quota was consumed in this session.
+- **Git actions:** No files were staged; no commit or push was performed. The pre-existing modified runner/notebook and untracked diagnostics remain untouched.
+- **Remaining limits:** There is one completed measurement for each sample count, the local raw JSON/video/image artifacts were not downloaded due to the 429 response, and the scaled preview is insufficient for fine visual quality approval. Absolute timing comparison with v8 is also subject to run-to-run Kaggle variation.
+
+## 2026-10-21 - Restore verification optimization and audit-only Kaggle run
+
+**Date/time:** 2026-10-21 12:45:28 +03:00 (local completion checks).
+**Objective and authorization:** Make the smallest safe change to remove redundant Blender restore verification from the normal execution path, retain full integrity checks, and run an audit-only cache-miss/cache-hit comparison on the existing Kaggle Kernel. Do not change the 8-sample production default, render a Short, or stage/commit/push Git changes.
+
+### Files changed and temporary artifacts
+
+- **MODIFIED:** `kaggle-blender-short-test/short_test_runner.py` removes the second restore call from the normal path. The full archive and manifest SHA-256 checks and full restored-file content verification remain. If permission repair changes the tree, a metadata-only post-repair pass still checks file and directory modes, inventory, symlink targets, and resolved links.
+- **MODIFIED:** `kaggle-blender-short-test/ai-engine-satisfying-physics-short.ipynb` execution cell was resynchronized exactly with the runner. The committed/default source still uses the normal production path unless `AI_ENGINE_RESTORE_AUDIT_ONLY=1` is explicitly set.
+- **MODIFIED:** This entry was appended; earlier archive records were preserved.
+- **TEMPORARY, created then removed:** `kaggle-blender-short-test/restore-audit-v11-upload/` held the existing Kernel notebook and metadata plus a single audit-only environment cell for the remote run. It was uploaded to the same Kernel slug, then removed locally after execution.
+- **TEMPORARY, created then removed:** `kaggle-blender-short-test/restore-audit-v11-output/` was created as a destination for one targeted output download. No files were downloaded because Kaggle returned HTTP 429; the empty directory was removed.
+- No video, v10 report, credentials, Dataset, or diagnostic files were modified or deleted. No local replacement for the Kaggle report was created.
+
+### Restore audit measurements
+
+- **VERIFIED — Kaggle execution:** Existing Kernel `haroonbaaraabumanar/ai-engine-blender-runtime-preflight`, version 11, run `360729285`, completed. Kernel CLI status was `KernelWorkerStatus.COMPLETE`; Kaggle Logs showed `Restore cache audit status: COMPLETED` and the report path `/kaggle/working/ai-engine-satisfying-physics-short/short_test_report.json`. The report's `kaggle_kernel_version` field is null; version 11 and run ID were verified separately from the Kaggle UI.
+- The audit-only run finished at `2026-10-21T09:35:34.328294+00:00`, starting at `2026-10-21T09:34:41.922652+00:00`. Its report `elapsed_seconds` is 52.405 s; the two restore-call measurements sum to 52.377387 s, with the remaining 0.027613 s covering other report/runner work. No Blender launch, EEVEE or physics smoke test, or render was executed in this audit-only run.
+- **Environment observed in the original report/logs:** CPU-only; no `nvidia-smi` and no TPU devices; 4 logical CPUs; Linux x86_64 (`Linux-6.18.48+-x86_64-with-glibc2.39`); Python 3.13.15; reported memory total 33,658,310,656 bytes and available 32,442,413,056 bytes.
+- **VERIFIED — integrity:** Both calls reported `VERIFIED` and `content_hashes_verified=true`. Each checked 5,302 regular files (1,315,515,076 bytes), 699 directories, and 85 symlinks; no missing/extra files or directories, hash mismatches, mode mismatches, symlink mismatches, or unresolved links were reported. The Blender executable had mode `0o755`. No permission correction was needed, so `post_permission_metadata_verified=false` for the cache hit; its full content verification still completed.
+
+| Restore state | v10 baseline (s) | v11 audit (s) | Change (v11 - v10, s) |
+|---|---:|---:|---:|
+| Input discovery | miss 0.350755; hit 0.002783 | miss 0.810725; hit 0.002721 | miss +0.459970; hit -0.000062 |
+| Archive SHA-256 | miss 2.535602; hit 1.270861 | miss 6.837124; hit 0.904836 | miss +4.301522; hit -0.366025 |
+| Manifest SHA-256 | miss 0.123913; hit 0.006583 | miss 0.497270; hit 0.004700 | miss +0.373357; hit -0.001883 |
+| Manifest validation | miss 0.016180; hit 0.014273 | miss 0.018184; hit 0.012303 | miss +0.002004; hit -0.001970 |
+| Extraction | miss 38.527290; hit 0.000000 | miss 33.219595; hit 0.000000 | miss -5.307695; hit 0.000000 |
+| Tree inventory/content verification | miss 6.569376; hit 13.057455 | miss 4.947458; hit 4.989030 | miss -1.621918; hit -8.068425 |
+| Restore call total | miss 48.125665; hit 14.485559 | miss 46.332919; hit 6.044468 | miss -1.792746; hit -8.441091 |
+
+- Cache-miss total was 3.725% lower than the v10 miss measurement, but the archive and manifest hashing times were slower in v11; one observation per run cannot attribute that change to code.
+- Cache-hit total was 58.272% lower; inventory time was 61.792% lower. The report confirmed `cache_hit_duplicate_full_hash_scan_removed=true` and `normal_run_second_restore_call_removed=true`. The prior v10 miss+hit pair totaled 62.611224 s; the audit-only v11 miss+hit pair totaled 52.377387 s (16.345% lower). This is a two-run comparison, not a repeated benchmark.
+- **Inference from the code path and measurements:** The normal path now completes after its first fully verified restore. Audit-only mode deliberately invokes the second restore to measure cache-hit behavior. On a cache hit, content is still fully re-hashed once; only the redundant second full content pass after permission processing is avoided when permissions did not change. If permissions do change, the post-repair metadata/symlink check remains.
+
+### v10 visual evidence status, validation, and Git
+
+- The v11 report was inspected in Kaggle's Output JSON viewer, which showed `overall_status=COMPLETED`, `restore_cache_comparison.status=COMPLETED`, and the measured values above. Its remote output folder contained `short_test_report.json` (11.35 kB). One targeted `kaggle kernels output .../11` download attempt returned HTTP `429 Too Many Requests`; it was not retried. The original v11 report was not downloaded locally.
+- The v10 output folder was visible in the Kaggle UI, but its file list could not be expanded/retrieved through the available UI session. The prior report and thumbnail evidence remain the only available v10 evidence here. **Not completed:** full-resolution review of the 8/4/2 videos or images across frames. Fine-detail, noise, shadow, edge, and moving-object quality is not approved; retain 8 samples as the production default. No replacement v10 report or media was generated.
+- **Checks executed:** Python AST parse; notebook JSON parse and exact runner-cell equality; Kaggle metadata JSON parse and CPU-only flags; Pylance syntax check; Kaggle v11 CLI push/status; Kaggle Logs and Output report UI inspection; one targeted CLI output retrieval attempt (HTTP 429); repository branch/HEAD/status review; and `git diff --check` (passed). No new package was installed.
+- **Resource use:** One CPU-only, restore-audit-only Kaggle run; 4 logical CPU cores; no GPU/TPU and no render. No other Kernel or Dataset was created.
+- **Git actions:** No staging, commit, or push. Existing untracked diagnostics were preserved. The generated upload and failed-download destination folders were removed after verifying their contents.
+- **Remaining limit / next step (proposed):** Full-resolution v10 visual review is still pending because the original media could not be retrieved. Retry recovery only after Kaggle output rate limits have cleared; if original v10 media remains inaccessible, request approval for the smallest necessary targeted rerun that emits reviewable frames/videos. Do not change production samples before that review.
+
+### Continuation — delayed v10 output recovery attempt
+
+**Date/time:** 2026-10-21 12:59:32 +03:00.
+- After waiting six minutes following the earlier HTTP 429, one `kaggle kernels output .../10` retry was attempted into the already-existing empty `kaggle-blender-short-test/v10-evidence-recovered/` folder.
+- **FAILED / stopped:** Kaggle began enumerating and downloading the Blender runtime input tree rather than returning the requested benchmark media first. The command was still running after 600 seconds; the output showed 419 files in 113 directories totaling 207,029,240 bytes, all under `ai-engine-blender-4-0-2-runtime/`. It had not yielded the v10 report or comparison media.
+- The process was stopped. Because the recovery folder had been confirmed empty immediately before the attempt, only the exact partial `ai-engine-blender-4-0-2-runtime/` download created by this command was removed. The recovery folder was verified empty afterward. No Blender file contents were opened; no Kaggle input, credential, or user diagnostic file was deleted.
+- **Result:** The v10 report/videos/images remain unavailable locally. Do not repeat the unfiltered output command; any future retrieval must use an output filter that avoids the Blender runtime tree or use a specifically approved targeted rerun.
+- **13:02 +03:00 follow-up:** After another attempt to avoid the runtime tree using `--file-pattern '(short_test_report\.json|eevee-sample-benchmark-report\.json|\.mp4$|\.png$)'`, Kaggle again returned HTTP `429 Too Many Requests` from `ListKernelSessionOutput`. No retry loop was made and the evidence folder remained empty. Full-resolution visual review therefore remains blocked.
+
+### Continuation — targeted v12 EEVEE benchmark and output recovery
+
+**Date/time:** 2026-10-21 13:05:56 +03:00 (Kaggle log start: 2026-10-21T10:05:56.923756Z).
+**Objective and authorization:** Complete the already-submitted, single CPU-only 8/4/2 EEVEE benchmark on the existing Kaggle Kernel and attempt to recover its original report and media. Keep the production default at 8 samples; do not create another Kernel or start another render.
+
+#### Results observed in Kaggle Logs
+
+- **VERIFIED — execution:** Existing Kernel version 12, run `360738597`, completed (`KernelWorkerStatus.COMPLETE`). Benchmark identifier: `20261021T100654Z`. Logs report total benchmark elapsed time `899.903311` seconds; final notebook log activity reached `976.5` seconds.
+- **VERIFIED — benchmark stage results:** All three benchmark render stages, `ffprobe`, full `ffmpeg` decode, per-sample contact-sheet generation, and the combined comparison contact sheet logged `COMPLETED`. Each sample summary logged `status: COMPLETED`.
+- Measured render-plus-MP4-write times and file sizes from Kaggle Logs:
+
+| EEVEE samples | Render + MP4 write (s) | MP4 size (bytes) | Change vs v8 412.360 s |
+|---:|---:|---:|---:|
+| 8 | 492.430 | 259,531 | -19.417% |
+| 4 | 258.884 | 265,304 | +37.219% |
+| 2 | 141.481 | 273,531 | +65.690% |
+
+- Changes relative to this v12 8-sample run: 4 samples was 47.427% faster; 2 samples was 71.269% faster. These are single-run timings, not a repeated benchmark or a quality approval.
+- Benchmark report path printed in Logs: `/kaggle/working/ai-engine-satisfying-physics-short/eevee-sample-benchmark/20261021T100654Z/eevee-sample-benchmark-report.json`.
+- **Environment visible in Logs:** Linux x86_64, Python 3.13.15, four logical CPUs, GPU query found no `nvidia-smi`, and TPU devices were `[]`. The `blender_version`, embedded-Python, and EEVEE/physics smoke stages logged `COMPLETED`; exact runtime version strings were not captured in the inspected log excerpt.
+
+#### Artifact recovery limits and quality decision
+
+- The Kaggle Output tab showed the existing runtime input and the `ai-engine-satisfying-physics-short` output folder. Its nested file list could not be expanded in this browser session.
+- One targeted `kaggle kernels output .../12 --file-pattern ...` request returned HTTP `429 Too Many Requests` from `ListKernelSessionOutput`. No rapid retry was made and no output file was downloaded.
+- **NOT VERIFIED LOCALLY:** Original benchmark JSON contents, per-video SHA-256 values, full metadata values, and image/video pixels. Logs report successful `ffprobe`, full decode, motion-qualified sample completion, and image creation, but these do not substitute for independently inspecting the original report and media.
+- **VISUAL REVIEW NOT COMPLETED:** The comparison image was generated, but it was not retrieved or visually examined at full resolution. Noise, edges, shadows, fine detail, temporal stability, and moving-object clarity therefore remain unapproved. Keep the production default at 8 samples; do not promote 4 or 2 based on timing alone.
+
+#### Files, commands, checks, and resource use
+
+- **MODIFIED:** This archive entry only; previous entries were preserved.
+- **TEMPORARY, created for the completed Kaggle run:** `kaggle-blender-short-test/eevee-quality-rerun-v12-upload/` contained a copy of the existing notebook and Kernel metadata for the authorized benchmark upload. It remains local pending explicit/safe cleanup review.
+- **TEMPORARY, created for targeted output recovery:** `kaggle-blender-short-test/eevee-quality-rerun-v12-output/` is empty after the HTTP 429 response.
+- Commands actually run included Kaggle Kernel status checks, `kaggle kernels output .../12 --file-pattern ...` (failed with HTTP 429), inspection of the Kaggle Logs/Output tabs, repository `git status`, `git diff --stat`, and `git diff --check` (passed). The Windows `python` command was unavailable for a local percentage calculation; the percentages above were computed using PowerShell arithmetic from the displayed log measurements. No secrets or credentials were opened.
+- One CPU-only Kaggle benchmark run; Logs reported four logical CPUs, no available `nvidia-smi`, and no TPU devices. No local render, Dataset creation, additional Kernel, Git stage, commit, or push occurred.
+- **Next recommendation:** After Kaggle output throttling clears, make one targeted evidence-recovery attempt for the exact report, three benchmark videos, and generated comparison/contact sheets. Validate the original JSON, hashes, metadata, and full decode, then inspect images at full resolution. Do not rerender unless the original media remains inaccessible and a new run is separately approved.
+
+### Continuation — v12 output UI inspection and delayed recovery retry
+
+**Date/time:** 2026-10-21 13:31:29 +03:00 and subsequent inspection (local time).
+- **FAILED — targeted recovery retry:** After waiting since the previous HTTP 429, one additional filtered `kaggle kernels output .../12` request was issued against the existing empty `kaggle-blender-short-test/eevee-quality-rerun-v12-output/` directory. Kaggle again returned HTTP `429 Too Many Requests` from `ListKernelSessionOutput`; no retry loop was made and no files were downloaded.
+- **VERIFIED — Kaggle Output UI visibility:** The v12 Output tab was opened at the exact run `360738597`. The tree showed `ai-engine-satisfying-physics-short/eevee-sample-benchmark/20261021T100654Z/` containing `samples-02/`, `samples-04/`, `samples-08/`, `eevee-sample-benchmark-report.json`, and `samples-08-04-02-comparison.png`. Selecting the report showed its UI-reported size of 107.51 kB. The UI tree also showed benchmark logs, the top-level `short_test_report.json`, and the Blender smoke-test artifacts.
+- **NOT RECOVERED / NOT INSPECTED:** The report contents, nested sample files, original videos, and comparison-image pixels were not exposed by the available UI interaction. No local JSON validation, MP4 hash/metadata/full-decode recheck, or visual quality assessment was performed. Logs remain evidence of completion only; they do not replace file inspection.
+- No project source, production setting, Kaggle input, credential, prior evidence, or user diagnostic file was modified or deleted. The v12 upload copy remains available locally; the targeted output destination remains empty.
+- **Next recommendation:** Keep the default at 8 samples and retain the benchmark as technically completed but visual quality pending. Attempt recovery only after the Kaggle API throttle clears; otherwise request approval for the smallest evidence-recovery rerun that does not repeat full renders where practical.
+
+### Continuation — final delayed v12 evidence-recovery attempt
+
+**Date/time:** 2026-10-21 13:41:52 +03:00.
+- After an additional five-minute wait, one final filtered request for the original v12 report, sample videos, and comparison images was made using `kaggle kernels output .../12 --file-pattern ...`.
+- **FAILED:** Kaggle again returned HTTP `429 Too Many Requests` from `ListKernelSessionOutput`. No retry loop was performed; the recovery directory remains empty.
+- The Kaggle Output UI had previously confirmed the report and comparison-image filenames and report size, but did not expose their contents. Full-resolution visual review and local evidence verification remain unperformed.
+- No Kaggle rerender, source edit, credential access, Git stage/commit/push, or changes to pre-existing diagnostic files occurred during this attempt.
+- **Next recommendation:** Stop further API requests for now. Retry only after Kaggle access becomes available, or obtain explicit approval for a minimally scoped, evidence-recovery run with an output path that can be reviewed without downloading the full Blender runtime tree. Keep 8 EEVEE samples as the production default until visual quality is reviewed.
+
+### Continuation — closing the benchmark and restore-audit phase
+
+**Date/time:** 2026-10-21 13:57 +03:00.
+**Objective and authorization:** Close the active EEVEE benchmark/Blender restore-audit phase, preserve evidence and user work, clean only confirmed disposable artifacts, then commit and push the reviewed tracked changes to `origin/main` as explicitly authorized.
+
+#### Phase results and unresolved evidence
+
+- **VERIFIED — v10:** The detailed record above documents Kernel v10 run `360710783`, benchmark `20261021T083149Z`, its per-sample measurements, output checks, restore timings, and visual-review limitation. The original report and media remain on Kaggle and were not downloaded locally after HTTP 429.
+- **VERIFIED from Kaggle Logs — v12:** Kernel v12 run `360738597`, benchmark `20261021T100654Z`, completed on the existing CPU-only Kernel. Logs reported successful 8/4/2 render, `ffprobe`, full-decode, and contact-sheet stages. Render plus MP4-write times were 492.430, 258.884, and 141.481 seconds respectively; logged MP4 sizes were 259,531, 265,304, and 273,531 bytes. These are per-variant render intervals, not v12 total production time, and the three renders are not comparable as a single render against v8's total.
+- The v12 UI confirmed the original benchmark report and comparison image exist, but a delayed filtered retrieval again returned HTTP 429. The report contents, original video hashes/metadata, and full-resolution image pixels remain unavailable locally. **Full-resolution visual quality review is unresolved.** No report substitute was created. Keep the production default at 8 samples.
+- **RESTORE AUDIT:** The prior v11 audit-only run and measurements remain recorded above. Archive/manifest integrity and restored-file checks were retained; this phase does not authorize bypassing content verification.
+
+#### Files, cleanup, checks, and Git scope
+
+- **Tracked files intended for this update:** `PROJECT_WORK_ARCHIVE.md`, `kaggle-blender-short-test/short_test_runner.py`, and `kaggle-blender-short-test/ai-engine-satisfying-physics-short.ipynb`. The runner changes provide the optional 8/4/2 benchmark and remove a redundant normal-path restore call without changing the default sample count. The Notebook code cell remains synchronized with the runner. The archive change appends only; prior history is retained.
+- **Removed:** `kaggle-blender-short-test/eevee-quality-rerun-v12-output/`, after verifying it was the exact empty output-recovery directory created for failed targeted downloads. No other project files or directories were deleted.
+- **Intentionally retained outside Git:** the v10 and v12 upload-only Notebook/metadata copies (`kaggle-blender-short-test/.benchmark-v10-upload/` and `kaggle-blender-short-test/eevee-quality-rerun-v12-upload/`) preserve the submitted benchmark inputs for reproducibility. Existing untracked restore probes and diagnostic/evidence paths are preserved. `.ai-engine-upload-temp/` and all credentials/secrets were not opened or modified. `.venv` and `.tools` were retained; no project `__pycache__` directories were found outside those environments.
+- **Checks run:** Python AST parse; Notebook JSON parse and exact runner-source cell containment; Kernel metadata JSON and CPU-only flags; production default (8 samples, benchmark off by default); historical v6/v8 evidence JSON; and `git diff --check` (passed). No Kaggle rerender, package installation, or production-setting change occurred in this closure step.
+- **Initial Git state:** repository root `C:\AI-Engine`, branch `main`, HEAD and `origin/main` both `ab1971cbc94f4989f7f77013d2c230f229adc68e`; three tracked files modified, no staged changes. The only intended commit paths are the three tracked files listed above; no untracked files are to be staged.
+- **Git action:** Commit and push are authorized for this phase. Record the primary commit SHA and verified remote synchronization in the follow-up archive entry after Git confirms them.
+- **Next recommendation:** Recover and inspect the original v12 report/media only after Kaggle output access is available. Keep 8 samples until full-resolution quality review; do not begin the next production-improvement phase in this closure task.
