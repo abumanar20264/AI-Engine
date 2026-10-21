@@ -4,3 +4,8 @@
 __pycache__/
 /projects/
 /.ai-engine-task-state/
+/.task-lifecycle-v15-ui/
+/kaggle-blender-short-test/.benchmark-v10-upload/
+/kaggle-blender-short-test/.scene-integration-v13-upload/
+/kaggle-blender-short-test/eevee-quality-rerun-v12-upload/
+/kaggle-blender-tree-restore-probe/
