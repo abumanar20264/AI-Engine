@@ -1222,3 +1222,12 @@ Chronological record of approved work in this repository. Append new entries; do
 - **COMPLETED — project commit:** Created commit `74ee18b2298b180c7698d9d0ac7ee88ddc15af13` on branch `main` with message `chore: clean project artifacts and stabilize Blender short pipeline`. It contains only the four reviewed paths: this archive, the Short runner, the synchronized Short Notebook, and its Kaggle metadata.
 - **VERIFIED — pre-push remote check:** `origin/main` still pointed to parent `3a4c5fe8170ca94a376e6c97bf9e27f0435b805b`; local HEAD was the new commit and was ahead by one. No force push or remote rewrite is planned.
 - **NOT YET COMPLETED:** Push and post-push ref verification remain pending. The next archive-only follow-up commit records this primary cleanup commit identifier; untracked diagnostic roots remain unstaged.
+
+## 2026-10-21 - GitHub push verified
+
+**Date/time:** 2026-10-21 09:34 +03:00.
+
+- **COMPLETED — push of cleanup commits:** Ran `git push origin main` without force. The pre-push `git ls-remote` check confirmed `origin/main` was still the expected parent `3a4c5fe8170ca94a376e6c97bf9e27f0435b805b`.
+- **VERIFIED — remote synchronization:** PowerShell's `ErrorActionPreference=Stop` surfaced Git's native `To https://github.com/abumanar20264/AI-Engine.git` stderr line as a terminating `NativeCommandError` before the script printed `LASTEXITCODE`; no credential data was output. A separate read-only `git ls-remote origin refs/heads/main` then returned exit code 0 and exact remote SHA `058b45ef97f0335eb70d1146e97bd6fd5d608ce2`, equal to local HEAD. `git status --short --branch` showed `main...origin/main` with no ahead/behind commits. Thus the push succeeded; the PowerShell error was output handling, not a failed/rejected push.
+- **Commits pushed:** `74ee18b2298b180c7698d9d0ac7ee88ddc15af13` (project changes and cleanup record) and `058b45ef97f0335eb70d1146e97bd6fd5d608ce2` (archive commit-ID follow-up).
+- **Status:** This push result is verified. The current archive-only push-verification note still needs to be committed and pushed; untracked diagnostics remain unstaged.
