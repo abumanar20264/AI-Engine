@@ -1595,3 +1595,9 @@ The Kaggle UI separately displayed **524.9 s** for this run; it is a broader wal
 - Moved the new `1.3.2` change-log entry above `1.3.1` to keep the active change log in reverse chronological order; prior historical entries were not rewritten.
 
 **Validation:** The targeted stale README sentence and the obsolete active compatibility question were matched once and replaced. The foundation changelog now lists 1.3.2 before 1.3.1. This follow-up is documentation-only; no runner, notebook, metadata, production setting, Kaggle resource, or credential was changed.
+
+
+### Continuation — whitespace hygiene for newly added documentation
+
+- Removed trailing spaces from the new `CURRENT_PROJECT_STATUS.md` and from edited status/date lines in the gap register and product foundation, so newly added lines do not introduce avoidable `git diff --check` warnings.
+- No content decisions, production files, runtime settings, or historical archive entries were changed in this formatting-only follow-up.
