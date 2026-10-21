@@ -1561,3 +1561,25 @@ The Kaggle UI separately displayed **524.9 s** for this run; it is a broader wal
 - **COMPLETED — primary commit:** `f6e94d15ecc13e1c744074fe89b45430ef96d15b`, message `chore: finalize benchmark phase and clean project state`. It contains only `PROJECT_WORK_ARCHIVE.md`, `kaggle-blender-short-test/short_test_runner.py`, and `kaggle-blender-short-test/ai-engine-satisfying-physics-short.ipynb`.
 - **VERIFIED before push:** The primary commit was created on local `main` after fetching `origin`; at that check, `origin/main` and local `main` were aligned at parent `ab1971cbc94f4989f7f77013d2c230f229adc68e`. No untracked paths were staged.
 - The following archive-only update records the primary commit identifier. Push and post-push local/remote SHA verification are completed only when observed and are reported by the final task result.
+
+
+## 2026-10-21 - Documentation reconciliation and current product-status baseline
+
+**Objective:** Reconcile active documentation with the recorded implementation, resolve stale compatibility claims, make the current product gaps explicit, and preserve the complete chronological archive.
+
+**Baseline:** Reviewed public `main` at commit `cde3ef55523c431f02d9c67b63ea9aab70ae7b85`. Read the complete `PROJECT_WORK_ARCHIVE.md` (1,564 lines at review time) and compared its latest benchmark/restore entries with `README.md`, `DOCUMENT_AUDIT_AND_GAP_REGISTER.md`, `REVIEW_AND_UPDATED_PROJECT_FOUNDATION.md`, `BLENDER_KAGGLE_ENGINE_SPECIFICATION.md`, `PRODUCTION_OPERATIONS_SPECIFICATION.md`, the tracked runner, Kaggle notebook, and metadata. This was a GitHub-tracked-file review; local untracked files were not available through this review.
+
+**Findings:** The core Blender 4.0.2/EEVEE CPU-only Kaggle short-render path is validated within the v8 scope. The runner produces a fixed-scene MP4 and contains benchmark/restore checks. This is not an integrated product: the tracked tree has no control UI/project manager, general scenario input and scenario-to-scene contract, integrated job lifecycle for end users, or end-to-end audio assembly and delivery path. v10/v12 sample timings are documented, but the original v12 report and full-resolution comparison pixels were not retrieved after HTTP 429; 4/2-sample quality remains unapproved and the production default remains 8.
+
+**Documentation conflicts corrected:**
+- Updated the active gap register to replace the stale statement that no Kaggle test or video had been run.
+- Updated the product foundation's current engine/renderer status and next steps to reflect the passed v8 test and the actual missing product components.
+- Updated the README's top status notice to distinguish the validated technical spike from the unimplemented user-facing product and unverified competitor research.
+- Added `CURRENT_PROJECT_STATUS.md` as the concise implementation snapshot, gap register, evidence boundary, and ordered build plan.
+- Preserved historical archive entries and old changelog entries; no historical claim was silently rewritten as if later evidence were already known.
+
+**Files changed:** `README.md`, `DOCUMENT_AUDIT_AND_GAP_REGISTER.md`, `REVIEW_AND_UPDATED_PROJECT_FOUNDATION.md`, `PROJECT_WORK_ARCHIVE.md`; created `CURRENT_PROJECT_STATUS.md`. No production runner, Notebook, Kaggle metadata, render setting, credential, or untracked local artifact was changed.
+
+**Validation performed on the authored documentation:** Exact-string guards were used for each targeted replacement; all intended stale statements were matched once. Content is UTF-8 Markdown. The archive was updated by appending this entry only; its prior content was retained unchanged. No Kaggle run, render, dependency installation, cleanup, or credential access was performed. Repository-wide `git diff --check` cannot be run from this GitHub API editing session; the commit content will be re-fetched and checked for the expected text before completion.
+
+**Next step:** Start with scenario/project schema and persistence tests, then build the smallest control UI. Keep EEVEE at 8 samples pending full-resolution review. Do not treat this documentation update as implementation of the missing product features.

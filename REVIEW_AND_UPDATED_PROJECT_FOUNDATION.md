@@ -1,9 +1,9 @@
 # AI-Engine — Visual Physics Experiments Channel Product Specification
 
 **Document ID:** AI-ENGINE-PRODUCT-VISUAL-PHYSICS  
-**Version:** 1.3.1-engine-status-aligned
+**Version:** 1.3.2-current-implementation-status
 
-**Status:** EDITORIAL DIRECTION APPROVED — PRODUCTION SYSTEM NOT IMPLEMENTED  
+**Status:** EDITORIAL DIRECTION APPROVED — CORE BLENDER/KAGGLE TEST PATH VALIDATED; USER-FACING PRODUCT PIPELINE NOT IMPLEMENTED  
 **Decision date:** 2026-10-20  
 **Repository:** https://github.com/abumanar20264/AI-Engine  
 **Production SOP:** [PRODUCTION_OPERATIONS_SPECIFICATION.md](./PRODUCTION_OPERATIONS_SPECIFICATION.md) — authoritative stage-gated production procedure  
@@ -13,7 +13,7 @@
 **Expansion path:** Long-form YouTube videos after evidence from the Shorts pilot  
 **Supersedes:** Previous multi-niche candidate recommendations. This file now defines one product only.
 
-> **Decision boundary:** The channel concept is approved. Market success, monetization, model availability, render performance, and technical feasibility are not yet validated. Do not build a large automated production system, purchase services, or begin bulk production until the prototype gate is passed.
+> **Decision boundary:** The channel concept is approved. The narrow Blender 4.0.2/EEVEE CPU-only Kaggle compatibility and short-render path passed in Kernel v8, and v10/v12 measured 8/4/2 sample timing. Full-resolution quality approval for 4/2 samples, a general scenario-driven production pipeline, audio assembly, market success, economics, and scaled production remain unvalidated. Build incrementally; do not begin bulk production.
 
 ---
 
@@ -52,8 +52,8 @@ The channel should be:
 | Target a global audience with English metadata and minimal language dependence | **APPROVED** |
 | Develop long-form videos after the Shorts pilot provides evidence | **APPROVED IN PRINCIPLE** |
 | Public channel name, logo, and final visual identity | NOT SELECTED |
-| Primary 3D scene/simulation/render engine | **BLENDER APPROVED**; Kaggle compatibility not yet validated |
-| Initial renderer | EEVEE **PROVISIONAL** pending a minimal runtime compatibility test |
+| Primary 3D scene/simulation/render engine | **BLENDER APPROVED**; Blender 4.0.2/EEVEE CPU-only short-render path validated on Kaggle in Kernel v8 |
+| Initial renderer | EEVEE **VALIDATED FOR THE RECORDED CPU-ONLY TEST SCOPE**; production quality/scale outside that scope remains unproven |
 | AI models, voice, and final editing stack | NOT SELECTED |
 | Production automation or unattended publishing | NOT APPROVED |
 | Claims about likely views, revenue, retention, or monetization eligibility | NOT ESTABLISHED |
@@ -433,7 +433,7 @@ The local persistent project archive remains the source of truth. Temporary GPU 
 
 ## 8. Proposed technical architecture
 
-Blender is approved as the sole primary 3D production engine by the decision recorded in [BLENDER_KAGGLE_ENGINE_SPECIFICATION.md](./BLENDER_KAGGLE_ENGINE_SPECIFICATION.md). This is an architecture decision, not a measured benchmark result. The pinned version and renderer must pass a small compatibility test in the actual Kaggle runtime before bulk production. Other stack components remain unselected until separately justified.
+Blender is approved as the sole primary 3D production engine by the decision recorded in [BLENDER_KAGGLE_ENGINE_SPECIFICATION.md](./BLENDER_KAGGLE_ENGINE_SPECIFICATION.md). The recorded Blender 4.0.2/EEVEE CPU-only Kaggle compatibility and short-render path passed in Kernel v8; v10/v12 also measured 8/4/2 sample render times. These results validate only the tested path, not a complete scenario-driven product, production-scale performance, visual approval of reduced samples, economics, or market outcomes. Other stack components remain unselected until separately justified.
 
 ### 8.1 Design principles
 
@@ -447,7 +447,7 @@ Blender is approved as the sole primary 3D production engine by the decision rec
 
 ### 8.2 Approved engine and validation criteria
 
-Blender is the approved primary engine. EEVEE remains provisional until it passes a minimal compatibility test in the actual Kaggle runtime. Do not investigate or compare alternative engines unless Blender fails a documented mandatory requirement after reasonable remediation and separate approval is obtained. Record:
+Blender is the approved primary engine. EEVEE passed the minimal CPU-only compatibility and short-render test in Kaggle Kernel v8. Re-run this gate only if the runtime, pinned Blender version, or required workflow materially changes. Do not investigate or compare alternative engines unless Blender fails a documented mandatory requirement after reasonable remediation and separate approval is obtained. For broader production integration, record:
 - Physical behavior and stability for the intended rigid-body scene.
 - Scripted scene creation and background execution.
 - Ability to render vertical output.
@@ -783,16 +783,16 @@ Do not answer these questions by assumption. Use recorded tests and current sour
 
 ## 17. Immediate next actions
 
-1. Keep the three-pillar channel direction as the sole approved editorial product.
-2. Do not resume the earlier unrelated niche shortlist in this foundation document.
-3. Choose three candidate concepts—one from each pillar—and score them before creating any production code.
-4. Run the minimal Blender/EEVEE compatibility test in the actual Kaggle runtime before production benchmarking.
-5. Record production time, failures, and visual defects.
-6. Create three distinct prototype Shorts with a comparable quality standard.
-7. Review the prototypes against Section 15 before publishing.
-8. If publishing is approved, define the measurement window and collect comparable YouTube Studio data.
-9. Do not build a generalized or fully automated production pipeline until the prototype and repeatability gates pass.
-10. Revisit long-form only after evidence indicates which premise patterns merit expansion.
+1. Keep the approved three-pillar channel direction; do not resume the unrelated niche shortlist.
+2. Implement a versioned scenario/project contract with schema validation and persistence. This is the first product-building milestone.
+3. Add tests for valid/invalid scenarios, save/load round trips, schema versioning, and clear validation errors.
+4. Build a minimal control UI to create a project, enter/edit a scenario, save it, and reopen it.
+5. Add a scenario-to-scene adapter that translates the contract into a Blender scene; keep the existing fixed-scene runner as a regression fixture until the adapter passes.
+6. Add a tracked job lifecycle for submitting work to Kaggle, reporting status/errors, and associating outputs with the project.
+7. Implement audio generation/import, event synchronization, muxing, and audio/video QA as a separate stage after scenario-driven rendering works.
+8. Run one end-to-end acceptance test: create project → enter scenario → save/reopen → generate scene → render MP4 → add audio → verify playback and synchronization → preview the final result.
+9. Keep 8 EEVEE samples as the production default until reduced-sample visual quality is reviewed at full resolution.
+10. Produce pilot Shorts and evaluate publishing/scale-up only after the integrated workflow, rights checks, and QA gates pass.
 
 ---
 
@@ -1017,3 +1017,9 @@ These sources document policies or tools. They do not validate this channel’s 
 - Defined the audience promise, differentiation rules, Shorts structure, long-form expansion criteria, production workflow, technical architecture principles, quality gates, pilot plan, metrics, risks, and acceptance criteria.
 - Preserved the distinction between an approved editorial direction and unvalidated market/technical outcomes.
 - No code, production assets, model tests, Kaggle runs, or publishing actions were performed by this document update.
+
+
+### 1.3.2 — 2026-10-21
+- Updated active compatibility statements to reflect the recorded Kernel v8 CPU-only Blender 4.0.2/EEVEE short-render result and v10/v12 sample timing evidence.
+- Clarified that the tested rendering path is not a user-facing product pipeline; replaced the obsolete compatibility-test next step with scenario/project persistence, control UI, scene adapter, job lifecycle, and audio integration milestones.
+- Retained all earlier change-log entries as historical records.
