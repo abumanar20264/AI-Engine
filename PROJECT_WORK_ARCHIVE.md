@@ -1554,3 +1554,10 @@ The Kaggle UI separately displayed **524.9 s** for this run; it is a broader wal
 - **Initial Git state:** repository root `C:\AI-Engine`, branch `main`, HEAD and `origin/main` both `ab1971cbc94f4989f7f77013d2c230f229adc68e`; three tracked files modified, no staged changes. The only intended commit paths are the three tracked files listed above; no untracked files are to be staged.
 - **Git action:** Commit and push are authorized for this phase. Record the primary commit SHA and verified remote synchronization in the follow-up archive entry after Git confirms them.
 - **Next recommendation:** Recover and inspect the original v12 report/media only after Kaggle output access is available. Keep 8 samples until full-resolution quality review; do not begin the next production-improvement phase in this closure task.
+
+### Git follow-up — primary benchmark-phase commit
+
+**Date/time:** 2026-10-21 14:00:15 +03:00.
+- **COMPLETED — primary commit:** `f6e94d15ecc13e1c744074fe89b45430ef96d15b`, message `chore: finalize benchmark phase and clean project state`. It contains only `PROJECT_WORK_ARCHIVE.md`, `kaggle-blender-short-test/short_test_runner.py`, and `kaggle-blender-short-test/ai-engine-satisfying-physics-short.ipynb`.
+- **VERIFIED before push:** The primary commit was created on local `main` after fetching `origin`; at that check, `origin/main` and local `main` were aligned at parent `ab1971cbc94f4989f7f77013d2c230f229adc68e`. No untracked paths were staged.
+- The following archive-only update records the primary commit identifier. Push and post-push local/remote SHA verification are completed only when observed and are reported by the final task result.
