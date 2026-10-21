@@ -1296,3 +1296,11 @@ Remove the one completed CPython installer cache; the 2,357 individual `.pyc` ca
 - **Resource use:** 61,674,998 local bytes reclaimed; zero Kaggle accelerator use.
 - **Unresolved:** The protected upload/auth subtree was intentionally not inventoried; its file count is not included. Kaggle runtime execution was not repeated because production inputs/code were unchanged.
 - **Next action:** Stage only `PROJECT_WORK_ARCHIVE.md`, create the authorized cleanup commit, push to `origin/main` without force, and verify local/remote HEAD equality.
+
+## 2026-10-21 - Cleanup commit and GitHub push verification
+
+**Date/time:** 2026-10-21 10:02 +03:00.
+
+- **VERIFIED — commit:** `e5ddd1fba2ad303167bae2d528d0fcd7d87776e0`, message `chore: clean safe generated workspace artifacts`. The commit contains only `PROJECT_WORK_ARCHIVE.md` (65 insertions); the 2,374 removed files were untracked/ignored local artifacts and were intentionally not staged.
+- **VERIFIED — push:** Before pushing, fetched `origin/main` and confirmed it still equaled the expected base `e0e85c46782db9530b78ae28154a4aa090e56ce2`. Normal non-force `git push origin main` succeeded. A post-push fetch verified both local `HEAD` and `origin/main` equal `e5ddd1fba2ad303167bae2d528d0fcd7d87776e0`.
+- No stage/commit/push was performed for any diagnostic files, credentials, or Kaggle assets. This entry will be included in an archive-only follow-up commit; its SHA will be reported in the final status.
