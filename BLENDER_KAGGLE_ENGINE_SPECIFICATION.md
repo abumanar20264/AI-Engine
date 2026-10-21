@@ -1,16 +1,17 @@
 # AI-Engine — Blender Production Engine & Kaggle Operations Specification
 
 **Document ID:** AI-ENGINE-BLENDER-KAGGLE-SPEC  
-**Version:** 1.0.1
+**Version:** 1.0.2
 
 **Decision status:** **BLENDER APPROVED AS THE SOLE PRIMARY PRODUCTION ENGINE**  
-**Operational status:** **NOT YET VALIDATED ON THE PROJECT'S KAGGLE RUNTIME**  
+**Operational status:** **CORE CPU-ONLY KAGGLE COMPATIBILITY PATH VALIDATED (KERNEL v8)**
 **Decision date:** 2026-10-20  
+**Status reviewed:** 2026-10-21
 **Applies to:** Visual Physics Experiments — Satisfying Systems, Physics in Action, The Experiment  
 **Parent product specification:** [REVIEW_AND_UPDATED_PROJECT_FOUNDATION.md](./REVIEW_AND_UPDATED_PROJECT_FOUNDATION.md)  
 **Production procedure:** [PRODUCTION_OPERATIONS_SPECIFICATION.md](./PRODUCTION_OPERATIONS_SPECIFICATION.md)
 
-> **Decision boundary:** Blender is the approved primary production engine for this project. This is an architecture decision, not a claim that Kaggle compatibility, render speed, output quality, or production economics have already been measured. A small compatibility gate remains mandatory before bulk production. Do not investigate or benchmark alternative engines unless Blender fails a documented mandatory requirement and separate approval is obtained.
+> **Decision boundary:** Blender is the approved primary production engine for this project. The core CPU-only Blender 4.0.2/EEVEE path has passed the tested Kaggle compatibility workflow, including archive restoration, Blender/Python checks, physics and EEVEE smoke tests, a short render, and MP4 validation. This is not evidence of bulk-production readiness, production economics, market performance, or compatibility with every Kaggle runtime or renderer configuration. Do not investigate or benchmark alternative engines unless Blender fails a documented mandatory requirement and separate approval is obtained.
 
 ## 1. Purpose and scope
 
@@ -35,7 +36,7 @@ The intended initial output is vertical YouTube Shorts. Long-form production may
 **Blender is the sole approved primary 3D scene, animation, simulation, and rendering environment.**
 
 - **Scene authoring and procedural control:** Blender Python API (bpy).
-- **Initial renderer:** EEVEE, **PROVISIONAL** until it passes the Kaggle compatibility gate.
+- **Renderer:** EEVEE, validated for the tested CPU-only Kaggle workflow; other runtime and renderer configurations remain unverified.
 - **Initial simulation domain:** rigid bodies, collision-driven motion, gravity, rebound, stacking, and controlled chain reactions.
 - **Execution mode on Kaggle:** background/headless command-line execution where supported.
 - **Post-processing:** use command-line tools only where available and compatible; keep their versions and licenses recorded. Do not assume a particular encoder or binary exists in a fresh notebook.
@@ -119,7 +120,13 @@ Before building reusable production scripts:
 - Do not upgrade Blender, change renderer, or change a major simulation setting in the middle of a production batch without recording the change and revalidating representative scenes.
 - If local and Kaggle versions cannot be identical, record the mismatch and verify scene-file compatibility and output consistency explicitly.
 
-The specific version is **NOT YET LOCKED**. Choose it after the compatibility check, not by assuming that the newest release is automatically the best choice.
+**Tested Kaggle runtime version:** Blender 4.0.2. Use this version for the currently validated Kaggle route unless a separately documented change is tested. Local Blender-version compatibility has not been established.
+
+### 3.5 Current compatibility evidence
+
+The production notebook's Kernel v8 run (`360689524`, 2026-10-21) passed the core CPU-only compatibility path in the actual Kaggle runtime. The private runtime Dataset contains the Blender TAR.XZ archive, not an unpacked Blender tree; the verified workflow checks the archive and build manifest, then restores Blender into writable `/kaggle/working`. Blender 4.0.2, embedded Python 3.10.13, EEVEE, rigid-body physics, the 120-frame MP4 render, metadata, decode, and visible-motion checks passed. The runner measured 501.796 seconds end-to-end, 14.011% faster than the Kernel v7 runner time of 583.558 seconds. See the [project archive](./PROJECT_WORK_ARCHIVE.md) and [normalized Kernel v8 measurement summary](./kaggle-blender-tree-restore-probe/full-dataset-verification/performance-run-v8-output/performance-run-v8-summary.json).
+
+This evidence establishes the tested technical path only. It does not establish an unpacked-tree Dataset, universal Kaggle availability, production scale, economic viability, or audience demand.
 
 ## 4. Kaggle operating model
 
@@ -279,6 +286,8 @@ Create one simple scene containing a floor and a small number of rigid objects. 
 - [ ] Copy the scene file, scripts, config, logs, and output to durable storage.
 - [ ] Confirm the archived copies are readable.
 
+**Recorded result:** the core CPU-only Kaggle path described above passed in Kernel v8. This result covers the executable/version checks, archive restoration and integrity checks, EEVEE/physics smoke test, short MP4 render, and output validation. It is limited to the recorded test and does not imply all future-runtime checklist items or bulk-production gates are complete.
+
 **Pass condition:** the complete minimal path succeeds, the output is inspectable, the source and parameters are recoverable, and runtime/version details are recorded.
 
 **Fail condition:** Blender cannot start, the renderer cannot initialize, the scene cannot be saved/reopened, output is corrupt, or the job cannot be recovered. On failure, document the exact error and correct that specific issue before scaling up.
@@ -330,3 +339,6 @@ Kaggle runtime capabilities and limits are service policies and can change. Veri
 
 ### 1.0.1 — 2026-10-20
 - Clarified that alternative-engine investigation requires a documented Blender mandatory-requirement failure and separate approval.
+
+### 1.0.2 — 2026-10-21
+- Updated active operational status from pending to the tested CPU-only Kaggle compatibility result; documented Blender 4.0.2, the archive-restore route, and its production-scale limits.

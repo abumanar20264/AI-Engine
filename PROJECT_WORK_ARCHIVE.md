@@ -1357,3 +1357,28 @@ The Kaggle UI separately displayed **524.9 s** for this run; it is a broader wal
 - **Not tested:** No second full run was started. The one v8 run completed all user-required production and MP4 validation gates. Memory values were not captured in the local evidence summary; the remote report viewer showed the memory object but did not expose its values in the saved review snapshot.
 - **Recommendation:** Keep the detailed remote report with Kernel v8 and the local summary JSON/this archive entry as the analysis trail; compare future runs using the monotonic runner timer and report Kaggle UI wall time separately.
 - **VERIFIED — GitHub synchronization:** Commit `6b2899677b15712a29a0786eef4ed39aa7db0fe4` (`perf: measure Kaggle Shorts production run`) contains only this archive, the runner, its synchronized production notebook, and the normalized v8 JSON summary. `git diff --check` passed. Before push, `origin/main` matched the commit's parent `823b0dc0ac7f935dae48b0406f7f7788ef020f29`; normal `git push origin main` succeeded, and the post-push fetch confirmed local `HEAD` and `origin/main` both at `6b2899677b15712a29a0786eef4ed39aa7db0fe4`. No force push was used. Other untracked diagnostic items were not staged or committed.
+
+## 2026-10-21 - Documentation status reconciliation after Kaggle Kernel v8
+
+**Date/time:** 2026-10-21 10:45:46 +03:00.
+**Objective and authorization:** Review current project documentation against the recorded Kernel v8 evidence; reconcile active compatibility status without changing production code or renderer settings. Authorized documentation-only changes; no stage, commit, push, Kaggle run, or diagnostic cleanup.
+
+### Files reviewed and changes
+
+- **Reviewed:** `PROJECT_WORK_ARCHIVE.md`; `kaggle-blender-short-test/short_test_runner.py`; `kaggle-blender-short-test/ai-engine-satisfying-physics-short.ipynb`; `kaggle-blender-short-test/kernel-metadata.json`; `kaggle-blender-tree-restore-probe/full-dataset-verification/performance-run-v8-output/performance-run-v8-summary.json`; `README.md`; `BLENDER_KAGGLE_ENGINE_SPECIFICATION.md`; and `PRODUCTION_OPERATIONS_SPECIFICATION.md`.
+- **MODIFIED:** `README.md` now points to the CPU-only compatibility result while retaining the research and market-evidence caveats.
+- **MODIFIED:** `BLENDER_KAGGLE_ENGINE_SPECIFICATION.md` version 1.0.2 records the tested Kaggle Blender version (4.0.2), EEVEE/CPU-only scope, archive-to-writable-workspace restore route, Kernel v8 evidence, and limits. It does not claim the Dataset contains an unpacked tree or that local version parity, scale, economics, or market outcomes are established.
+- **MODIFIED:** `PRODUCTION_OPERATIONS_SPECIFICATION.md` version 1.0.2 updates active compatibility status and unresolved items; earlier change-log entries were retained unchanged.
+- **MODIFIED:** This archive entry records the documentation review; earlier project records were retained unchanged.
+- No production runner, notebook, metadata, or render configuration was modified. The private Blender Dataset remains an archive-only Dataset; the tested route extracts the TAR.XZ into writable Kaggle working storage.
+
+### Evidence and checks
+
+- **VERIFIED:** The local normalized v8 summary identifies Kaggle run `360689524`, status `COMPLETED`, runner elapsed time `501.796 s`, Kernel v7 baseline `583.558 s`, and measured improvement `14.011%`. The runner and notebook were unchanged and their code cell remained exactly synchronized.
+- **VERIFIED:** `kernel-metadata.json` still disables GPU and TPU. The v8 summary identifies Blender 4.0.2, EEVEE, CPU-only, the single TAR.XZ input, and successful restore, physics, render, metadata, decode, and motion checks.
+- **Commands/checks executed:** Python AST parse of the runner; JSON parsing of the notebook, Kaggle metadata, and v8 summary; assertions for notebook/runner equality, CPU-only metadata and recorded measurements; validation of 12 relative Markdown links across the three reviewed documentation files; search for stale active compatibility claims; and `git diff --check`. All final checks passed.
+- Initial validation attempts exposed a typo in the validation command (`pathlib.os`) and trailing spaces on newly added specification header lines. Both were corrected; the validation and `git diff --check` were rerun successfully.
+- **Resource use:** No Kaggle execution, render, Dataset/Kernel creation, package installation, or accelerator use. No diagnostic files were deleted.
+- **Git status at review:** Existing untracked diagnostic files/directories remain untouched. No files were staged; no commit or push was performed.
+- **Remaining limits:** One measured CPU-only Kaggle run does not prove all Kaggle runtime profiles, local Blender-version parity, unpacked-tree Dataset publication, scaled production, economic viability, or market success. The local JSON is a normalized summary, not the full raw remote report.
+- **Recommendation:** Keep the current Blender 4.0.2 archive-restore route for controlled pilot work; evaluate scale and economics separately using additional authorized evidence.

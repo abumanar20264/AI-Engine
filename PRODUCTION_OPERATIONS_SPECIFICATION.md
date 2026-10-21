@@ -1,14 +1,14 @@
 # AI-Engine — Production Operations Specification
 **Document ID:** AI-ENGINE-PRODUCTION-SOP  
-**Version:** 1.0.1
+**Version:** 1.0.2
 
-**Status:** Blender approved; compatibility test, implementation, and hardware benchmarks pending
+**Status:** Blender approved; core Blender 4.0.2/EEVEE Kaggle compatibility path validated CPU-only in Kernel v8; scale, economics, and broader feasibility remain unproven
 
 **Applies to:** Visual Physics Experiments — Satisfying Systems, Physics in Action, The Experiment  
 **Parent specification:** [REVIEW_AND_UPDATED_PROJECT_FOUNDATION.md](./REVIEW_AND_UPDATED_PROJECT_FOUNDATION.md)  
-**Last updated:** 2026-10-20
+**Last updated:** 2026-10-21
 
-> **Purpose and limits.** This document removes avoidable ambiguity from the production workflow. It defines required inputs, outputs, acceptance tests, failure handling, records, and provisional delivery settings. Blender is the approved primary engine; this document does not claim that its Kaggle compatibility, actual render speed, achievable quality on the available machine, audience performance, or monetization have been measured. Those items must be tested or measured. Any value marked **PROVISIONAL** is a controlled starting point, not a proven optimum.
+> **Purpose and limits.** This document removes avoidable ambiguity from the production workflow. It defines required inputs, outputs, acceptance tests, failure handling, records, and provisional delivery settings. The core Blender 4.0.2/EEVEE CPU-only Kaggle path and one short-render workflow were measured in Kernel v8; this does not establish scaled-production feasibility, economics, audience performance, or monetization. Those items remain to be tested or measured. Any value marked **PROVISIONAL** is a controlled starting point, not a proven optimum.
 
 ## 0. Governing rules
 
@@ -519,9 +519,9 @@ For published videos, add publication URL/date, observation date, views, and any
 
 ## 15. Approved engine and compatibility gate
 
-**Decision:** Blender is the project's sole approved primary production engine. EEVEE remains provisional until it passes the compatibility gate in the actual Kaggle runtime. See [BLENDER_KAGGLE_ENGINE_SPECIFICATION.md](./BLENDER_KAGGLE_ENGINE_SPECIFICATION.md) for the authoritative engine decision, requirements, Kaggle operating model, local control workflow, checkpoint policy, and compatibility gate.
+**Decision:** Blender is the project's sole approved primary production engine. The core EEVEE CPU-only compatibility path passed in the actual Kaggle runtime in Kernel v8 (`360689524`); the tested version is Blender 4.0.2. Its runner time was 501.796 seconds, 14.011% faster than Kernel v7's recorded 583.558 seconds. The private runtime Dataset contains a TAR.XZ archive, which is restored into writable Kaggle working storage. The Dataset itself does not contain the unpacked Blender tree. See [BLENDER_KAGGLE_ENGINE_SPECIFICATION.md](./BLENDER_KAGGLE_ENGINE_SPECIFICATION.md) for the authoritative engine decision, requirements, Kaggle operating model, local control workflow, checkpoint policy, and compatibility gate.
 
-Approval of Blender is an architecture decision; it does not mean the chosen Blender version, renderer, or Kaggle runtime has passed an empirical test. Bulk production remains blocked until the minimal compatibility gate in the engine specification passes.
+The v8 result is empirical evidence for the recorded CPU-only test path, not every Kaggle runtime/configuration. The technical compatibility gate is passed for that scope, but this does not authorize bulk production or establish economic viability, audience demand, or market success.
 
 ### 15.1 Required compatibility scene
 
@@ -677,7 +677,7 @@ Reject a long-form plan that is only a compilation, repeats the same result, or 
 - Scene/experiment parameters and fidelity claims are recorded.
 - Simulation defects have severity levels and retest rules.
 - Visual, audio, export, rights, and archive gates are defined.
-- Blender/EEVEE compatibility and the export path require measured validation.
+- The core Blender/EEVEE compatibility and MP4 export path are validated for the recorded CPU-only Kaggle test; other runtime profiles and quality settings still require measured validation.
 - Templates exist for concepts, scenes, defects, decisions, and releases.
 - Unknowns are explicitly assigned a test rather than silently guessed.
 
@@ -690,7 +690,7 @@ Reject a long-form plan that is only a compilation, repeats the same result, or 
 - Any publication and audience conclusions are supported by actual data.
 
 ### Explicitly unresolved
-- Kaggle compatibility of Blender and provisional EEVEE, plus the exact Blender version to pin.
+- Compatibility outside the tested Kaggle CPU-only Blender 4.0.2/EEVEE path, including local-version parity and other runtime or renderer configurations.
 - Actual hardware/accelerator availability and compatible versions.
 - Final frame rate and render quality settings.
 - Real per-video production time and cost.
@@ -712,3 +712,6 @@ These items are not omissions in the procedure; they are empirical or owner deci
 ### 1.0.1 — 2026-10-20
 - Aligned engine status with the approved Blender decision; kept EEVEE and Kaggle compatibility unvalidated pending the required test.
 - Clarified that alternative-engine investigation requires a documented Blender requirement failure and separate approval.
+
+### 1.0.2 — 2026-10-21
+- Updated active status to reflect the successful CPU-only Kaggle Kernel v8 compatibility and short-render test while keeping scale, economics, market outcomes, and untested runtime profiles explicitly unresolved.
