@@ -10,7 +10,10 @@
   "enable_tpu": false,
   "enable_internet": true,
   "keywords": [],
-  "dataset_sources": [],
+  "dataset_sources": [
+    "haroonbaaraabumanar/ai-engine-blender-4-0-2-runtime",
+    "haroonbaaraabumanar/ai-engine-blender-4-0-2-build-manifest"
+  ],
   "kernel_sources": [],
   "competition_sources": [],
   "model_sources": [],
