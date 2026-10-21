@@ -9,3 +9,5 @@ __pycache__/
 /kaggle-blender-short-test/.scene-integration-v13-upload/
 /kaggle-blender-short-test/eevee-quality-rerun-v12-upload/
 /kaggle-blender-tree-restore-probe/
+/kaggle-blender-runtime-preflight-output-*/
+/kaggle-blender-short-test-output-*/

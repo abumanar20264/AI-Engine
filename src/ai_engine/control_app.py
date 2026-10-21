@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 from http import HTTPStatus
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -51,12 +52,19 @@ class ControlRequestHandler(BaseHTTPRequestHandler):
         status: HTTPStatus,
         content_type: str,
         body: bytes,
+        *,
+        download_name: str | None = None,
     ) -> None:
         self.send_response(status)
         self.send_header("Content-Type", content_type)
         self.send_header("Content-Length", str(len(body)))
         self.send_header("X-Content-Type-Options", "nosniff")
         self.send_header("Referrer-Policy", "no-referrer")
+        if download_name is not None:
+            self.send_header(
+                "Content-Disposition",
+                f'attachment; filename="{download_name}"',
+            )
         self.send_header(
             "Content-Security-Policy",
             "default-src 'self'; connect-src 'self'; style-src 'self'; script-src 'self'; "
@@ -68,6 +76,24 @@ class ControlRequestHandler(BaseHTTPRequestHandler):
     def _send_json(self, status: HTTPStatus, payload: object) -> None:
         body = json.dumps(payload, ensure_ascii=False, allow_nan=False).encode("utf-8")
         self._send_bytes(status, "application/json; charset=utf-8", body)
+
+    def _send_video_file(self, path: Path, download_name: str) -> None:
+        size = path.stat().st_size
+        self.send_response(HTTPStatus.OK)
+        self.send_header("Content-Type", "video/mp4")
+        self.send_header("Content-Length", str(size))
+        self.send_header("Content-Disposition", f'attachment; filename="{download_name}"')
+        self.send_header("X-Content-Type-Options", "nosniff")
+        self.send_header("Referrer-Policy", "no-referrer")
+        self.send_header(
+            "Content-Security-Policy",
+            "default-src 'self'; connect-src 'self'; style-src 'self'; script-src 'self'; "
+            "img-src 'self' data:; base-uri 'none'; frame-ancestors 'none'",
+        )
+        self.end_headers()
+        with path.open("rb") as video_file:
+            while chunk := video_file.read(1024 * 1024):
+                self.wfile.write(chunk)
 
     def _send_error_json(
         self,
@@ -131,6 +157,10 @@ class ControlRequestHandler(BaseHTTPRequestHandler):
         if path.startswith("/api/projects/") and path.endswith("/tasks"):
             project_id = unquote(path[len("/api/projects/") : -len("/tasks")].rstrip("/"))
             self._list_tasks(project_id)
+            return
+        if path.startswith("/api/tasks/") and path.endswith("/video"):
+            task_id = unquote(path[len("/api/tasks/") : -len("/video")].rstrip("/"))
+            self._download_task_video(task_id)
             return
         if path.startswith("/api/tasks/"):
             task_id = unquote(path.removeprefix("/api/tasks/"))
@@ -275,6 +305,55 @@ class ControlRequestHandler(BaseHTTPRequestHandler):
             self._send_error_json(status, str(exc))
             return
         self._send_json(HTTPStatus.OK, {"task": _public_task(task)})
+
+    def _download_task_video(self, task_id: str) -> None:
+        try:
+            task = self.control_server.tasks.get_task(task_id)
+        except TaskStoreError as exc:
+            status = (
+                HTTPStatus.NOT_FOUND
+                if str(exc).startswith("Task not found:")
+                else HTTPStatus.BAD_REQUEST
+            )
+            self._send_error_json(status, str(exc))
+            return
+        result = task.get("result")
+        if task.get("status") != "succeeded" or not isinstance(result, dict):
+            self._send_error_json(HTTPStatus.CONFLICT, "Task has no verified video output.")
+            return
+        if result.get("task_id") != task_id or result.get("project_id") != task.get("project_id"):
+            self._send_error_json(HTTPStatus.CONFLICT, "Video output identity does not match its task.")
+            return
+        video_path = Path(str(result.get("video_file", "")))
+        task_root = Path(task["work_directory"])
+        artifact_root = task_root / "downloaded-artifacts"
+        try:
+            if video_path.name != f"{task['project_id']}.mp4":
+                raise ValueError("Unexpected video filename.")
+            if not artifact_root.is_dir() or artifact_root.is_symlink():
+                raise ValueError("Task video artifact directory is unavailable.")
+            relative = video_path.relative_to(artifact_root)
+            current = artifact_root
+            if current.is_symlink():
+                raise ValueError("Task video artifact directory is a symbolic link.")
+            for part in relative.parts:
+                current = current / part
+                if current.is_symlink():
+                    raise ValueError("Task video path contains a symbolic link.")
+            resolved = video_path.resolve(strict=True)
+            resolved.relative_to(artifact_root.resolve(strict=True))
+            if not resolved.is_file() or resolved.stat().st_size != result.get("video_size_bytes"):
+                raise ValueError("Task video file is missing or has an unexpected size.")
+            digest_builder = hashlib.sha256()
+            with resolved.open("rb") as video_file:
+                for chunk in iter(lambda: video_file.read(1024 * 1024), b""):
+                    digest_builder.update(chunk)
+            digest = digest_builder.hexdigest()
+            if digest != result.get("video_sha256"):
+                raise ValueError("Task video checksum does not match its verified result.")
+            self._send_video_file(resolved, f"{task['project_id']}.mp4")
+        except (OSError, ValueError):
+            self._send_error_json(HTTPStatus.NOT_FOUND, "Verified task video is unavailable.")
 
     def _start_task(self, project_id: str, payload: object) -> None:
         if payload != {}:

@@ -367,10 +367,25 @@ function renderTasks(tasks) {
         `Blender: ${task.result.blender_version || "unknown"}`,
         `Kaggle status: ${task.result.remote_status || "unknown"}`,
         `Remote .blend: ${task.result.remote_blend_file || "not available"}`,
+        `Local .blend: ${task.result.blend_file || "not available"}`,
+        `Blend size: ${task.result.blend_size_bytes || "not available"}`,
+        `Blend SHA-256: ${task.result.blend_sha256 || "not available"}`,
+        `Local MP4: ${task.result.video_file || "not available"}`,
+        `MP4 size: ${task.result.video_size_bytes || "not available"}`,
+        `MP4 SHA-256: ${task.result.video_sha256 || "not available"}`,
+        `Audio: ${task.result.audio_status || "not available"}`,
         `Report: ${task.result.report_file || "not available"}`,
+        `Video report: ${task.result.video_report_file || "not available"}`,
         `Logs: ${task.result.logs_file || "not available"}`,
       ].join("\n");
       card.append(results);
+      if (task.result.video_file) {
+        const download = document.createElement("a");
+        download.href = `/api/tasks/${encodeURIComponent(task.id)}/video`;
+        download.download = `${task.project_id}.mp4`;
+        download.textContent = "Download verified MP4";
+        card.append(download);
+      }
     }
     if (Array.isArray(task.events) && task.events.length) {
       const events = document.createElement("ol");

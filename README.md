@@ -1,6 +1,24 @@
-> **Current implementation status — 2026-10-21:** The repository has a validated Blender 4.0.2/EEVEE CPU-only Kaggle short-render path, a local project editor, a scenario-to-Blender scene adapter, and a SQLite-backed task lifecycle connected to a bounded Kaggle scene-verification run. Kernel v16 verified one saved-project `.blend` by reopening it in Blender and measuring rigid-body motion; local recovery of that artifact remains blocked by Kaggle output retrieval. This is a test path, not a complete production pipeline. Audio and final video export remain unimplemented. See [CURRENT_PROJECT_STATUS.md](./CURRENT_PROJECT_STATUS.md) for the implementation inventory and next build sequence.
+> **Implementation status — 2026-10-21:** The local source now connects a saved rigid-body-chain project to Kaggle scene verification, MP4 rendering, video checks, and task-scoped artifact retrieval. This integration has not yet been run remotely after the change. Audio, other scenario types, and human release QA remain unsupported. See [CURRENT_PROJECT_STATUS.md](./CURRENT_PROJECT_STATUS.md) for evidence and boundaries.
 >
 > **Research evidence notice — 2026-10-21:** This file contains a research response and creative/technical hypotheses, not a completed, source-verified competitor study. It does not include a sufficiently traceable video-by-video evidence ledger. Treat claims about audience comprehension percentages, sound impact multipliers, algorithmic distribution, and market superiority as unverified unless independently sourced and measured. The operational procedure is maintained in [PRODUCTION_OPERATIONS_SPECIFICATION.md](./PRODUCTION_OPERATIONS_SPECIFICATION.md); the approved product strategy is in [REVIEW_AND_UPDATED_PROJECT_FOUNDATION.md](./REVIEW_AND_UPDATED_PROJECT_FOUNDATION.md); and the section-by-section audit is in [DOCUMENT_AUDIT_AND_GAP_REGISTER.md](./DOCUMENT_AUDIT_AND_GAP_REGISTER.md). The selected production engine is documented in [BLENDER_KAGGLE_ENGINE_SPECIFICATION.md](./BLENDER_KAGGLE_ENGINE_SPECIFICATION.md). The core Blender 4.0.2/EEVEE compatibility path passed on Kaggle CPU-only in Kernel v8; v10/v12 timing comparisons do not approve reduced-sample visual quality, scaled production, economics, or market success.
+
+## Run locally
+
+Requires Python 3.10 or newer. The control service uses the standard library; Kaggle tasks additionally require an authenticated Kaggle CLI, the configured Blender runtime dataset, and `ffmpeg`/`ffprobe` in the Kaggle runtime.
+
+```powershell
+./.venv/Scripts/python.exe ./run_control_ui.py
+```
+
+Open `http://127.0.0.1:8765/`, create and save a project, then start a task. A completed task exposes the verified MP4 through **Download verified MP4**. Projects and task artifacts stay in local ignored storage. Audio-required projects are rejected before Kaggle submission because audio rendering is not implemented.
+
+Run the local test suite with:
+
+```powershell
+./.venv/Scripts/python.exe -m unittest discover -s tests -v
+```
+
+The UI integration does not itself prove remote Kaggle success; see [CURRENT_PROJECT_STATUS.md](./CURRENT_PROJECT_STATUS.md) for the verification boundary and [ARTIFACT_RETENTION_POLICY.md](./ARTIFACT_RETENTION_POLICY.md) for evidence handling. The research draft below is retained for historical context, not as a source-verified competitor study.
 
 ---
 

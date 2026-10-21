@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import base64
+import hashlib
 import json
 import re
 import shutil
@@ -15,6 +16,7 @@ from pathlib import Path
 from typing import Any
 
 from .project_store import validate_project
+from .video_artifacts import VideoArtifactError, validate_video_evidence
 
 KERNEL_SLUG = "haroonbaaraabumanar/ai-engine-blender-runtime-preflight"
 KERNEL_TIMEOUT_SECONDS = 300
@@ -38,6 +40,14 @@ def _safe_error(text: str) -> str:
     for pattern, replacement in _REDACT_PATTERNS:
         value = pattern.sub(replacement, value)
     return value or "Kaggle CLI returned no diagnostic output."
+
+
+def _sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as source:
+        for chunk in iter(lambda: source.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def _extract_json_objects(text: str) -> list[dict[str, Any]]:
@@ -93,6 +103,11 @@ class KaggleExecutor:
         project = validate_project(project)
         if task["project_id"] != project["id"]:
             raise KaggleExecutionError("Task project ID does not match the saved project.")
+        if project["audio"]["enabled"]:
+            raise KaggleExecutionError(
+                "Audio is required by this project, but audio rendering is not implemented; "
+                "no Kaggle task was submitted."
+            )
         notebook_template = self.template_directory / "ai-engine-satisfying-physics-short.ipynb"
         metadata_template = self.template_directory / "kernel-metadata.json"
         restorer = self.repository_root / "kaggle-blender-short-test" / "short_test_runner.py"
@@ -108,6 +123,7 @@ class KaggleExecutor:
             / "src"
             / "ai_engine"
             / "blender_scene_integration_verifier.py",
+            self.repository_root / "src" / "ai_engine" / "video_artifacts.py",
         ]
         required = [notebook_template, metadata_template, restorer, runner, *required_sources]
         missing = [str(path) for path in required if not path.is_file()]
@@ -154,6 +170,11 @@ class KaggleExecutor:
                 )
                 + "\n",
             )
+        submitted_project_path = work_directory / "submitted-project.json"
+        submitted_project_path.write_text(
+            json.dumps(project, ensure_ascii=False, indent=2, allow_nan=False) + "\n",
+            encoding="utf-8",
+        )
         with zipfile.ZipFile(bundle_path) as bundle:
             if bundle.testzip() is not None:
                 raise KaggleExecutionError("Prepared Kaggle source bundle failed CRC validation.")
@@ -193,6 +214,7 @@ class KaggleExecutor:
             "upload_directory": str(upload_directory),
             "bundle_file": str(bundle_path),
             "notebook_file": str(notebook_path),
+            "project_file": str(submitted_project_path),
         }
 
     def submit(self, prepared: dict[str, str]) -> str:
@@ -328,6 +350,8 @@ class KaggleExecutor:
         if (
             report.get("status") != "PASSED"
             or report.get("project_id") != task["project_id"]
+            or report.get("kaggle_kernel_slug") != KERNEL_SLUG
+            or report.get("kaggle_kernel_version") != execution.get("run_id")
             or report.get("errors") != []
         ):
             errors = report.get("errors")
@@ -361,6 +385,10 @@ class KaggleExecutor:
             or not expected_checks.issubset(checks)
             or not all(checks.get(name) is True for name in expected_checks)
             or not isinstance(scene.get("blend_file"), str)
+            or not isinstance(scene.get("blend_size_bytes"), int)
+            or scene.get("blend_size_bytes", 0) <= 0
+            or not isinstance(scene.get("blend_sha256"), str)
+            or len(scene.get("blend_sha256", "")) != 64
         ):
             raise KaggleExecutionError(
                 "Blender did not pass every required .blend reopen and physics verification check."
@@ -373,16 +401,46 @@ class KaggleExecutor:
         motion = measurements.get("target_motion_toward_chain_m")
         if isinstance(motion, bool) or not isinstance(motion, (int, float)) or motion <= 0.01:
             raise KaggleExecutionError("Blender report has no measurable post-contact target motion.")
+        try:
+            project = json.loads(Path(prepared["project_file"]).read_text(encoding="utf-8"))
+            video = validate_video_evidence(
+                report.get("video"),
+                project,
+                task["id"],
+                execution["run_id"],
+            )
+        except (
+            KeyError,
+            OSError,
+            UnicodeDecodeError,
+            json.JSONDecodeError,
+            ValueError,
+            TypeError,
+            VideoArtifactError,
+        ) as exc:
+            raise KaggleExecutionError(f"Kaggle video validation failed: {exc}") from exc
 
         work_directory = Path(prepared["work_directory"])
+        downloaded = self._download_verified_outputs(
+            task,
+            prepared,
+            execution,
+            scene,
+            video,
+        )
         logs_path = work_directory / f"kaggle-kernel-{execution['run_id']}-logs.json"
         report_path = work_directory / "integration-report.json"
+        video_report_path = downloaded["video_report_file"]
         logs_path.write_text(
             json.dumps(execution["rows"], ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
         )
         report_path.write_text(
             json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False) + "\n",
+            encoding="utf-8",
+        )
+        video_report_path.write_text(
+            json.dumps(video, ensure_ascii=False, indent=2, allow_nan=False) + "\n",
             encoding="utf-8",
         )
         wrapper_reports = [
@@ -397,11 +455,85 @@ class KaggleExecutor:
             "report_file": str(report_path),
             "logs_file": str(logs_path),
             "remote_blend_file": scene["blend_file"],
+            "remote_video_file": video["video_file"],
+            "blend_file": str(downloaded["blend_file"]),
+            "blend_sha256": scene["blend_sha256"],
+            "blend_size_bytes": scene["blend_size_bytes"],
+            "video_file": str(downloaded["video_file"]),
+            "video_sha256": video["sha256"],
+            "video_size_bytes": video["size_bytes"],
+            "video_report_file": str(video_report_path),
+            "audio_status": video["audio"]["status"],
+            "task_id": task["id"],
+            "project_id": task["project_id"],
             "blender_version": scene["blender_version"],
             "remote_status": execution.get("remote_status", "unknown"),
             "measurements": measurements,
             "checks": {name: checks[name] for name in sorted(expected_checks)},
             "wrapper": wrapper_reports[-1],
+        }
+
+    def _download_verified_outputs(
+        self,
+        task: dict[str, Any],
+        prepared: dict[str, str],
+        execution: dict[str, Any],
+        scene: dict[str, Any],
+        video: dict[str, Any],
+    ) -> dict[str, Path]:
+        run_id = execution.get("run_id")
+        if not isinstance(run_id, str) or not run_id.isdigit():
+            raise KaggleExecutionError("Cannot retrieve artifacts without a valid Kaggle run ID.")
+        project_id = task["project_id"]
+        output_directory = Path(prepared["work_directory"]) / "downloaded-artifacts"
+        if output_directory.is_symlink():
+            raise KaggleExecutionError("Task artifact directory must not be a symbolic link.")
+        output_directory.mkdir(parents=True, exist_ok=True)
+        if not output_directory.is_dir():
+            raise KaggleExecutionError("Task artifact destination is not a directory.")
+        pattern = rf"(^|/)({re.escape(project_id)}\.(blend|mp4)|video-report\.json)$"
+        self._run_cli(
+            [
+                "kernels",
+                "output",
+                f"{KERNEL_SLUG}/{run_id}",
+                "--path",
+                str(output_directory),
+                "--force",
+                "--file-pattern",
+                pattern,
+            ],
+            timeout=600,
+        )
+        blend_files = [path for path in output_directory.rglob(f"{project_id}.blend") if path.is_file() and not path.is_symlink()]
+        video_files = [path for path in output_directory.rglob(f"{project_id}.mp4") if path.is_file() and not path.is_symlink()]
+        report_files = [path for path in output_directory.rglob("video-report.json") if path.is_file() and not path.is_symlink()]
+        if len(blend_files) != 1 or len(video_files) != 1 or len(report_files) != 1:
+            raise KaggleExecutionError(
+                "Kaggle output retrieval did not return exactly one .blend, MP4, and video report."
+            )
+        local_video = video_files[0]
+        local_blend = blend_files[0]
+        if (
+            local_blend.stat().st_size != scene["blend_size_bytes"]
+            or _sha256_file(local_blend) != scene["blend_sha256"]
+        ):
+            raise KaggleExecutionError("Downloaded .blend size or SHA-256 does not match remote verification.")
+        if (
+            local_video.stat().st_size != video["size_bytes"]
+            or _sha256_file(local_video) != video["sha256"]
+        ):
+            raise KaggleExecutionError("Downloaded MP4 size or SHA-256 does not match remote verification.")
+        try:
+            downloaded_report = json.loads(report_files[0].read_text(encoding="utf-8"))
+        except (OSError, UnicodeDecodeError, json.JSONDecodeError) as exc:
+            raise KaggleExecutionError(f"Downloaded video report is unreadable: {exc}") from exc
+        if downloaded_report != video:
+            raise KaggleExecutionError("Downloaded video report differs from task-validated evidence.")
+        return {
+            "blend_file": local_blend,
+            "video_file": local_video,
+            "video_report_file": report_files[0],
         }
 
     def _run_cli(self, arguments: list[str], *, timeout: int) -> str:

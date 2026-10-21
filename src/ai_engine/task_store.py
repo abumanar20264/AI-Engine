@@ -176,6 +176,48 @@ class TaskStore:
                     raise TaskStoreError("Task results may only be recorded on success.")
                 existing_result = json.loads(str(row["result_json"]))
                 updated_result = existing_result if result is None else result
+                if status == "succeeded":
+                    if not isinstance(updated_result, dict):
+                        raise TaskStoreError("A succeeded task requires verified video results.")
+                    if not {
+                        "task_id",
+                        "project_id",
+                        "remote_video_file",
+                        "blend_file",
+                        "blend_sha256",
+                        "blend_size_bytes",
+                        "video_file",
+                        "video_report_file",
+                        "video_sha256",
+                        "video_size_bytes",
+                        "audio_status",
+                    }.issubset(updated_result):
+                        raise TaskStoreError("A succeeded task requires verified video results.")
+                    if (
+                        updated_result.get("task_id") != task_id
+                        or updated_result.get("project_id") != str(row["project_id"])
+                    ):
+                        raise TaskStoreError("Task result identity does not match the succeeded task.")
+                    if (
+                        not isinstance(updated_result.get("remote_video_file"), str)
+                        or not isinstance(updated_result.get("blend_file"), str)
+                        or not isinstance(updated_result.get("blend_sha256"), str)
+                        or len(updated_result["blend_sha256"]) != 64
+                        or any(character not in "0123456789abcdef" for character in updated_result["blend_sha256"])
+                        or not isinstance(updated_result.get("blend_size_bytes"), int)
+                        or isinstance(updated_result.get("blend_size_bytes"), bool)
+                        or updated_result["blend_size_bytes"] <= 0
+                        or not isinstance(updated_result.get("video_file"), str)
+                        or not isinstance(updated_result.get("video_report_file"), str)
+                        or not isinstance(updated_result.get("video_sha256"), str)
+                        or len(updated_result["video_sha256"]) != 64
+                        or any(character not in "0123456789abcdef" for character in updated_result["video_sha256"])
+                        or not isinstance(updated_result.get("video_size_bytes"), int)
+                        or isinstance(updated_result.get("video_size_bytes"), bool)
+                        or updated_result["video_size_bytes"] <= 0
+                        or updated_result.get("audio_status") != "NOT_AVAILABLE"
+                    ):
+                        raise TaskStoreError("A succeeded task requires verified MP4 and audio status.")
                 serialized_result = json.dumps(
                     updated_result,
                     ensure_ascii=False,

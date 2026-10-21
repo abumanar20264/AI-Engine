@@ -1,9 +1,12 @@
 from __future__ import annotations
 
 import ast
+import hashlib
 import json
 import os
 import platform
+import shutil
+import subprocess
 import sys
 import traceback
 from datetime import datetime, timezone
@@ -13,6 +16,7 @@ from uuid import UUID, uuid4
 
 from ai_engine.project_store import ProjectStore
 from ai_engine.scene_integration import run_saved_project_scene_integration
+from ai_engine.video_artifacts import verify_video_artifact
 
 OUTPUT = Path("/kaggle/working/ai-engine-scene-integration")
 PROJECT_FILE = Path(__file__).with_name("project.json")
@@ -134,7 +138,67 @@ def main() -> int:
         report["status"] = scene_report["status"]
         if report["status"] != "PASSED":
             report["errors"].extend(scene_report["errors"])
+        else:
+            if saved_project["audio"]["enabled"]:
+                raise RuntimeError(
+                    "Audio is required by this project, but audio rendering is not implemented."
+                )
+            blend_file = Path(scene_report["blend_file"])
+            video_file = blend_file.with_suffix(".mp4")
+            if video_file.exists() or video_file.is_symlink():
+                raise RuntimeError("Refusing to overwrite an existing task video.")
+            rendered = subprocess.run(
+                [
+                    runtime["blender"],
+                    "--background",
+                    "--threads",
+                    "1",
+                    str(blend_file),
+                    "--render-anim",
+                ],
+                check=False,
+                capture_output=True,
+                text=True,
+                timeout=1800,
+                env=os.environ.copy(),
+            )
+            video_candidates = [
+                path
+                for path in blend_file.parent.glob(f"{blend_file.stem}*.mp4")
+                if path.is_file() and not path.is_symlink() and path.stat().st_size > 0
+            ]
+            if rendered.returncode != 0 or len(video_candidates) != 1:
+                raise RuntimeError(
+                    "Blender did not produce exactly one non-empty project MP4: "
+                    + (rendered.stderr or rendered.stdout)[-4000:]
+                )
+            if video_candidates[0] != video_file:
+                video_candidates[0].replace(video_file)
+            report["render_performed"] = True
+            video_report = verify_video_artifact(
+                video_file,
+                saved_project,
+                task_id,
+                ffmpeg=shutil.which("ffmpeg"),
+                ffprobe=shutil.which("ffprobe"),
+            )
+            video_report["kaggle_kernel_slug"] = report["kaggle_kernel_slug"]
+            video_report["kaggle_kernel_version"] = report["kaggle_kernel_version"]
+            blend_digest = hashlib.sha256()
+            with blend_file.open("rb") as blend_stream:
+                for chunk in iter(lambda: blend_stream.read(1024 * 1024), b""):
+                    blend_digest.update(chunk)
+            scene_report["blend_size_bytes"] = blend_file.stat().st_size
+            scene_report["blend_sha256"] = blend_digest.hexdigest()
+            video_report_path = task_output / "video-report.json"
+            video_report_path.write_text(
+                json.dumps(video_report, ensure_ascii=False, indent=2, allow_nan=False) + "\n",
+                encoding="utf-8",
+            )
+            report["video"] = video_report
+            report["video_report_file"] = str(video_report_path)
     except Exception as exc:
+        report["status"] = "FAILED"
         report["errors"].append(f"{type(exc).__name__}: {exc}")
         report["traceback"] = traceback.format_exc()
     report["completed_utc"] = datetime.now(timezone.utc).isoformat()

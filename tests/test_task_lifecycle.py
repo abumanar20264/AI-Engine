@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import base64
+import hashlib
 import json
 import re
 import sys
@@ -21,6 +22,7 @@ from ai_engine.kaggle_executor import KERNEL_SLUG, KaggleExecutionError, KaggleE
 from ai_engine.project_store import ProjectStore, create_project
 from ai_engine.task_manager import TaskManager
 from ai_engine.task_store import TaskStore, TaskStoreError
+from ai_engine.video_artifacts import VideoArtifactError, validate_video_evidence
 
 
 class FakeExecutor:
@@ -33,6 +35,7 @@ class FakeExecutor:
         self.remote_status = remote_status
         self.submitted = threading.Event()
         self.release_wait = threading.Event()
+        self.project_seen_after_restart: dict[str, Any] | None = None
 
     def prepare(self, task: dict[str, Any], project: dict[str, Any]) -> dict[str, str]:
         if self.failure_at == "prepare":
@@ -51,6 +54,10 @@ class FakeExecutor:
         return "14"
 
     def wait(self, task: dict[str, Any], prepared: dict[str, str]) -> dict[str, Any]:
+        project_file_value = prepared.get("project_file")
+        project_file = Path(project_file_value) if project_file_value else None
+        if project_file is not None and project_file.is_file():
+            self.project_seen_after_restart = json.loads(project_file.read_text(encoding="utf-8"))
         self.release_wait.wait(timeout=5)
         if self.failure_at == "wait":
             raise KaggleExecutionError("Kaggle kernel ended with ERROR.")
@@ -69,7 +76,18 @@ class FakeExecutor:
         if self.failure_at == "validate":
             raise KaggleExecutionError("Blender report did not pass verification.")
         return {
+            "task_id": task["id"],
+            "project_id": task["project_id"],
             "remote_blend_file": "/kaggle/working/test.blend",
+            "remote_video_file": "/kaggle/working/test.mp4",
+            "blend_file": str(Path(task["work_directory"]) / "downloaded-artifacts" / "test.blend"),
+            "blend_sha256": "b" * 64,
+            "blend_size_bytes": 100,
+            "video_file": str(Path(task["work_directory"]) / "downloaded-artifacts" / "test.mp4"),
+            "video_sha256": "a" * 64,
+            "video_size_bytes": 100,
+            "video_report_file": str(Path(task["work_directory"]) / "video-report.json"),
+            "audio_status": "NOT_AVAILABLE",
             "report_file": str(Path(task["work_directory"]) / "integration-report.json"),
             "logs_file": str(Path(task["work_directory"]) / "logs.json"),
             "blender_version": "4.0.2",
@@ -77,7 +95,11 @@ class FakeExecutor:
         }
 
 
-def _passed_report(task_id: str, project_id: str) -> dict[str, Any]:
+def _passed_report(
+    task_id: str,
+    project_id: str,
+    kernel_version: str,
+) -> dict[str, Any]:
     checks = {
         "blender_version": True,
         "blend_reopened": True,
@@ -91,6 +113,8 @@ def _passed_report(task_id: str, project_id: str) -> dict[str, Any]:
         "schema_version": 1,
         "task_id": task_id,
         "project_id": project_id,
+        "kaggle_kernel_slug": KERNEL_SLUG,
+        "kaggle_kernel_version": kernel_version,
         "status": "PASSED",
         "errors": [],
         "scene_integration": {
@@ -99,10 +123,41 @@ def _passed_report(task_id: str, project_id: str) -> dict[str, Any]:
             "blender_version": "4.0.2",
             "verification_process_exit_code": 0,
             "blend_file": "/kaggle/working/task.blend",
+            "blend_size_bytes": len(b"verified blend bytes"),
+            "blend_sha256": hashlib.sha256(b"verified blend bytes").hexdigest(),
             "verification": {
                 "checks": checks,
                 "measurements": {"target_motion_toward_chain_m": 0.5},
             },
+        },
+        "video": {
+            "schema_version": 1,
+            "status": "PASSED",
+            "task_id": task_id,
+            "project_id": project_id,
+            "kaggle_kernel_slug": KERNEL_SLUG,
+            "kaggle_kernel_version": kernel_version,
+            "video_file": f"/kaggle/working/task/{project_id}.mp4",
+            "size_bytes": 1200,
+            "sha256": "a" * 64,
+            "metadata": {
+                "codec": "h264",
+                "width": 720,
+                "height": 1280,
+                "fps": 24,
+                "frame_count": 120,
+                "duration_seconds": 5.0,
+            },
+            "checks": {
+                "h264_codec": True,
+                "resolution_matches_project": True,
+                "frame_rate_matches_project": True,
+                "frame_count_matches_project": True,
+                "duration_matches_project": True,
+                "full_decode": True,
+                "visible_motion": True,
+            },
+            "audio": {"status": "NOT_AVAILABLE"},
         },
     }
 
@@ -115,6 +170,125 @@ class TaskLifecycleTests(unittest.TestCase):
         self.project_store = ProjectStore(self.root / "projects")
         self.project = self.project_store.save(create_project("Tracked scene task"))
         self.task_store = TaskStore(self.root / "task-state" / "tasks.sqlite3")
+
+    def mock_output_retrieval(
+        self,
+        task: dict[str, Any],
+        prepared: dict[str, str],
+        report: dict[str, Any],
+    ) -> Any:
+        project_file = Path(task["work_directory"]) / "submitted-project.json"
+        project_file.write_text(json.dumps(self.project), encoding="utf-8")
+        prepared["project_file"] = str(project_file)
+        video_data = b"verified mp4 bytes"
+        blend_data = b"verified blend bytes"
+        report["video"]["size_bytes"] = len(video_data)
+        report["video"]["sha256"] = hashlib.sha256(video_data).hexdigest()
+
+        def retrieve(arguments: list[str], *, timeout: int) -> str:
+            output_path = Path(arguments[arguments.index("--path") + 1])
+            (output_path / f"{task['project_id']}.blend").write_bytes(blend_data)
+            (output_path / f"{task['project_id']}.mp4").write_bytes(video_data)
+            (output_path / "video-report.json").write_text(
+                json.dumps(report["video"]), encoding="utf-8"
+            )
+            return "downloaded"
+
+        return retrieve
+
+    def test_video_evidence_requires_matching_task_project_and_all_checks(self) -> None:
+        task_id = "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa"
+        evidence = {
+            "schema_version": 1,
+            "status": "PASSED",
+            "task_id": task_id,
+            "project_id": self.project["id"],
+            "kaggle_kernel_slug": KERNEL_SLUG,
+            "kaggle_kernel_version": "44",
+            "video_file": f"/kaggle/working/task/{self.project['id']}.mp4",
+            "size_bytes": 1200,
+            "sha256": "a" * 64,
+            "metadata": {
+                "codec": "h264",
+                "width": 720,
+                "height": 1280,
+                "fps": 24,
+                "frame_count": 120,
+                "duration_seconds": 5.0,
+            },
+            "checks": {
+                "h264_codec": True,
+                "resolution_matches_project": True,
+                "frame_rate_matches_project": True,
+                "frame_count_matches_project": True,
+                "duration_matches_project": True,
+                "full_decode": True,
+                "visible_motion": True,
+            },
+            "audio": {"status": "NOT_AVAILABLE"},
+        }
+        self.assertEqual(
+            validate_video_evidence(evidence, self.project, task_id, "44")["sha256"],
+            "a" * 64,
+        )
+        with self.assertRaisesRegex(VideoArtifactError, "identity or acceptance"):
+            validate_video_evidence(
+                {**evidence, "task_id": "bbbbbbbb-bbbb-4bbb-8bbb-bbbbbbbbbbbb"},
+                self.project,
+                task_id,
+                "44",
+            )
+        failed_checks = {**evidence, "checks": {**evidence["checks"], "full_decode": False}}
+        with self.assertRaisesRegex(VideoArtifactError, "identity or acceptance"):
+            validate_video_evidence(failed_checks, self.project, task_id, "44")
+        task = self.task_store.create(self.project["id"], self.root / "runs")
+        self.task_store.transition(task["id"], "preparing", "Preparing.")
+        self.task_store.transition(task["id"], "running", "Running.", run_id="14")
+        self.task_store.transition(task["id"], "validating", "Validating.")
+        with self.assertRaisesRegex(TaskStoreError, "verified video results"):
+            self.task_store.transition(task["id"], "succeeded", "No video evidence.")
+
+    def test_mp4_verifier_checks_project_metadata_decode_motion_and_hash(self) -> None:
+        video_file = self.root / f"{self.project['id']}.mp4"
+        video_file.write_bytes(b"encoded video")
+        probe = {
+            "streams": [
+                {
+                    "codec_type": "video",
+                    "codec_name": "h264",
+                    "width": 720,
+                    "height": 1280,
+                    "avg_frame_rate": "24/1",
+                    "nb_frames": "120",
+                    "duration": "5.0",
+                }
+            ],
+            "format": {"duration": "5.0", "size": str(video_file.stat().st_size)},
+        }
+        frame_size = 64 * 64 * 3
+        motion_frames = bytes(frame_size) + bytes([20]) * frame_size + bytes([40]) * frame_size
+        responses = iter(
+            [
+                CompletedProcess([], 0, json.dumps(probe).encode(), b""),
+                CompletedProcess([], 0, b"", b""),
+                CompletedProcess([], 0, motion_frames, b""),
+            ]
+        )
+        from ai_engine.video_artifacts import verify_video_artifact
+
+        with patch("ai_engine.video_artifacts._run", side_effect=lambda *_args: next(responses)):
+            evidence = verify_video_artifact(
+                video_file,
+                self.project,
+                "aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa",
+                ffmpeg="ffmpeg",
+                ffprobe="ffprobe",
+            )
+        self.assertEqual(evidence["status"], "PASSED")
+        self.assertTrue(evidence["checks"]["full_decode"])
+        self.assertTrue(evidence["checks"]["visible_motion"])
+        self.assertEqual(evidence["size_bytes"], video_file.stat().st_size)
+        self.assertEqual(evidence["audio"]["status"], "NOT_AVAILABLE")
 
     def wait_for(self, task_id: str, status: str) -> dict[str, Any]:
         deadline = time.monotonic() + 5
@@ -163,6 +337,26 @@ class TaskLifecycleTests(unittest.TestCase):
             [event["to_status"] for event in reopened["events"]],
             ["queued", "preparing", "running"],
         )
+
+    def test_recovered_running_task_uses_immutable_submitted_project(self) -> None:
+        task = self.task_store.create(self.project["id"], self.root / "runs")
+        task_directory = Path(task["work_directory"])
+        snapshot = task_directory / "project-snapshot.json"
+        submitted = task_directory / "submitted-project.json"
+        snapshot.write_text(json.dumps(self.project), encoding="utf-8")
+        submitted.write_text(json.dumps(self.project), encoding="utf-8")
+        self.task_store.transition(task["id"], "preparing", "Preparing.")
+        self.task_store.transition(task["id"], "running", "Submitted.", run_id="14")
+        changed_project = {**self.project, "name": "Edited after submission"}
+        self.project_store.save(changed_project)
+
+        executor = FakeExecutor()
+        executor.release_wait.set()
+        manager = TaskManager(self.project_store, self.task_store, executor)
+        recovered = self.wait_for_manager(manager, task["id"], "succeeded")
+        self.assertEqual(recovered["result"]["project_id"], self.project["id"])
+        self.assertIsNotNone(executor.project_seen_after_restart)
+        self.assertEqual(executor.project_seen_after_restart["name"], self.project["name"])
 
     def test_manager_tracks_success_only_after_result_validation(self) -> None:
         executor = FakeExecutor(remote_status="CANCEL_ACKNOWLEDGED")
@@ -233,6 +427,7 @@ class TaskLifecycleTests(unittest.TestCase):
             context = json.loads(bundle.read("job-context.json"))
             self.assertEqual(payload, self.project)
             self.assertEqual(context, {"task_id": task["id"], "project_id": self.project["id"]})
+            self.assertIn("src/ai_engine/video_artifacts.py", bundle.namelist())
             self.assertNotIn("main", {
                 item.filename for item in bundle.infolist()
                 if item.filename == "production-main.py"
@@ -252,6 +447,15 @@ class TaskLifecycleTests(unittest.TestCase):
             self.fail("Prepared notebook did not contain its embedded source bundle.")
         decoded = base64.b64decode(embedded.group(1), validate=True)
         self.assertEqual(decoded, Path(prepared["bundle_file"]).read_bytes())
+
+        audio_project = {
+            **self.project,
+            "audio": {"enabled": True, "source": "licensed-audio.wav", "volume": 1.0},
+        }
+        audio_project = self.project_store.save(audio_project)
+        audio_task = self.task_store.create(audio_project["id"], self.root / "audio-runs")
+        with self.assertRaisesRegex(KaggleExecutionError, "audio rendering is not implemented"):
+            executor.prepare(audio_task, audio_project)
 
     def test_kaggle_cli_submission_status_and_logs_use_supported_commands(self) -> None:
         executor = KaggleExecutor(ROOT, job_timeout_seconds=10)
@@ -320,7 +524,9 @@ class TaskLifecycleTests(unittest.TestCase):
 
     def test_cancel_acknowledged_logs_still_require_task_specific_blender_validation(self) -> None:
         task = self.task_store.create(self.project["id"], self.root / "runs")
-        report = _passed_report(task["id"], self.project["id"])
+        report = _passed_report(task["id"], self.project["id"], "31")
+        prepared = {"work_directory": task["work_directory"]}
+        retrieve = self.mock_output_retrieval(task, prepared, report)
         wrapper = {
             "status": "PASSED",
             "embedded_bundle_sha256": "known-bundle-hash",
@@ -341,16 +547,17 @@ class TaskLifecycleTests(unittest.TestCase):
             return CompletedProcess(command, 0, raw_logs, "")
 
         task_with_run = {**task, "run_id": "31"}
-        prepared = {"work_directory": task["work_directory"]}
         with (
             patch("ai_engine.kaggle_executor.subprocess.run", side_effect=run),
             patch("ai_engine.kaggle_executor.time.sleep"),
         ):
             execution = executor.wait(task_with_run, prepared)
         self.assertEqual(execution["remote_status"], "CANCEL_ACKNOWLEDGED")
-        result = executor.validate(task, prepared, execution)
+        with patch.object(executor, "_run_cli", side_effect=retrieve):
+            result = executor.validate(task, prepared, execution)
         self.assertEqual(result["remote_status"], "CANCEL_ACKNOWLEDGED")
         self.assertEqual(result["blender_version"], "4.0.2")
+        self.assertTrue(Path(result["video_file"]).is_file())
 
     def test_kaggle_failure_includes_and_persists_remote_execution_logs(self) -> None:
         executor = KaggleExecutor(ROOT)
@@ -432,7 +639,9 @@ class TaskLifecycleTests(unittest.TestCase):
         self.task_store.transition(task["id"], "preparing", "Preparing.")
         self.task_store.transition(task["id"], "running", "Running.", run_id="14")
         task = self.task_store.transition(task["id"], "validating", "Validating.")
-        report = _passed_report(task["id"], self.project["id"])
+        report = _passed_report(task["id"], self.project["id"], "14")
+        prepared = {"work_directory": task["work_directory"]}
+        retrieve = self.mock_output_retrieval(task, prepared, report)
         wrapper = {
             "status": "PASSED",
             "embedded_bundle_sha256": "known-bundle-hash",
@@ -444,14 +653,27 @@ class TaskLifecycleTests(unittest.TestCase):
             "rows": [{"stream_name": "stdout", "data": stdout}],
         }
         executor = KaggleExecutor(ROOT)
-        result = executor.validate(
-            task,
-            {"work_directory": task["work_directory"]},
-            execution,
-        )
+        with patch.object(executor, "_run_cli", side_effect=retrieve):
+            result = executor.validate(task, prepared, execution)
         self.assertEqual(result["blender_version"], "4.0.2")
+        self.assertEqual(result["project_id"], self.project["id"])
+        self.assertEqual(result["audio_status"], "NOT_AVAILABLE")
+        self.assertTrue(Path(result["video_report_file"]).is_file())
         self.assertTrue(Path(result["report_file"]).is_file())
         self.assertTrue(Path(result["logs_file"]).is_file())
+
+        wrong_kernel_report = {**report, "kaggle_kernel_version": "13"}
+        wrong_kernel_stdout = json.dumps(wrong_kernel_report) + "\n" + json.dumps(wrapper) + "\n"
+        with self.assertRaisesRegex(KaggleExecutionError, "report did not pass"):
+            executor.validate(
+                task,
+                prepared,
+                {
+                    **execution,
+                    "stdout": wrong_kernel_stdout,
+                    "rows": [{"stream_name": "stdout", "data": wrong_kernel_stdout}],
+                },
+            )
 
         report["scene_integration"]["verification"]["checks"][
             "target_moved_after_contact"
@@ -465,7 +687,7 @@ class TaskLifecycleTests(unittest.TestCase):
         with self.assertRaisesRegex(KaggleExecutionError, "every required"):
             executor.validate(
                 task,
-                {"work_directory": task["work_directory"]},
+                prepared,
                 failed_execution,
             )
 

@@ -3,11 +3,12 @@
 from __future__ import annotations
 
 import threading
+import json
 from pathlib import Path
 from typing import Any, Protocol
 
 from .kaggle_executor import KaggleExecutor
-from .project_store import ProjectStore
+from .project_store import ProjectStore, validate_project
 from .task_store import TERMINAL_STATUSES, TaskStore, TaskStoreError
 
 
@@ -57,6 +58,17 @@ class TaskManager:
                 project["id"],
                 self.task_store.database.parent / "runs",
             )
+            snapshot_path = Path(task["work_directory"]) / "project-snapshot.json"
+            try:
+                snapshot_path.write_text(
+                    json.dumps(project, ensure_ascii=False, indent=2, allow_nan=False) + "\n",
+                    encoding="utf-8",
+                )
+            except OSError as exc:
+                self._fail(task["id"], f"Could not persist the task project snapshot: {exc}")
+                raise TaskStoreError(
+                    f"Cannot persist task project snapshot: {exc}"
+                ) from exc
             self._launch(task["id"])
         return task
 
@@ -94,11 +106,24 @@ class TaskManager:
     def _run(self, task_id: str) -> None:
         try:
             task = self.task_store.get(task_id)
-            project = self.project_store.load(task["project_id"])
+            snapshot_path = Path(task["work_directory"]) / "project-snapshot.json"
+            if not snapshot_path.is_file():
+                raise TaskStoreError(
+                    "The immutable project snapshot is missing; refusing to resume this task."
+                )
+            try:
+                project = validate_project(
+                    json.loads(snapshot_path.read_text(encoding="utf-8"))
+                )
+            except (OSError, UnicodeDecodeError, json.JSONDecodeError, ValueError) as exc:
+                raise TaskStoreError(f"The immutable project snapshot is invalid: {exc}") from exc
+            if project["id"] != task["project_id"]:
+                raise TaskStoreError("Task project snapshot identity does not match its task.")
             work_directory = Path(task["work_directory"])
             prepared = {
                 "work_directory": str(work_directory),
                 "upload_directory": str(work_directory / "upload"),
+                "project_file": str(work_directory / "submitted-project.json"),
             }
             if task["status"] == "queued":
                 self.task_store.transition(
@@ -126,12 +151,12 @@ class TaskManager:
                     )
                 result = self.executor.validate(task, prepared, execution)
                 completion_message = (
-                    "Blender 4.0.2 scene, reopen, EEVEE, and physics checks passed."
+                    "Blender 4.0.2 scene, reopen, physics, MP4 render, decode, and motion checks passed."
                 )
                 if execution.get("remote_status") == "CANCEL_ACKNOWLEDGED":
                     completion_message = (
                         "Kaggle acknowledged cancellation after emitting this task's report; "
-                        "the task-specific report and all Blender physics checks passed."
+                        "the task-specific physics, render, and video checks passed."
                     )
                 self.task_store.transition(
                     task_id,

@@ -1903,3 +1903,13 @@ The Kaggle UI separately displayed **524.9 s** for this run; it is a broader wal
 **Verification:** No test code changed after the 52-test run documented above; the follow-up contains only `.gitignore` rules and this archive record. Push and remote SHA equality were verified; no force push, Kaggle task, or accelerator use occurred.
 
 **Next recommendation:** Resume local v16 artifact recovery only when Kaggle output listing is available. This remains blocked by the previously observed HTTP 429; the remote Blender verification evidence is retained and no local `.blend` recovery is claimed.
+
+## 2026-10-21 - Saved-project video integration implementation
+
+**Objective:** Close the source-level gap between saved-project Kaggle scene verification and a task-bound MP4 result, while preserving prior task records and historical artifacts.
+
+**Implemented:** Added project-configured Blender animation rendering after scene reopen/physics verification; MP4 H.264/settings/full-decode/motion checks; task/project/kernel identity checks; remote and downloaded `.blend`/MP4 size and SHA-256 comparisons; exact-pattern Kaggle output retrieval; immutable per-task project snapshots for restart recovery; a success transition that requires verified video evidence and explicit `NOT_AVAILABLE` audio status; and a loopback UI download endpoint that rechecks file path, size, and hash. Audio-required tasks are rejected before remote submission. Updated the Kaggle template description, README/current status/audit register, added cross-platform test CI, and documented artifact retention without deleting or untracking historical outputs.
+
+**Verification:** Full local suite: **55 tests, OK, 1 skipped**. The skipped case is Windows symlink creation requiring a privilege not available in this environment. `compileall` passed for source/tests/Kaggle runner; the Kaggle notebook and metadata parsed as JSON; Pylance found no Python syntax errors and confirmed all four call sites of `validate_video_evidence` match its signature. `git diff --check` reported no whitespace errors; Git emitted only its expected LF-to-CRLF warning for the edited notebook.
+
+**Unverified and remaining:** No new Kaggle kernel was submitted, so the integrated render/retrieval path and actual output-file layout remain pending remote acceptance. Audio production, broader scenario types, human visual/rights release QA, and auditable competitor research remain open. Existing v14-v16 records and tracked outputs were not altered. No credentials were inspected, no commit or push was made, and all changes remain local.

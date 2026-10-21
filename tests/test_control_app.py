@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import sys
 import tempfile
 import threading
@@ -37,7 +38,28 @@ class ImmediateTaskExecutor:
         prepared: dict[str, str],
         execution: dict[str, Any],
     ) -> dict[str, Any]:
-        return {"remote_blend_file": "/kaggle/working/test.blend"}
+        video = Path(task["work_directory"]) / "downloaded-artifacts" / f"{task['project_id']}.mp4"
+        video.parent.mkdir(parents=True, exist_ok=True)
+        video_bytes = b"verified video"
+        video.write_bytes(video_bytes)
+        return {
+            "task_id": task["id"],
+            "project_id": task["project_id"],
+            "remote_blend_file": "/kaggle/working/test.blend",
+            "blend_file": str(video.with_suffix(".blend")),
+            "blend_sha256": hashlib.sha256(b"verified blend").hexdigest(),
+            "blend_size_bytes": len(b"verified blend"),
+            "remote_video_file": "/kaggle/working/test.mp4",
+            "video_file": str(video),
+            "video_sha256": hashlib.sha256(video_bytes).hexdigest(),
+            "video_size_bytes": len(video_bytes),
+            "video_report_file": str(video.with_name("video-report.json")),
+            "audio_status": "NOT_AVAILABLE",
+            "report_file": str(video.with_name("integration-report.json")),
+            "logs_file": str(video.with_name("logs.json")),
+            "blender_version": "4.0.2",
+            "remote_status": execution.get("remote_status", "unknown"),
+        }
 
 
 class ControlAppHTTPTests(unittest.TestCase):
@@ -87,7 +109,7 @@ class ControlAppHTTPTests(unittest.TestCase):
             html = response.read().decode("utf-8")
             self.assertEqual(response.status, 200)
             self.assertIn("/assets/control.js", html)
-            self.assertIn("does not render video", html)
+            self.assertIn("MP4 rendering", html)
             self.assertIn("start-task", html)
 
         status, listing = self.request_json("/api/projects")
@@ -193,6 +215,15 @@ class ControlAppHTTPTests(unittest.TestCase):
             self.fail("No task status response was received.")
         self.assertEqual(current["task"]["status"], "succeeded")
         self.assertEqual(current["task"]["result"]["remote_blend_file"], "/kaggle/working/test.blend")
+        with urlopen(self.base_url + f"/api/tasks/{task_id}/video", timeout=5) as response:
+            self.assertEqual(response.status, 200)
+            self.assertEqual(response.headers["Content-Type"], "video/mp4")
+            self.assertIn("attachment", response.headers["Content-Disposition"])
+            self.assertEqual(response.read(), b"verified video")
+        Path(current["task"]["result"]["video_file"]).write_bytes(b"corrupted")
+        status, download_error = self.request_json(f"/api/tasks/{task_id}/video")
+        self.assertEqual(status, 404)
+        self.assertIn("unavailable", download_error["error"])
 
         status, history = self.request_json(f"/api/projects/{project_id}/tasks")
         self.assertEqual(status, 200)
