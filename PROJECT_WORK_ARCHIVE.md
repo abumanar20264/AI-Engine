@@ -1214,3 +1214,11 @@ Chronological record of approved work in this repository. Append new entries; do
 - **FAILED, then recovered:** The first PowerShell assertion used `Sort-Object -Unique -join`, which PowerShell parsed as an unsupported `Sort-Object` parameter. This happened after `git add` had staged the four intended files; it did not modify or stage additional files. The check was rerun with the join operation applied after sorting.
 - **VERIFIED:** Corrected assertion confirmed the staged path set is exactly `PROJECT_WORK_ARCHIVE.md`, `kaggle-blender-short-test\short_test_runner.py`, `kaggle-blender-short-test\ai-engine-satisfying-physics-short.ipynb`, and `kaggle-blender-short-test\kernel-metadata.json`. `git diff --cached --check` passed and the unstaged tracked diff was empty.
 - **Status:** No commit or push had occurred at this point. Untracked diagnostic roots remained unstaged.
+
+## 2026-10-21 - Cleanup commit created
+
+**Date/time:** 2026-10-21 09:32 +03:00.
+
+- **COMPLETED — project commit:** Created commit `74ee18b2298b180c7698d9d0ac7ee88ddc15af13` on branch `main` with message `chore: clean project artifacts and stabilize Blender short pipeline`. It contains only the four reviewed paths: this archive, the Short runner, the synchronized Short Notebook, and its Kaggle metadata.
+- **VERIFIED — pre-push remote check:** `origin/main` still pointed to parent `3a4c5fe8170ca94a376e6c97bf9e27f0435b805b`; local HEAD was the new commit and was ahead by one. No force push or remote rewrite is planned.
+- **NOT YET COMPLETED:** Push and post-push ref verification remain pending. The next archive-only follow-up commit records this primary cleanup commit identifier; untracked diagnostic roots remain unstaged.
